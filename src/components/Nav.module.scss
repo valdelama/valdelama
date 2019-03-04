@@ -1,0 +1,16 @@
+.nav {
+  margin-bottom: 15px;
+}
+
+.link {
+  box-shadow: none;
+
+  ~ .link {
+    margin-left: 5px;
+  }
+}
+
+.active {
+  color: #333;
+  text-decoration: line-through;
+}
