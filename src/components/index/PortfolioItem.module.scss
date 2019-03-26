@@ -1,0 +1,35 @@
+@import 'src/styles/util/index.scss';
+
+.portfolioItem {
+  max-width: 1000px;
+  margin: 100px auto 0;
+
+  & ~ & {
+    margin-top: 140px;
+  }
+}
+
+.copy {
+  margin-bottom: 1.5rem;
+}
+
+.company {
+  font-family: $fontSansSerif;
+  font-weight: bold;
+  display: block;
+  color: $defaultTextColor;
+  margin-bottom: 0.5rem;
+}
+
+.imageWrapper {
+  height: 450px;
+  background: #fafbfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wegowise {
+  background: #fafcfa;
+  align-items: flex-end;
+}

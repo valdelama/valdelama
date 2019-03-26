@@ -1,0 +1,26 @@
+@import 'src/styles/util/index.scss';
+
+.indexContent {
+  margin: 120px 0;
+}
+
+.intro {
+  color: #4d4236;
+  font-family: $fontSerif;
+}
+
+.name {
+  color: #4d4236;
+  font-family: $fontSansSerif;
+  font-weight: bold;
+  font-size: 72px;
+  margin: -14px 0 -12px -4px;
+}
+
+.about {
+  color: #cc8d49;
+  font-family: $fontSerif;
+  font-style: italic;
+  display: block;
+  margin-bottom: 2rem;
+}

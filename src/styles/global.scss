@@ -1,0 +1,49 @@
+@import 'src/styles/util/index.scss';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+body {
+  background-image: linear-gradient(
+    6deg,
+    #ffffff 20%,
+    rgba(250, 236, 222, 0.4) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 1100px;
+  font-family: $fontSerif;
+  color: $defaultTextColor;
+}
+
+p {
+  font-family: $fontSerif;
+  line-height: 1.6;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: #175ce6;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}

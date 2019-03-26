@@ -3,9 +3,16 @@ module.exports = {
     title: `Valdelama`,
     author: `Dan Winer`,
     description: `A product design handbook`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `valdelama.com/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: 'images',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,7 +34,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 900,
             },
           },
           {
@@ -65,11 +72,22 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-page-transitions',
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `@mangoart/gatsby-plugin-react-css-modules`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        // *.css files are included by default.
+        // To support another syntax (e.g. SCSS),
+        // add `postcss-scss` to your project's devDependencies
+        // and add the following option here:
+        filetypes: {
+          '.scss': { syntax: `postcss-scss` },
+        },
+
+        // Exclude global styles from the plugin using a RegExp:
+        exclude: `\/global\/`,
+        // For all the options check babel-plugin-react-css-modules README link provided above
       },
     },
   ],
