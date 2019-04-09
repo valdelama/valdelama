@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@mangoart/gatsby-plugin-react-css-modules": "^1.0.0",
+    "classnames": "^2.2.6",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-feed": "^2.0.8",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
+    "gatsby-plugin-root-import": "^2.0.5",
     "node-sass": "^4.11.0",
     "prettier": "^1.14.2",
     "react-animate-on-scroll": "^2.1.5"

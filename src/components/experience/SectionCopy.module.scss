@@ -1,7 +1,10 @@
 @import 'src/styles/util/index.scss';
 
 .sectionCopy {
-  max-width: 475px;
-  padding: 50px;
-  text-align: left;
+  max-width: $contentWidth;
+  margin: $lineHeight * 4 auto 0;
+
+  @include media($gridIsStacked) {
+    margin-top: $lineHeight * 2;
+  }
 }

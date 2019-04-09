@@ -1,0 +1,24 @@
+@import 'src/styles/util/index.scss';
+
+$_spacing: 1rem;
+
+.category {
+  font-family: $fontSansSerif;
+  font-size: 0.9rem;
+}
+
+.post {
+  & ~ & {
+    margin-top: 3.5rem;
+  }
+}
+
+.title {
+  margin: $_spacing / 4 0 $_spacing;
+  color: $textColor;
+}
+
+.date {
+  display: block;
+  margin-bottom: $_spacing;
+}

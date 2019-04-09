@@ -1,0 +1,77 @@
+@import 'src/styles/util/index.scss';
+
+$_spacing: $lineHeight * 3;
+
+.expSection {
+  margin-top: rem(50px);
+}
+
+.shadow {
+  box-shadow: 0 8px 20px rgba(0, 70, 140, 0.08);
+}
+
+.shadowImg {
+  box-shadow: 0 8px 32px rgba(#004dad, 0.05), 0 2px 7px rgba(#000, 0.02);
+}
+
+.expImage {
+  margin: {
+    top: $_spacing;
+    bottom: $_spacing;
+  }
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    $doubleSpacing: $_spacing * 2;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+    // max-width: calc(100% - #{$doubleSpacing}) !important;
+  }
+
+  @include media($gridIsNotStacked) {
+    padding: $_spacing;
+  }
+
+  @include media($gridIsStacked) {
+    margin: {
+      top: $_spacing / 2;
+      bottom: $_spacing / 2;
+    }
+  }
+}
+
+.expImageNoBg {
+  padding: 0;
+}
+
+.expImageWT {
+  background: #f7fafc;
+}
+
+.expImageWW {
+  background: #fafbfc;
+}
+
+.expImageWTdash {
+  background: #f7f9fa;
+}
+
+.expImageBottom {
+  padding-bottom: 0;
+}
+
+.expImageLinkAbove {
+  margin-top: 0;
+
+  @include media($gridIsStacked) {
+    margin-top: $lineHeight;
+  }
+}
+
+.expImageFluid {
+  padding: {
+    top: $_spacing;
+    bottom: $_spacing;
+  }
+}

@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
+import Container from 'src/components/layout/Container'
+import { GridRow, GridCell } from 'src/components/layout/grid/index'
+import BodyCopy from 'src/components/BodyCopy'
 import SEO from '../components/seo'
+import Title from 'src/components/Title'
+// Template styles
+import styles from './BlogPost.scss'
+// General styles for article content
+import './BlogContent.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -12,36 +19,46 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <Container>
+          <SEO title={post.frontmatter.title} description={post.excerpt} />
+          <BodyCopy>
+            <Title
+              title={post.frontmatter.category}
+              subheader={post.frontmatter.title}
+            />
+          </BodyCopy>
+          <div className="blog-post">
+            {/* <p>{post.frontmatter.date}</p> */}
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+          <BodyCopy>
+            <h3 className={styles.prevNextTitle}>More articles…</h3>
+            <GridRow>
+              {previous && (
+                <GridCell className={styles.prevNext}>
+                  <Link
+                    to={previous.fields.slug}
+                    rel="prev"
+                    className={styles.prevNextLink}
+                  >
+                    ← {previous.frontmatter.title}
+                  </Link>
+                </GridCell>
+              )}
+              {next && (
+                <GridCell className={styles.prevNext}>
+                  <Link
+                    to={next.fields.slug}
+                    rel="next"
+                    className={styles.prevNextLink}
+                  >
+                    {next.frontmatter.title} →
+                  </Link>
+                </GridCell>
+              )}
+            </GridRow>
+          </BodyCopy>
+        </Container>
       </Layout>
     )
   }
@@ -64,6 +81,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        category
       }
     }
   }

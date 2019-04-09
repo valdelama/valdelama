@@ -3,13 +3,7 @@
 .sectionHeader {
   font-family: $fontSansSerif;
   font-weight: bold;
-
-  &:after {
-    content: '';
-    display: block;
-    width: 24px;
-    height: 5px;
-    background: $defaultTextColor;
-    margin: 18px 0;
-  }
+  font-size: rem(23px);
+  display: block;
+  margin-bottom: $lineHeight / 2;
 }

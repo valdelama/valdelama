@@ -1,0 +1,15 @@
+@import 'src/styles/util/index';
+
+/* for even widths just use this */
+.gridCell {
+  flex: 1;
+  @include media($gridIsNotStacked) {
+    padding: {
+      left: $gridSpacing;
+      right: $gridSpacing;
+    }
+  }
+}
+
+/* span1, span2 etc width classes */
+@include outputGridCells;

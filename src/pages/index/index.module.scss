@@ -1,7 +1,11 @@
 @import 'src/styles/util/index.scss';
 
 .indexContent {
-  margin: 120px 0;
+  margin: rem(120px) 0;
+
+  @include media($gridIsStacked) {
+    margin: rem(60px) 0;
+  }
 }
 
 .intro {
@@ -13,14 +17,15 @@
   color: #4d4236;
   font-family: $fontSansSerif;
   font-weight: bold;
-  font-size: 72px;
+  font-size: rem(72px);
   margin: -14px 0 -12px -4px;
 }
 
 .about {
-  color: #cc8d49;
-  font-family: $fontSerif;
   font-style: italic;
+  font-size: rem(26px);
+  font-weight: normal;
+  color: $accentTextColor;
   display: block;
   margin-bottom: 2rem;
 }

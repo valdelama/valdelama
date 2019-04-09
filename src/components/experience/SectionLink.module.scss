@@ -1,0 +1,66 @@
+@import 'src/styles/util/index.scss';
+
+$mainPanelPadding: $lineHeight * 3;
+
+.crossLink,
+.link {
+  background-color: #fff;
+  transition: background-color 1s ease;
+
+  &:hover {
+    background-color: #f2f7fc;
+  }
+}
+
+.link {
+  display: flex;
+  padding: $mainPanelPadding;
+  flex-direction: column;
+
+  @include media($gridIsStacked) {
+    padding: $lineHeight;
+  }
+}
+
+.intro {
+  display: block;
+  color: $textColor;
+}
+
+.company {
+  font-weight: bold;
+  padding: $lineHeight 0;
+
+  @include media($gridIsNotStacked) {
+    font-size: rem(27px);
+  }
+}
+
+.crossLinkPanel {
+  padding: $mainPanelPadding;
+
+  @include media($gridIsStacked) {
+    padding: 0 $lineHeight $lineHeight;
+  }
+
+  .intro {
+    margin-bottom: $lineHeight / 2;
+    @include media($gridIsNotStacked) {
+      margin-left: $lineHeight / 2;
+    }
+  }
+}
+
+.crossLink {
+  display: inline-flex;
+  padding: $lineHeight / 2;
+  font-weight: bold;
+
+  @include media($gridIsStacked) {
+    padding: $lineHeight / 2 0;
+  }
+
+  &.active {
+    display: none;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import PageTransition from 'gatsby-plugin-page-transitions'
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 import Nav from './layout/Nav'
 import Footer from './layout/Footer'
 import BodyCopy from '../components/BodyCopy'
@@ -13,14 +13,14 @@ class Layout extends React.Component {
     let header
 
     return (
-      <div className={styles.container}>
+      <>
         <Nav />
         <div className={styles.siteContent}>
           {header}
           <PageTransition transitionTime={500}>{children}</PageTransition>
         </div>
         <Footer />
-      </div>
+      </>
     )
   }
 }

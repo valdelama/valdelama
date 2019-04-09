@@ -4,8 +4,12 @@ body,
 html {
   padding: 0;
   margin: 0;
-  font-size: 18px;
+  font-size: $fontSize;
   line-height: 1.4;
+
+  @include media($gridIsStacked) {
+    font-size: $fontSize - 2px;
+  }
 }
 
 body {
@@ -17,12 +21,16 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 1100px;
   font-family: $fontSerif;
-  color: $defaultTextColor;
+  color: $textColor;
 }
 
 p {
   font-family: $fontSerif;
   line-height: 1.6;
+  margin: {
+    top: 0;
+    bottom: $lineHeight;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -30,7 +38,7 @@ p {
 }
 
 a {
-  color: #175ce6;
+  color: $linkColor;
   text-decoration: none;
 }
 

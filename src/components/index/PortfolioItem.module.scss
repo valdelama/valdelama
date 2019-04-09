@@ -1,35 +1,93 @@
 @import 'src/styles/util/index.scss';
 
 .portfolioItem {
-  max-width: 1000px;
-  margin: 100px auto 0;
+  box-shadow: 0 8px 32px rgba(#004dad, 0.05), 0 2px 7px rgba(#000, 0.02);
+  border: 1px solid rgba(250, 236, 222, 0.4);
 
-  & ~ & {
-    margin-top: 140px;
+  @include media($gridIsStacked) {
+    margin-bottom: rem(60px);
   }
 }
 
 .copy {
-  margin-bottom: 1.5rem;
+  padding: $lineHeight;
+  font-family: $fontSansSerif;
 }
 
 .company {
-  font-family: $fontSansSerif;
+  $timing: 0.4s;
   font-weight: bold;
+  font-size: 1.2rem;
   display: block;
-  color: $defaultTextColor;
+  color: $textColor;
   margin-bottom: 0.5rem;
+  transition: color $timing ease-in;
+
+  &:hover {
+    color: $linkColor;
+  }
+
+  &:after {
+    content: '→';
+    display: inline-flex;
+    transform: translateX(-2px);
+    opacity: 0;
+    transition: all $timing ease-in;
+    transition-property: opacity, transform;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: translateX(3px);
+  }
 }
 
 .imageWrapper {
-  height: 450px;
-  background: #fafbfc;
+  $timing: 1.2s;
+  height: 380px;
+  background-color: #fafbfc;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  transition: background-color $timing ease;
 
-.wegowise {
-  background: #fafcfa;
-  align-items: flex-end;
+  @include media($gridIsStacked) {
+    height: 200px;
+  }
+
+  &:hover {
+    background-color: #f4f8fc;
+  }
+
+  &:hover .image {
+    transform: scale(1.03);
+  }
+
+  .image {
+    transition: transform $timing ease;
+  }
+
+  &.watchingthat {
+    .image {
+      width: 65%;
+      top: 20px;
+      position: relative;
+    }
+  }
+
+  &.wegowise {
+    background-color: #fafcfa;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      background-color: #f7f9fc;
+    }
+
+    .image {
+      width: 130%;
+      position: absolute;
+    }
+  }
 }
