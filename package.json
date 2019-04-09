@@ -36,6 +36,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
+    "gatsby-plugin-root-import": "^2.0.5",
     "node-sass": "^4.11.0",
     "prettier": "^1.14.2",
     "react-animate-on-scroll": "^2.1.5"

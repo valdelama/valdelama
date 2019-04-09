@@ -18,9 +18,10 @@
 }
 
 .about {
-  color: #cc8d49;
-  font-family: $fontSerif;
   font-style: italic;
+  font-size: 26px;
+  font-weight: normal;
+  color: $accentTextColor;
   display: block;
   margin-bottom: 2rem;
 }

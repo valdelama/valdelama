@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import PageTransition from 'gatsby-plugin-page-transitions'
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 import Nav from './layout/Nav'
 import Footer from './layout/Footer'
 import BodyCopy from '../components/BodyCopy'

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
-import Layout from '../../components/Layout'
-import BodyCopy from '../../components/BodyCopy'
-import SEO from '../../components/seo'
-import Title from '../../components/experience/Title'
-import SectionCopy from '../../components/experience/SectionCopy'
+import Layout from 'src/components/Layout'
+import BodyCopy from 'src/components/BodyCopy'
+import SEO from 'src/components/seo'
+import Title from 'src/components/experience/Title'
+import SectionCopy from 'src/components/experience/SectionCopy'
 import Img from 'gatsby-image'
-import styles from './WatchingThat.module.scss'
+import styles from './Experience.module.scss'
 
 export default ({ data }) => (
   <Layout>

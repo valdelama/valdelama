@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `valdelama.com/`,
   },
   plugins: [
+    'gatsby-plugin-root-import',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -72,7 +73,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-page-transitions',
+    'gatsby-v2-plugin-page-transitions',
     `gatsby-plugin-sass`,
     {
       resolve: `@mangoart/gatsby-plugin-react-css-modules`,

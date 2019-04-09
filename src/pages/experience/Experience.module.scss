@@ -1,5 +1,10 @@
 @import 'src/styles/util/index.scss';
 
+.intro {
+  background: rgba(250, 236, 222, 0.2);
+  margin: 170px 0;
+}
+
 .expBlock1 {
   display: flex;
   background-image: linear-gradient(
@@ -7,12 +12,8 @@
     rgba(#f7f9fa, 0.5) 0%,
     rgba(#f7f9fa, 0.75) 100%
   );
-  margin: 320px 0;
-}
-
-.intro {
-  background: rgba(250, 236, 222, 0.2);
-  margin: 220px 0;
+  margin: 250px 0;
+  position: relative;
 }
 
 .expBlock1Left,
@@ -27,11 +28,14 @@
 }
 
 .expBlock1Img {
-  margin: {
-    top: -60px;
-    bottom: -60px;
-    right: -80px;
-  }
+  position: absolute;
+  right: -80px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.greenLoansImg {
+  right: -180px;
 }
 
 .expBlock1Content {
@@ -55,4 +59,17 @@
 
 .expBlock2Img {
   margin-bottom: -10px;
+}
+
+.expSection {
+  margin-top: 50px;
+}
+
+.expSectionImg {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 70px;
+  }
 }
