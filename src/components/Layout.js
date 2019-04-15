@@ -13,14 +13,14 @@ class Layout extends React.Component {
     let header
 
     return (
-      <div className={styles.container}>
+      <>
         <Nav />
         <div className={styles.siteContent}>
           {header}
           <PageTransition transitionTime={500}>{children}</PageTransition>
         </div>
         <Footer />
-      </div>
+      </>
     )
   }
 }

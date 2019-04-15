@@ -1,0 +1,32 @@
+@mixin contain($width) {
+  max-width: $width;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+.blog-post {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  .gatsby-highlight {
+    @include contain(630px);
+  }
+}
+
+.gatsby-highlight {
+  code {
+    font-size: 0.8rem;
+  }
+
+  pre {
+    background: rgba(#000, 0.025);
+  }
+}

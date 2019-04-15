@@ -9,8 +9,12 @@ export default () => (
       <Link to="/" className={styles.link} activeClassName={styles.active}>
         Home
       </Link>
-      <Link to="/blog/" className={styles.link} activeClassName={styles.active}>
-        Blog
+      <Link
+        to="/writing/"
+        className={styles.link}
+        activeClassName={styles.active}
+      >
+        Writing
       </Link>
     </BodyCopy>
   </nav>

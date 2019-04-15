@@ -4,7 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import Layout from 'src/components/Layout'
 import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
-import Title from 'src/components/experience/Title'
+import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
 import Img from 'gatsby-image'
 import styles from '../Experience.module.scss'
@@ -62,7 +62,7 @@ export default ({ data }) => (
         </p>
       </BodyCopy>
       <div styleName="expSectionImg">
-        <Img fixed={data.iaMap.childImageSharp.fixed} />
+        <Img fluid={data.iaMap.childImageSharp.fluid} />
       </div>
     </div>
     <div styleName="expSection">
@@ -76,7 +76,7 @@ export default ({ data }) => (
         </p>
       </BodyCopy>
       <div styleName="expSectionImg">
-        <Img fixed={data.trello.childImageSharp.fixed} />
+        <Img fluid={data.trello.childImageSharp.fluid} />
       </div>
     </div>
     <div styleName="expSection">
@@ -100,35 +100,35 @@ export const query = graphql`
   query {
     cardSorting: file(relativePath: { eq: "ww/card-sorting.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 1540) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     cardSorting2: file(relativePath: { eq: "ww/card-sorting2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 1540) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     iaMap: file(relativePath: { eq: "ww/ia-map.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 1540) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     trello: file(relativePath: { eq: "ww/trello.png" }) {
       childImageSharp {
-        fixed(width: 1129) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 1129) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     nav: file(relativePath: { eq: "ww/nav.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1200) {
+        fluid(maxWidth: 1520) {
           ...GatsbyImageSharpFluid
         }
       }
