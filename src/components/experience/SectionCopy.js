@@ -1,9 +1,9 @@
 import React from 'react'
 import SectionTitle from './SectionTitle'
-import './SectionCopy.module.scss'
+import styles from './SectionCopy.module.scss'
 
 export default ({ title, children }) => (
-  <div styleName="sectionCopy">
+  <div className={styles.sectionCopy}>
     <SectionTitle title={title} />
     {children}
   </div>

@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
+import cn from 'classnames'
 import Layout from 'src/components/Layout'
+import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
@@ -11,88 +13,78 @@ import styles from '../Experience.module.scss'
 
 export default ({ data }) => (
   <Layout>
-    <BodyCopy>
-      <Title
-        title="WegoWise"
-        subheader="Solving an Information Architecture Puzzle"
-      />
-      <p>
-        The dashboard at WegoWise had become a dumping ground for links to
-        miscellaneous pages as the site continued to grow and the result was an
-        unwieldy, long navigation menu with lots of unrelated links sitting
-        side-by-side.
-      </p>
-      <p>
-        To solve this, I created a multi-stage process to ensure that the
-        information architecture changes that I implemented were thoroughly
-        verified via user testing at various stages.
-      </p>
-    </BodyCopy>
-    <div styleName="expSection">
+    <Container>
       <BodyCopy>
-        <h3>Card sorting</h3>
+        <Title
+          title="WegoWise"
+          subheader="Solving an Information Architecture Puzzle"
+        />
+        <p>
+          The dashboard at WegoWise had become a dumping ground for links to
+          miscellaneous pages as the site continued to grow and the result was
+          an unwieldy, long navigation menu with lots of unrelated links sitting
+          side-by-side.
+        </p>
+        <p>
+          To solve this, I created a multi-stage process to ensure that the
+          information architecture changes that I implemented were thoroughly
+          verified via user testing at various stages.
+        </p>
+      </BodyCopy>
+      <SectionCopy title="Card sorting">
         <p>
           The first stage was to print out every screen of the app onto a card
           and get groups of users to put them into buckets. Post-its were used
           to create the buckets and the cards were placed in lists underneath.
         </p>
-      </BodyCopy>
-      <div styleName="expSectionImg">
+      </SectionCopy>
+      <div className={styles.expImageFluid}>
         <Img fluid={data.cardSorting.childImageSharp.fluid} />
       </div>
-      <BodyCopy>
+      <SectionCopy>
         <p>
           During the exercise, I conducted interviews to understand the
           reasoning behind the various bucket types and took photos of the
           arrangement to be able to look through them later and check for
           overlaps.
         </p>
-      </BodyCopy>
-      <div styleName="expSectionImg">
+      </SectionCopy>
+      <div className={styles.expImageFluid}>
         <Img fluid={data.cardSorting2.childImageSharp.fluid} />
       </div>
-    </div>
-    <div styleName="expSection">
-      <BodyCopy>
-        <h3>Exposing common patterns</h3>
+      <SectionCopy title="Exposing common patterns">
         <p>
           A few common patterns emerged, these were plotted into a tree diagram
           to make sense of the findings and some definitive category names were
           chosen.
         </p>
-      </BodyCopy>
-      <div styleName="expSectionImg">
+      </SectionCopy>
+      <div className={styles.expImageFluid}>
         <Img fluid={data.iaMap.childImageSharp.fluid} />
       </div>
-    </div>
-    <div styleName="expSection">
-      <BodyCopy>
-        <h3>Verifying the new structure</h3>
+      <SectionCopy title="Verifying the new structure">
         <p>
           In the next stage, users were asked to move cards into the categories
           that we had defined in the previous step. For this stage we used
           Trello cards and lists and the idea was to verify that the categories
           we had defined made sense to a wider audience.
         </p>
-      </BodyCopy>
-      <div styleName="expSectionImg">
+      </SectionCopy>
+      <div className={styles.expImageFluid}>
         <Img fluid={data.trello.childImageSharp.fluid} />
       </div>
-    </div>
-    <div styleName="expSection">
-      <BodyCopy>
-        <h3>Testing the interface</h3>
+      <SectionCopy title="Testing the interface">
         <p>
           In the final stage of testing (before starting development), users
           clicked around interactive prototypes (created in Sketch and InVision)
           to see if they arrived at the desired destinations in the expected
           number of clicks.
         </p>
-      </BodyCopy>
-      <div styleName="expSectionImg">
+      </SectionCopy>
+      <div className={styles.expImageFluid}>
         <Img fluid={data.nav.childImageSharp.fluid} />
       </div>
-    </div>
+    </Container>
   </Layout>
 )
 

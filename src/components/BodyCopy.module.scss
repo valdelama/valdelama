@@ -1,4 +1,6 @@
+@import 'src/styles/util/index.scss';
+
 .bodyCopy {
-  max-width: 560px;
+  max-width: $contentWidth;
   margin: 0 auto;
 }

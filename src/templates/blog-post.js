@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import Title from 'src/components/Title'
 import './BlogPost.scss'
 
 class BlogPostTemplate extends React.Component {
@@ -14,8 +14,11 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <div className="blogPost">
-          <h1>{post.frontmatter.title}</h1>
+        <div className="blog-post">
+          <Title
+            title={post.frontmatter.category}
+            subheader={post.frontmatter.title}
+          />
           {/* <p>{post.frontmatter.date}</p> */}
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
@@ -58,6 +61,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        category
       }
     }
   }

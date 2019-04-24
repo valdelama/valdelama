@@ -1,3 +1,5 @@
+@import 'src/styles/util/index.scss';
+
 @mixin contain($width) {
   max-width: $width;
   margin: {
@@ -17,7 +19,21 @@
   ul,
   ol,
   .gatsby-highlight {
-    @include contain(630px);
+    @include contain($contentWidth);
+  }
+
+  h2 {
+    margin-top: $lineHeight * 3;
+    margin-bottom: $lineHeight;
+  }
+
+  h3 {
+    margin-top: $lineHeight * 2;
+    margin-bottom: $lineHeight;
+  }
+
+  p {
+    margin-bottom: $lineHeight;
   }
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
+import cn from 'classnames'
 import Layout from 'src/components/Layout'
 import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
@@ -27,29 +28,21 @@ export default ({ data }) => (
           design, and front-end development (using React).
         </p>
       </BodyCopy>
-      <div styleName="expBlock1 intro">
-        <div styleName="expBlock1Left">
-          <SectionCopy title="Video Intelligence Dashboard">
-            <p>
-              The goal was to build a flexible dashboard that, through
-              personalisation, would become invaluable to users from across all
-              roles in the organisation.
-            </p>
-            <p>
-              Feedback has been very positive with customers relying on it daily
-              for a top-level view of the metrics they care about it.
-            </p>
-          </SectionCopy>
-        </div>
-        <div styleName="expBlock1Right">
-          <div styleName="expBlock1Img">
-            <Img fixed={data.widgets.childImageSharp.fixed} />
-          </div>
-        </div>
+      <SectionCopy title="Video Intelligence Dashboard">
+        <p>
+          The goal was to build a flexible dashboard that, through
+          personalisation, would become invaluable to users from across all
+          roles in the organisation.
+        </p>
+        <p>
+          Feedback has been very positive with customers relying on it daily for
+          a top-level view of the metrics they care about it.
+        </p>
+      </SectionCopy>
+      <div className={cn(styles.expImage, styles.expImageWTdash)}>
+        <Img fixed={data.widgets.childImageSharp.fixed} />
       </div>
-    </Container>
-    <ScrollAnimation animateIn="fadeIn">
-      <div className={styles.expBlock2}>
+      <ScrollAnimation animateIn="fadeIn">
         <SectionCopy title="Content Performance">
           <p>
             The content performance feature allows users to understand what kind
@@ -60,35 +53,26 @@ export default ({ data }) => (
           </p>
         </SectionCopy>
 
-        <div styleName="expBlock2Img">
+        <div className={cn(styles.expImage, styles.expImageWT)}>
           <Img fixed={data.cp.childImageSharp.fixed} />
         </div>
-      </div>
-    </ScrollAnimation>
-    <Container>
+      </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn">
-        <div styleName="expBlock1">
-          <div styleName="expBlock1Left">
-            <SectionCopy title="Troubleshooting Analysis">
-              <p>
-                The most advanced interface available for understanding and
-                resolving video advertising errors.
-              </p>
-            </SectionCopy>
-          </div>
-          <div styleName="expBlock1Right">
-            <div styleName="expBlock1Img">
-              <Img
-                fixed={data.errors.childImageSharp.fixed}
-                style={{ boxShadow: '0 8px 20px rgba(0, 70, 140, 0.08)' }}
-              />
-            </div>
-          </div>
+        <SectionCopy title="Troubleshooting Analysis">
+          <p>
+            The most advanced interface available for understanding and
+            resolving video advertising errors.
+          </p>
+        </SectionCopy>
+
+        <div className={cn(styles.expImage, styles.expImageWT)}>
+          <Img
+            fixed={data.errors.childImageSharp.fixed}
+            style={{ boxShadow: '0 8px 20px rgba(0, 70, 140, 0.08)' }}
+          />
         </div>
       </ScrollAnimation>
-    </Container>
-    <ScrollAnimation animateIn="fadeIn">
-      <div styleName="expBlock2">
+      <ScrollAnimation animateIn="fadeIn">
         <SectionCopy title="Channel insights">
           <p>
             A feature that allows users to track campaigns across various
@@ -96,11 +80,11 @@ export default ({ data }) => (
             aggregate performance data.
           </p>
         </SectionCopy>
-        <div styleName="expBlock2Img">
+        <div className={cn(styles.expImage, styles.expImageWT)}>
           <Img fixed={data.channels.childImageSharp.fixed} />
         </div>
-      </div>
-    </ScrollAnimation>
+      </ScrollAnimation>
+    </Container>
   </Layout>
 )
 
@@ -115,7 +99,7 @@ export const query = graphql`
     }
     cp: file(relativePath: { eq: "wt/cp.png" }) {
       childImageSharp {
-        fixed(width: 770) {
+        fixed(width: 689) {
           ...GatsbyImageSharpFixed_noBase64
         }
       }
@@ -129,7 +113,7 @@ export const query = graphql`
     }
     widgets: file(relativePath: { eq: "wt/widgets.png" }) {
       childImageSharp {
-        fixed(width: 709) {
+        fixed(width: 1200) {
           ...GatsbyImageSharpFixed
         }
       }
