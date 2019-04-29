@@ -10,7 +10,9 @@ export default ({ image, imgClass, company, url, description }) => (
         <Link className={styles.company} to={url}>
           {company}
         </Link>
-        <span className={styles.description}>{description}</span>
+        <span className={styles.description}>
+          {description} <Link to={url}>More…</Link>
+        </span>
       </div>
     </BodyCopy>
     <Link to={url} styleName="imageWrapper" className={styles[imgClass]}>

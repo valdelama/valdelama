@@ -11,6 +11,10 @@ $_spacing: $lineHeight * 3;
   margin-top: 50px;
 }
 
+.shadow {
+  box-shadow: 0 8px 20px rgba(0, 70, 140, 0.08);
+}
+
 .shadowImg {
   box-shadow: 0 8px 32px rgba(#004dad, 0.05), 0 2px 7px rgba(#000, 0.02);
 }
@@ -21,7 +25,7 @@ $_spacing: $lineHeight * 3;
     top: $_spacing;
     bottom: $_spacing;
   }
-  display: flex;
+  // display: flex;
   align-items: center;
   justify-content: center;
 
@@ -46,6 +50,14 @@ $_spacing: $lineHeight * 3;
 
 .expImageWTdash {
   background: #f7f9fa;
+}
+
+.expImageBottom {
+  padding-bottom: 0;
+}
+
+.expImageLinkAbove {
+  margin-top: 0;
 }
 
 .expImageFluid {

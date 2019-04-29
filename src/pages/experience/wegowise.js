@@ -13,38 +13,44 @@ import styles from './Experience.module.scss'
 
 export default ({ data }) => (
   <Layout>
-    <BodyCopy>
-      <Title
-        title="WegoWise"
-        subheader="Enabling people to make smarter decisions about how they build and invest in buildings"
-      />
-      <p>
-        For five years I was responsible for product and marketing design at
-        WegoWise, the largest database of multifamily utilty data in the US.
-        During that time I established and promoted a design-first company
-        culture that emphasised validating early-stage designs through user
-        testing.
-      </p>
-    </BodyCopy>
-    <ScrollAnimation animateIn="fadeIn">
-      <SectionCopy title="A Dashboard to Optimize Utility Consumption">
+    <Container>
+      <BodyCopy>
+        <Title
+          title="WegoWise"
+          subheader="Enabling people to make smarter decisions about how they build and invest in buildings"
+        />
         <p>
-          The challenge was to design a dashboard that would be the initial
-          screen that all WegoWise users would see after logging in.
+          For five years I was responsible for product and marketing design at
+          WegoWise, the largest database of multifamily utilty data in the US.
+          During that time I established and promoted a design-first company
+          culture that emphasised validating early-stage designs through user
+          testing.
         </p>
-        <p>
-          We needed to create something that would be useful to all customer
-          types, that is configurable, and that is able to clearly display a
-          high density of information. The information on display had to be both
-          high-level summary data and also detailed data, specific to individual
-          properties.
-        </p>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageWW)}>
-        <Img fixed={data.dash.childImageSharp.fixed} />
-      </div>
-    </ScrollAnimation>
-    <div className={styles.expImage}>
+      </BodyCopy>
+      <ScrollAnimation animateIn="fadeIn">
+        <SectionCopy title="A Dashboard to Optimize Utility Consumption">
+          <p>
+            The challenge was to design a dashboard that would be the initial
+            screen that all WegoWise users would see after logging in.
+          </p>
+          <p>
+            We needed to create something that would be useful to all customer
+            types, that is configurable, and that is able to clearly display a
+            high density of information. The information on display had to be
+            both high-level summary data and also detailed data, specific to
+            individual properties.
+          </p>
+        </SectionCopy>
+      </ScrollAnimation>
+    </Container>
+    <div
+      className={cn(styles.expImage, styles.expImageWW, styles.expImageBottom)}
+    >
+      <Container className={styles.innerContainer}>
+        <Img fluid={data.dash.childImageSharp.fluid} />
+      </Container>
+    </div>
+    <Container>
       <SectionCopy title="Solving an Information Architecture Puzzle">
         <p>
           The dashboard at WegoWise had become a dumping ground for links to
@@ -56,10 +62,10 @@ export default ({ data }) => (
           Read more →
         </Link>
       </SectionCopy>
-      <Img fixed={data.nav.childImageSharp.fixed} />
-    </div>
-    <ScrollAnimation animateIn="fadeIn">
-      <div className={styles.expImage}>
+      <div className={cn(styles.expImage, styles.expImageLinkAbove)}>
+        <Img fluid={data.nav.childImageSharp.fluid} />
+      </div>
+      <ScrollAnimation animateIn="fadeIn">
         <SectionCopy title="Helping Financial Institutions Go Green">
           <p>
             I led the design and front-end development of a web application that
@@ -68,9 +74,11 @@ export default ({ data }) => (
           </p>
           <Link to="experience/wegowise/green-loans">Read more →</Link>
         </SectionCopy>
-        <Img fixed={data.greenLoans.childImageSharp.fixed} />
-      </div>
-    </ScrollAnimation>
+        <div className={cn(styles.expImage, styles.expImageLinkAbove)}>
+          <Img fluid={data.greenLoans.childImageSharp.fluid} />
+        </div>
+      </ScrollAnimation>
+    </Container>
   </Layout>
 )
 
@@ -78,29 +86,29 @@ export const query = graphql`
   query {
     dash: file(relativePath: { eq: "ww/dash.png" }) {
       childImageSharp {
-        fixed(width: 759) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 1497) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     greenLoans: file(relativePath: { eq: "ww/green-loans.png" }) {
       childImageSharp {
-        fixed(width: 800) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     greenLoans2: file(relativePath: { eq: "ww/green-loans2.png" }) {
       childImageSharp {
-        fixed(width: 720) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 3042) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     nav: file(relativePath: { eq: "ww/nav.png" }) {
       childImageSharp {
-        fixed(width: 760) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1520) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

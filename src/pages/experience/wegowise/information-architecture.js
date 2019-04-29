@@ -18,6 +18,7 @@ export default ({ data }) => (
         <Title
           title="WegoWise"
           subheader="Solving an Information Architecture Puzzle"
+          backLink="/experience/wegowise"
         />
         <p>
           The dashboard at WegoWise had become a dumping ground for links to

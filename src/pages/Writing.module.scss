@@ -1,6 +1,19 @@
+@import 'src/styles/util/index.scss';
+
+$_spacing: 1rem;
+
 .post {
+  & ~ & {
+    margin-top: 3.5rem;
+  }
 }
+
 .title {
+  margin: 0 0 $_spacing;
+  color: $textColor;
 }
+
 .date {
+  display: block;
+  margin-bottom: $_spacing;
 }

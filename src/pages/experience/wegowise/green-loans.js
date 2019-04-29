@@ -19,6 +19,7 @@ export default ({ data }) => (
         <Title
           title="WegoWise"
           subheader="Helping Financial Institutions Go Green"
+          backLink="/experience/wegowise"
         />
         <p>
           I led the design and front-end development of a web application that
@@ -41,8 +42,8 @@ export default ({ data }) => (
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageNoBg)}>
         <Img
-          fixed={data.glea.childImageSharp.fixed}
-          className={styles.shadowImg}
+          fluid={data.glea.childImageSharp.fluid}
+          className={styles.shadow}
         />
       </div>
 
@@ -53,10 +54,16 @@ export default ({ data }) => (
         </p>
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageWW)}>
-        <Img fixed={data.marketingScreen.childImageSharp.fixed} />
+        <Img
+          fluid={data.marketingScreen.childImageSharp.fluid}
+          className={styles.shadow}
+        />
       </div>
       <div className={cn(styles.expImage, styles.expImageNoBg)}>
-        <Img fixed={data.flyer2.childImageSharp.fixed} />
+        <Img
+          fluid={data.flyer2.childImageSharp.fluid}
+          className={styles.shadow}
+        />
       </div>
     </Container>
   </Layout>
@@ -66,8 +73,8 @@ export const query = graphql`
   query {
     glea: file(relativePath: { eq: "ww/glea/glea.png" }) {
       childImageSharp {
-        fixed(width: 1440) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 2880) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -75,15 +82,15 @@ export const query = graphql`
       relativePath: { eq: "ww/glea/marketing-screen.png" }
     ) {
       childImageSharp {
-        fixed(width: 650) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1301) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     flyer2: file(relativePath: { eq: "ww/glea/flyer2.png" }) {
       childImageSharp {
-        fixed(width: 1264) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 2544) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

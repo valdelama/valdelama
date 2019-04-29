@@ -24,14 +24,19 @@ class BlogIndex extends React.Component {
             subheader="Notes and essays on product design"
           />
           {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
             return (
               <div styleName="post" key={node.fields.slug}>
-                <h3 styleName="title">
-                  <Link to={node.fields.slug}>{title}</Link>
-                </h3>
+                <Link to={node.fields.slug}>
+                  <h3 styleName="title">
+                    {node.frontmatter.category} - {node.frontmatter.title}
+                  </h3>
+                </Link>
+
                 <small styleName="date">{node.frontmatter.date}</small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                <div
+                  className={styles.excerpt}
+                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                />
               </div>
             )
           })}
@@ -60,6 +65,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            category
           }
         }
       }

@@ -40,7 +40,7 @@ export default ({ data }) => (
         </p>
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageWTdash)}>
-        <Img fixed={data.widgets.childImageSharp.fixed} />
+        <Img fluid={data.widgets.childImageSharp.fluid} />
       </div>
       <ScrollAnimation animateIn="fadeIn">
         <SectionCopy title="Content Performance">
@@ -54,7 +54,10 @@ export default ({ data }) => (
         </SectionCopy>
 
         <div className={cn(styles.expImage, styles.expImageWT)}>
-          <Img fixed={data.cp.childImageSharp.fixed} />
+          <Img
+            fluid={data.cp.childImageSharp.fluid}
+            className={styles.shadow}
+          />
         </div>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeIn">
@@ -67,8 +70,8 @@ export default ({ data }) => (
 
         <div className={cn(styles.expImage, styles.expImageWT)}>
           <Img
-            fixed={data.errors.childImageSharp.fixed}
-            style={{ boxShadow: '0 8px 20px rgba(0, 70, 140, 0.08)' }}
+            fluid={data.errors.childImageSharp.fluid}
+            className={styles.shadow}
           />
         </div>
       </ScrollAnimation>
@@ -80,8 +83,14 @@ export default ({ data }) => (
             aggregate performance data.
           </p>
         </SectionCopy>
-        <div className={cn(styles.expImage, styles.expImageWT)}>
-          <Img fixed={data.channels.childImageSharp.fixed} />
+        <div
+          className={cn(
+            styles.expImage,
+            styles.expImageWT,
+            styles.expImageBottom
+          )}
+        >
+          <Img fluid={data.channels.childImageSharp.fluid} />
         </div>
       </ScrollAnimation>
     </Container>
@@ -92,29 +101,29 @@ export const query = graphql`
   query {
     channels: file(relativePath: { eq: "wt/channels.png" }) {
       childImageSharp {
-        fixed(width: 770) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 1497) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     cp: file(relativePath: { eq: "wt/cp.png" }) {
       childImageSharp {
-        fixed(width: 689) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 1379) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     errors: file(relativePath: { eq: "wt/errors.png" }) {
       childImageSharp {
-        fixed(width: 720) {
-          ...GatsbyImageSharpFixed_noBase64
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     widgets: file(relativePath: { eq: "wt/widgets.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 2410) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

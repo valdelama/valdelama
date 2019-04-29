@@ -43,21 +43,24 @@ class Home extends React.Component {
             </div>
           </BodyCopy>
           <ScrollAnimation animateIn="fadeIn">
-            <PortfolioItem
-              image={WtImg}
-              url="/experience/watching-that/"
-              company="Watching That"
-              description="Currently Head of Design at Watching That helping to create the future of video revenue analytics. "
-            />
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="fadeIn">
-            <PortfolioItem
-              image={WegoImg}
-              imgClass="wegowise"
-              url="/experience/wegowise"
-              company="WegoWise"
-              description="For five years I was Head of Design at WegoWise, the leading analytics platform in the US for multifamily real estate utility data. "
-            />
+            <div className={styles.portfolio}>
+              <PortfolioItem
+                image={WtImg}
+                imgClass="watchingthat"
+                url="/experience/watching-that/"
+                company="Watching That"
+                description="Currently Head of Design at Watching That helping to create the future of video revenue analytics. "
+                className={styles.portfolioItem}
+              />
+              <PortfolioItem
+                image={WegoImg}
+                imgClass="wegowise"
+                url="/experience/wegowise"
+                company="WegoWise"
+                description="For five years I was Head of Design at WegoWise, the leading analytics platform in the US for multifamily real estate utility data. "
+                className={styles.portfolioItem}
+              />
+            </div>
           </ScrollAnimation>
         </Container>
       </Layout>
