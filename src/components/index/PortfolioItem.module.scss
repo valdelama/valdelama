@@ -1,21 +1,21 @@
 @import 'src/styles/util/index.scss';
 
 .portfolioItem {
-  max-width: 800px;
-  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(#004dad, 0.05), 0 2px 7px rgba(#000, 0.02);
+  border: 1px solid rgba(250, 236, 222, 0.4);
 
-  & ~ & {
-    margin-top: 140px;
+  @include media($gridIsStacked) {
+    margin-bottom: rem(60px);
   }
 }
 
 .copy {
-  margin-bottom: 1.5rem;
+  padding: $lineHeight;
+  font-family: $fontSansSerif;
 }
 
 .company {
   $timing: 0.4s;
-  font-family: $fontSansSerif;
   font-weight: bold;
   font-size: 1.2rem;
   display: block;
@@ -44,12 +44,16 @@
 
 .imageWrapper {
   $timing: 1.2s;
-  height: 420px;
+  height: 380px;
   background-color: #fafbfc;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color $timing ease;
+
+  @include media($gridIsStacked) {
+    height: 200px;
+  }
 
   &:hover {
     background-color: #f4f8fc;
@@ -65,20 +69,25 @@
 
   &.watchingthat {
     .image {
-      width: 45%;
+      width: 65%;
+      top: 20px;
+      position: relative;
     }
   }
 
   &.wegowise {
     background-color: #fafcfa;
     align-items: flex-end;
+    position: relative;
+    overflow: hidden;
 
     &:hover {
       background-color: #f7f9fc;
     }
 
     .image {
-      width: 85%;
+      width: 130%;
+      position: absolute;
     }
   }
 }

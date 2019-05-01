@@ -8,6 +8,7 @@ import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
+import WTLink from 'src/components/experience/WTLink'
 import Img from 'gatsby-image'
 import styles from './Experience.module.scss'
 
@@ -41,16 +42,16 @@ export default ({ data }) => (
             individual properties.
           </p>
         </SectionCopy>
+        <div
+          className={cn(
+            styles.expImage,
+            styles.expImageWW,
+            styles.expImageBottom
+          )}
+        >
+          <Img fluid={data.dash.childImageSharp.fluid} />
+        </div>
       </ScrollAnimation>
-    </Container>
-    <div
-      className={cn(styles.expImage, styles.expImageWW, styles.expImageBottom)}
-    >
-      <Container className={styles.innerContainer}>
-        <Img fluid={data.dash.childImageSharp.fluid} />
-      </Container>
-    </div>
-    <Container>
       <SectionCopy title="Solving an Information Architecture Puzzle">
         <p>
           The dashboard at WegoWise had become a dumping ground for links to
@@ -75,10 +76,14 @@ export default ({ data }) => (
           <Link to="experience/wegowise/green-loans">Read more →</Link>
         </SectionCopy>
         <div className={cn(styles.expImage, styles.expImageLinkAbove)}>
-          <Img fluid={data.greenLoans.childImageSharp.fluid} />
+          <Img
+            fluid={data.greenLoans.childImageSharp.fluid}
+            className={styles.shadow}
+          />
         </div>
       </ScrollAnimation>
     </Container>
+    <WTLink />
   </Layout>
 )
 

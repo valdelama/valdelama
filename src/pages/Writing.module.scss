@@ -2,6 +2,11 @@
 
 $_spacing: 1rem;
 
+.category {
+  font-family: $fontSansSerif;
+  font-size: 0.9rem;
+}
+
 .post {
   & ~ & {
     margin-top: 3.5rem;
@@ -9,7 +14,7 @@ $_spacing: 1rem;
 }
 
 .title {
-  margin: 0 0 $_spacing;
+  margin: $_spacing / 4 0 $_spacing;
   color: $textColor;
 }
 

@@ -2,13 +2,8 @@
 
 $_spacing: $lineHeight * 3;
 
-.intro {
-  background: rgba(250, 236, 222, 0.2);
-  margin: 170px 0;
-}
-
 .expSection {
-  margin-top: 50px;
+  margin-top: rem(50px);
 }
 
 .shadow {
@@ -20,7 +15,6 @@ $_spacing: $lineHeight * 3;
 }
 
 .expImage {
-  padding: $_spacing;
   margin: {
     top: $_spacing;
     bottom: $_spacing;
@@ -33,6 +27,17 @@ $_spacing: $lineHeight * 3;
     $doubleSpacing: $_spacing * 2;
     box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
     // max-width: calc(100% - #{$doubleSpacing}) !important;
+  }
+
+  @include media($gridIsNotStacked) {
+    padding: $_spacing;
+  }
+
+  @include media($gridIsStacked) {
+    margin: {
+      top: $_spacing / 2;
+      bottom: $_spacing / 2;
+    }
   }
 }
 
@@ -58,6 +63,10 @@ $_spacing: $lineHeight * 3;
 
 .expImageLinkAbove {
   margin-top: 0;
+
+  @include media($gridIsStacked) {
+    margin-top: $lineHeight;
+  }
 }
 
 .expImageFluid {

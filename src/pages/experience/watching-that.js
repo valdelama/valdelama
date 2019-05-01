@@ -8,6 +8,7 @@ import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
+import WWLink from 'src/components/experience/WWLink'
 import Img from 'gatsby-image'
 import styles from './Experience.module.scss'
 
@@ -94,6 +95,7 @@ export default ({ data }) => (
         </div>
       </ScrollAnimation>
     </Container>
+    <WWLink />
   </Layout>
 )
 

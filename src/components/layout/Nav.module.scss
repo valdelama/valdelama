@@ -2,6 +2,10 @@
 
 .nav {
   padding-top: 20px;
+  display: block;
+  width: 100%;
+  max-width: $contentWidth;
+  margin: 0 auto;
 }
 
 .link {
@@ -12,7 +16,7 @@
   color: $textColor;
 
   ~ .link {
-    margin-left: 30px;
+    margin-left: rem(50px);
   }
 }
 

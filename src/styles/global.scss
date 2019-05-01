@@ -6,6 +6,10 @@ html {
   margin: 0;
   font-size: $fontSize;
   line-height: 1.4;
+
+  @include media($gridIsStacked) {
+    font-size: $fontSize - 2px;
+  }
 }
 
 body {
@@ -23,6 +27,10 @@ body {
 p {
   font-family: $fontSerif;
   line-height: 1.6;
+  margin: {
+    top: 0;
+    bottom: $lineHeight;
+  }
 
   &:last-child {
     margin-bottom: 0;

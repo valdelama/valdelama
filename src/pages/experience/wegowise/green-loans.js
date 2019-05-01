@@ -8,6 +8,7 @@ import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
+import WTLink from 'src/components/experience/WTLink'
 import Img from 'gatsby-image'
 import styles from '../Experience.module.scss'
 import glStyles from './GreenLoans.module.scss'
@@ -66,6 +67,7 @@ export default ({ data }) => (
         />
       </div>
     </Container>
+    <WTLink />
   </Layout>
 )
 

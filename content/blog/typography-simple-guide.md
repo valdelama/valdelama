@@ -1,5 +1,5 @@
 ---
-title: A quick overview
+title: A simple guide to typography
 category: Typography
 date: '2019-03-08'
 ---
@@ -33,3 +33,5 @@ Probably the biggest visual impact after font choice is going to come from line 
 ## Line length
 
 Try and keep to a rule of 50-75 characters per line.
+
+_work in progress - please check back soon_

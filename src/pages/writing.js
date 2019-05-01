@@ -26,13 +26,14 @@ class BlogIndex extends React.Component {
           {posts.map(({ node }) => {
             return (
               <div styleName="post" key={node.fields.slug}>
+                <span className={styles.category}>
+                  {node.frontmatter.category}
+                </span>
                 <Link to={node.fields.slug}>
-                  <h3 styleName="title">
-                    {node.frontmatter.category} - {node.frontmatter.title}
-                  </h3>
+                  <h3 styleName="title">{node.frontmatter.title}</h3>
                 </Link>
 
-                <small styleName="date">{node.frontmatter.date}</small>
+                {/*<small styleName="date">{node.frontmatter.date}</small>*/}
                 <div
                   className={styles.excerpt}
                   dangerouslySetInnerHTML={{ __html: node.excerpt }}

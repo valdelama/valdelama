@@ -2,8 +2,9 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import Layout from '../components/Layout'
+import { GridRow, GridCell } from 'src/components/layout/grid/index'
 import Container from 'src/components/layout/Container'
-import BodyCopy from '../components/BodyCopy'
+import BodyCopy from 'src/components/BodyCopy'
 import Title from 'src/components/Title'
 import PortfolioItem from '../components/index/PortfolioItem'
 import WtImg from '../pages/index/watchingthat.svg'
@@ -33,7 +34,7 @@ class Home extends React.Component {
               <p>
                 I enjoy connecting with my target audience to make sure that I
                 understand their needs and keep them at the forefront of my
-                decision making process.
+                decision-making process.
               </p>
               <p>
                 I believe that good design has the potential to transform
@@ -42,26 +43,28 @@ class Home extends React.Component {
               </p>
             </div>
           </BodyCopy>
-          <ScrollAnimation animateIn="fadeIn">
-            <div className={styles.portfolio}>
-              <PortfolioItem
-                image={WtImg}
-                imgClass="watchingthat"
-                url="/experience/watching-that/"
-                company="Watching That"
-                description="Currently Head of Design at Watching That helping to create the future of video revenue analytics. "
-                className={styles.portfolioItem}
-              />
+          <GridRow>
+            <GridCell>
+              <ScrollAnimation animateIn="fadeIn">
+                <PortfolioItem
+                  image={WtImg}
+                  imgClass="watchingthat"
+                  url="/experience/watching-that/"
+                  company="Watching That"
+                  description="Helping to create the future of video revenue analytics."
+                />
+              </ScrollAnimation>
+            </GridCell>
+            <GridCell>
               <PortfolioItem
                 image={WegoImg}
                 imgClass="wegowise"
                 url="/experience/wegowise"
                 company="WegoWise"
-                description="For five years I was Head of Design at WegoWise, the leading analytics platform in the US for multifamily real estate utility data. "
-                className={styles.portfolioItem}
+                description="The leading analytics platform in the US for utility data."
               />
-            </div>
-          </ScrollAnimation>
+            </GridCell>
+          </GridRow>
         </Container>
       </Layout>
     )

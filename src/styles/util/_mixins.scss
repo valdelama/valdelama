@@ -1,0 +1,23 @@
+@import './variables';
+
+// Grid
+//-------
+
+// Create a grid cell with specified width, use as a modifier with the $cellClass from the gridRow() mixin
+@mixin gridcell($colspan, $columns: $gridColumns) {
+  $percent: percentage($colspan / $columns);
+  @include media($gridIsNotStacked) {
+    flex: 0 0 $percent;
+    max-width: $percent;
+  }
+}
+
+/* Outputs grid classes for the given amount of columns with the given prefix on the class name
+eg. .span1 {}, .span2 {}, .span3 {} etc.  */
+@mixin outputGridCells($columns: $gridColumns, $cellClass: '.span') {
+  @for $index from 1 through $columns {
+    #{$cellClass}#{$index} {
+      @include gridcell($index, $columns);
+    }
+  }
+}

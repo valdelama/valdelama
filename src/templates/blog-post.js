@@ -1,10 +1,15 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Container from 'src/components/layout/Container'
+import { GridRow, GridCell } from 'src/components/layout/grid/index'
 import BodyCopy from 'src/components/BodyCopy'
 import SEO from '../components/seo'
 import Title from 'src/components/Title'
-import './BlogPost.scss'
+// Template styles
+import styles from './BlogPost.scss'
+// General styles for article content
+import './BlogContent.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -24,24 +29,34 @@ class BlogPostTemplate extends React.Component {
         <div className="blog-post">
           {/* <p>{post.frontmatter.date}</p> */}
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
-
-          <ul>
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
+        </div>
+        <BodyCopy>
+          <h3 className={styles.prevNextTitle}>More articles…</h3>
+          <GridRow>
+            {previous && (
+              <GridCell className={styles.prevNext}>
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  className={styles.prevNextLink}
+                >
                   ← {previous.frontmatter.title}
                 </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
+              </GridCell>
+            )}
+            {next && (
+              <GridCell className={styles.prevNext}>
+                <Link
+                  to={next.fields.slug}
+                  rel="next"
+                  className={styles.prevNextLink}
+                >
                   {next.frontmatter.title} →
                 </Link>
-              )}
-            </li>
-          </ul>
-        </div>
+              </GridCell>
+            )}
+          </GridRow>
+        </BodyCopy>
       </Layout>
     )
   }

@@ -12,3 +12,34 @@ $linkColor: #175ce6;
 //----------------------
 $containerWidth: 1200px;
 $contentWidth: 560px;
+$spacingUnit: 1rem;
+$hSpacingUnit: $spacingUnit;
+$vSpacingUnit: $spacingUnit;
+$documentPadding: $spacingUnit * 2;
+$totalDocPadding: $documentPadding * 2;
+$gridSpacing: $spacingUnit * 2;
+$gridColumns: 12;
+
+//-- MQ dimensions
+$phoneSmall: 320px;
+$phone: 420px;
+$phablet: 580px;
+$tablet: 768px;
+$desktop: 1080px;
+$desktopWide: 1200px;
+
+$breakpoints: (
+  phone: $phone,
+  phoneSmall: $phoneSmall,
+  phablet: $phablet,
+  tablet: $tablet,
+  desktop: $desktop,
+  desktopWide: $desktopWide,
+);
+
+$gridIsStacked: '<=tablet';
+$gridIsNotStacked: '>tablet';
+
+// COMPONENTS
+//---------------
+$titleSpacing: $lineHeight * 2.5;

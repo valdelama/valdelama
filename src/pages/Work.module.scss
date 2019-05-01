@@ -1,0 +1,16 @@
+@import 'src/styles/util/index.scss';
+
+.companies {
+  margin: {
+    top: $lineHeight * 3;
+    bottom: $lineHeight * 3;
+  }
+
+  @include media($gridIsStacked) {
+    margin: {
+      left: -10px;
+      right: -10px;
+      bottom: 0;
+    }
+  }
+}
