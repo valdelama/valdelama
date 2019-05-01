@@ -18,7 +18,7 @@ export default () => (
       <BodyCopy>
         <Title
           title="Work"
-          subheader="I've been doing this for just over 12 years"
+          subheader="I've been doing this for over 12 years"
         />
         <p>
           I've worked as a freelancer designing and building websites for small
@@ -55,9 +55,8 @@ export default () => (
       <BodyCopy>
         <p>
           I've always been interested in turning my designs into code. Recently
-          I have been enjoying turning my designs into React components and
-          before that I was using Sass and BEM to create and maintain fairly
-          large codebases.
+          I have been workign with React components and before that I was using
+          Sass and BEM to create and maintain fairly large codebases.
         </p>
         <p>
           My experience and working knowledge of both visual design and

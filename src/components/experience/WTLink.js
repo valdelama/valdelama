@@ -10,8 +10,7 @@ export default () => (
       <Link to="/experience/watching-that/" className={styles.link}>
         <span className={styles.intro}>Want to switch to something else?</span>
         <span className={styles.company}>
-          Check out what I'm doing at Watching That, the future of video revenue
-          analytics.
+          Check out what I'm doing at Watching That.
         </span>
       </Link>
     </GridCell>

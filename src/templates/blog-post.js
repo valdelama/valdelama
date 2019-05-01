@@ -19,44 +19,46 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <BodyCopy>
-          <Title
-            title={post.frontmatter.category}
-            subheader={post.frontmatter.title}
-          />
-        </BodyCopy>
-        <div className="blog-post">
-          {/* <p>{post.frontmatter.date}</p> */}
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-        <BodyCopy>
-          <h3 className={styles.prevNextTitle}>More articles…</h3>
-          <GridRow>
-            {previous && (
-              <GridCell className={styles.prevNext}>
-                <Link
-                  to={previous.fields.slug}
-                  rel="prev"
-                  className={styles.prevNextLink}
-                >
-                  ← {previous.frontmatter.title}
-                </Link>
-              </GridCell>
-            )}
-            {next && (
-              <GridCell className={styles.prevNext}>
-                <Link
-                  to={next.fields.slug}
-                  rel="next"
-                  className={styles.prevNextLink}
-                >
-                  {next.frontmatter.title} →
-                </Link>
-              </GridCell>
-            )}
-          </GridRow>
-        </BodyCopy>
+        <Container>
+          <SEO title={post.frontmatter.title} description={post.excerpt} />
+          <BodyCopy>
+            <Title
+              title={post.frontmatter.category}
+              subheader={post.frontmatter.title}
+            />
+          </BodyCopy>
+          <div className="blog-post">
+            {/* <p>{post.frontmatter.date}</p> */}
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+          <BodyCopy>
+            <h3 className={styles.prevNextTitle}>More articles…</h3>
+            <GridRow>
+              {previous && (
+                <GridCell className={styles.prevNext}>
+                  <Link
+                    to={previous.fields.slug}
+                    rel="prev"
+                    className={styles.prevNextLink}
+                  >
+                    ← {previous.frontmatter.title}
+                  </Link>
+                </GridCell>
+              )}
+              {next && (
+                <GridCell className={styles.prevNext}>
+                  <Link
+                    to={next.fields.slug}
+                    rel="next"
+                    className={styles.prevNextLink}
+                  >
+                    {next.frontmatter.title} →
+                  </Link>
+                </GridCell>
+              )}
+            </GridRow>
+          </BodyCopy>
+        </Container>
       </Layout>
     )
   }

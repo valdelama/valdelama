@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
 import Title from 'src/components/Title'
 import SEO from '../components/seo'
@@ -14,34 +15,33 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <BodyCopy>
-          <Title
-            title="A design journal"
-            subheader="Notes and essays on product design"
-          />
-          {posts.map(({ node }) => {
-            return (
-              <div styleName="post" key={node.fields.slug}>
-                <span className={styles.category}>
-                  {node.frontmatter.category}
-                </span>
-                <Link to={node.fields.slug}>
-                  <h3 styleName="title">{node.frontmatter.title}</h3>
-                </Link>
+        <Container>
+          <SEO title="All posts" />
+          <BodyCopy>
+            <Title
+              title="A design journal"
+              subheader="Notes and essays on product design"
+            />
+            {posts.map(({ node }) => {
+              return (
+                <div styleName="post" key={node.fields.slug}>
+                  <span className={styles.category}>
+                    {node.frontmatter.category}
+                  </span>
+                  <Link to={node.fields.slug}>
+                    <h3 styleName="title">{node.frontmatter.title}</h3>
+                  </Link>
 
-                {/*<small styleName="date">{node.frontmatter.date}</small>*/}
-                <div
-                  className={styles.excerpt}
-                  dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                />
-              </div>
-            )
-          })}
-        </BodyCopy>
+                  {/*<small styleName="date">{node.frontmatter.date}</small>*/}
+                  <div
+                    className={styles.excerpt}
+                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                  />
+                </div>
+              )
+            })}
+          </BodyCopy>
+        </Container>
       </Layout>
     )
   }
