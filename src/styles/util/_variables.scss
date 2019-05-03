@@ -26,7 +26,7 @@ $phone: 420px;
 $phablet: 580px;
 $tablet: 768px;
 $desktop: 1080px;
-$desktopWide: 1200px;
+$desktopWide: $containerWidth;
 
 $breakpoints: (
   phone: $phone,

@@ -1,6 +1,7 @@
 @import 'src/styles/util/index.scss';
 
 .bodyCopy {
+  width: 100%;
   max-width: $contentWidth;
   margin: 0 auto;
 }

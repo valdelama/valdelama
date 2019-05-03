@@ -3,8 +3,6 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
   margin: {
     left: -($gridSpacing);
     right: -($gridSpacing);

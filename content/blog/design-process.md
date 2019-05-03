@@ -1,9 +1,9 @@
 ---
-title: A simple product design process to follow
+title: An outline of my product design process
 category: Product Design
 date: '2019-04-13'
 ---
-This is a very simple process that I like to follow when designing new products or non-trivial features. Whether you need to follow _all_ the steps or not will depend on the specific context. The opportunity assessment part is more formal and better suited to new products for example whereas the rest is pretty much equally applicable to features for existing products and new products.
+This is guide to the process that I like to follow when designing new products or non-trivial features. Whether you need to follow _all_ the steps or not will depend on the specific context. The opportunity assessment part is more formal and better suited to new products for example whereas the rest is pretty much equally applicable to features for existing products and new products.
 
 ## Opportunity assessment
 This part is basically lifted straight out of the brilliant book [INSPIRED: How to Create Tech Products Customers Love](https://svpg.com/inspired-how-to-create-products-customers-love/) by Marty Cagan, I think it's a must-read for product designers and managers alike.
@@ -17,7 +17,7 @@ This part is basically lifted straight out of the brilliant book [INSPIRED: How 
 8. How will we measure success? (metrics/revenue strategy)
 9. What factors are critical to success? (solution requirements)
 
-These are not questions that a product designer should feel compelled to answer but this the sort of information that you want to have at your disposal so that you can make more relevant and informed design decisions.
+These are not questions that a product designer should feel compelled to answer but this is the sort of information that you want to have at your disposal so that you can make more relevant and informed design decisions.
 ## Propose a solution
 
 **Create a simple product specification, a simple product spec. is more likely to be read and maintained.** I break this document down into three categories:
@@ -38,6 +38,8 @@ Your prototype should serve as:
 How you arrive at the high-fidelity prototype is largely down to designer preference and feature/product complexity. If I have a good design system at hand and the complexity is low I might feel confident to jump straight into the high-fidelity design work. If complexity is high then I might start with flowcharts, sketches, mind maps, greyscale wireframes or any other combination of techniques that I feel is suitable.
 
 
+![](/images/wireframe-to-final.png)
+
 ## Validate the prototype
 
 **User Validation**
@@ -51,4 +53,4 @@ There's no point designing a fantastic solution if you just don't have the techn
 
 ## Conclusion
 
-There's plenty of details that I intentionally left out of this article for brevity. This is just an outline of some of the steps you may want to take to ensure you are following a thorough and considerate design process. I hope it's useful. 
+There's plenty of details that I intentionally left out of this article for brevity. This is just an outline of some of the steps you may want to take to ensure you are following a thorough and considerate design process. I hope it's useful.

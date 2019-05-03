@@ -40,17 +40,18 @@ export default ({ data }) => (
           a top-level view of the metrics they care about it.
         </p>
       </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageWTdash)}>
+      <div className={cn(styles.expImage, styles.expImageWT)}>
         <Img fluid={data.widgets.childImageSharp.fluid} />
       </div>
       <ScrollAnimation animateIn="fadeIn">
         <SectionCopy title="Content Performance">
           <p>
-            The content performance feature allows users to understand what kind
-            of content is engaging their users in order to try and recreate that
-            success. At the same time it enables them to spot opportunities
-            where engaging content is not receiving the sort of exposure it
-            deserves—pinpointing where to direct promotional efforts.
+            The content performance feature allows our customers to understand
+            what kind of content is engaging their users in order to try and
+            recreate that success. At the same time it enables them to spot
+            opportunities where engaging content is not receiving the sort of
+            exposure it deserves—pinpointing where to direct promotional
+            efforts.
           </p>
         </SectionCopy>
 
@@ -94,6 +95,22 @@ export default ({ data }) => (
           <Img fluid={data.channels.childImageSharp.fluid} />
         </div>
       </ScrollAnimation>
+      <ScrollAnimation animateIn="fadeIn">
+        <SectionCopy title="A new website">
+          <p>
+            I do marketing design as well! I lead the content creation, design
+            and development of Watching That's new website. It was really
+            satisfying taking this project from start to finish.
+          </p>
+          <Link to="experience/watching-that/website">Read more →</Link>
+        </SectionCopy>
+        <div className={cn(styles.expImage, styles.expImageWT)}>
+          <Img
+            fluid={data.website.childImageSharp.fluid}
+            className={styles.shadow}
+          />
+        </div>
+      </ScrollAnimation>
     </Container>
     <WWLink />
   </Layout>
@@ -125,6 +142,13 @@ export const query = graphql`
     widgets: file(relativePath: { eq: "wt/widgets.png" }) {
       childImageSharp {
         fluid(maxWidth: 2410) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    website: file(relativePath: { eq: "wt/website1.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -14,11 +14,19 @@ $_spacing: 1rem;
 }
 
 .title {
-  margin: $_spacing / 4 0 $_spacing;
+  margin: $_spacing / 4 0 $_spacing / 2;
   color: $textColor;
+
+  &:hover {
+    color: $linkColor;
+  }
 }
 
 .date {
   display: block;
   margin-bottom: $_spacing;
+}
+
+.excerpt {
+  margin-bottom: $lineHeight / 2;
 }

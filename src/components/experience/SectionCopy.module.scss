@@ -2,7 +2,7 @@
 
 .sectionCopy {
   max-width: $contentWidth;
-  margin: $lineHeight * 4 auto 0;
+  margin: $titleSpacing auto 0;
 
   @include media($gridIsStacked) {
     margin-top: $lineHeight * 2;

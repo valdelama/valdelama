@@ -55,13 +55,13 @@ export default () => (
       <BodyCopy>
         <p>
           I've always been interested in turning my designs into code. Recently
-          I have been workign with React components and before that I was using
-          Sass and BEM to create and maintain fairly large codebases.
+          I have been working with React components and before that I was using
+          Sass and BEM.
         </p>
         <p>
           My experience and working knowledge of both visual design and
-          front-end code helps me implement consistent design systems that
-          facilitate both the design and development process.
+          front-end code helps me implement and oversee consistent design
+          systems that facilitate both the design and development process.
         </p>
       </BodyCopy>
     </Container>

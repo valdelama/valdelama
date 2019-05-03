@@ -41,15 +41,14 @@
   p,
   ul,
   ol {
-    margin-bottom: $lineHeight;
+    margin: {
+      top: 0;
+      bottom: $lineHeight;
+    }
   }
 
   ul,
   ol {
-    margin: {
-      top: 0;
-      bottom: 0;
-    }
     padding-left: $lineHeight * 2.5;
   }
 

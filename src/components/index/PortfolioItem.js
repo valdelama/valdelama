@@ -5,15 +5,15 @@ import BodyCopy from '../BodyCopy'
 import styles from './PortfolioItem.module.scss'
 
 export default ({ kind, image, imgClass, company, url, description }) => (
-  <div className={cn(styles.portfolioItem, styles[kind])}>
-    <Link to={url} className={cn(styles.imageWrapper, styles[imgClass])}>
+  <Link to={url} className={cn(styles.portfolioItem, styles[kind])}>
+    <div className={cn(styles.imageWrapper, styles[imgClass])}>
       <img src={image} alt={company} className={styles.image} />
-    </Link>
+    </div>
     <div className={styles.copy}>
-      <Link className={styles.company} to={url}>
+      <div className={styles.company} to={url}>
         {company}
-      </Link>
+      </div>
       <span className={styles.description}>{description}</span>
     </div>
-  </div>
+  </Link>
 )

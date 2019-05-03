@@ -1,8 +1,10 @@
 ---
 title: Adding classes to react components
 category: React
-date: '2019-04-13'
+date: '2019-02-13'
 ---
+
+_This is specific to React and CSS Modules and not relevant if you are using CSS-in-JS._
 
 Lets say we have a 'panel' component that we want to create:
 
@@ -61,10 +63,9 @@ This is how we would render the component on the homepage and apply a theme clas
 
 ```javascript
 import Panel from '../Panel';
-import styles from './Home.module.css';
 
 export default () => (
-  <MyComponent theme="primary"} />
+  <Panel theme="primary"} />
 )
 ```
 
@@ -94,7 +95,7 @@ import Panel from '../Panel'
 import styles from './Home.module.css'
 
 export default () => (
-  <MyComponent className={styles.homePanel} />
+  <Panel className={styles.homePanel} />
 )
 ```
 
@@ -126,7 +127,7 @@ import Panel from '../Panel'
 import styles from './Home.module.css'
 
 export default () => (
-  <MyComponent className={styles.homePanel} theme="primary" />
+  <Panel className={styles.homePanel} theme="primary" />
 )
 ```
 

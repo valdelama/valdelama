@@ -37,6 +37,9 @@ class BlogIndex extends React.Component {
                     className={styles.excerpt}
                     dangerouslySetInnerHTML={{ __html: node.excerpt }}
                   />
+                  <Link className={styles.readMore} to={node.fields.slug}>
+                    Read more
+                  </Link>
                 </div>
               )
             })}

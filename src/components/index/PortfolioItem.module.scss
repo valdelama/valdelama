@@ -1,11 +1,39 @@
 @import 'src/styles/util/index.scss';
+$_timing: 0.4s;
 
 .portfolioItem {
   box-shadow: 0 8px 32px rgba(#004dad, 0.05), 0 2px 7px rgba(#000, 0.02);
   border: 1px solid rgba(250, 236, 222, 0.4);
+  display: flex;
+  flex-direction: column;
+  color: $textColor;
+  transition: all $_timing ease;
+  transition-property: color, box-shadow;
 
   @include media($gridIsStacked) {
     margin-bottom: rem(60px);
+  }
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(#004dad, 0.08), 0 2px 5px rgba(#000, 0.05);
+    color: $linkColor;
+
+    .company:after {
+      opacity: 1;
+      transform: translateX(3px);
+    }
+
+    .imageWrapper {
+      background-color: #f4f8fc;
+    }
+
+    .image {
+      transform: scale(1.03);
+    }
+
+    .wegowise {
+      background-color: #f5f9ff;
+    }
   }
 }
 
@@ -15,56 +43,40 @@
 }
 
 .company {
-  $timing: 0.4s;
   font-weight: bold;
   font-size: 1.2rem;
   display: block;
-  color: $textColor;
   margin-bottom: 0.5rem;
-  transition: color $timing ease-in;
-
-  &:hover {
-    color: $linkColor;
-  }
 
   &:after {
     content: '→';
     display: inline-flex;
     transform: translateX(-2px);
     opacity: 0;
-    transition: all $timing ease-in;
+    transition: all $_timing ease-in;
     transition-property: opacity, transform;
-  }
-
-  &:hover:after {
-    opacity: 1;
-    transform: translateX(3px);
   }
 }
 
 .imageWrapper {
-  $timing: 1.2s;
+  $_timing: 1.2s;
   height: 380px;
-  background-color: #fafbfc;
+  background-color: #fafcfa;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color $timing ease;
+  transition: background-color $_timing ease;
+
+  @include media('<desktop') {
+    height: 280px;
+  }
 
   @include media($gridIsStacked) {
     height: 200px;
   }
 
-  &:hover {
-    background-color: #f4f8fc;
-  }
-
-  &:hover .image {
-    transform: scale(1.03);
-  }
-
   .image {
-    transition: transform $timing ease;
+    transition: transform $_timing ease;
   }
 
   &.watchingthat {
@@ -76,14 +88,9 @@
   }
 
   &.wegowise {
-    background-color: #fafcfa;
     align-items: flex-end;
     position: relative;
     overflow: hidden;
-
-    &:hover {
-      background-color: #f7f9fc;
-    }
 
     .image {
       width: 130%;

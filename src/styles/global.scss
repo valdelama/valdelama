@@ -6,10 +6,17 @@ html {
   margin: 0;
   font-size: $fontSize;
   line-height: 1.4;
+  box-sizing: border-box;
 
   @include media($gridIsStacked) {
     font-size: $fontSize - 2px;
   }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -35,6 +42,11 @@ p {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
