@@ -29,8 +29,8 @@ export default ({ data }) => (
       </BodyCopy>
       <SectionCopy title="Setting the right tone">
         <p>
-          Once there was a solid content map in place outlining the different
-          pages and sections we would need the first thing I worked on was
+          Once there was a solid content map in place, outlining the different
+          pages and sections we would need, the first thing I worked on was
           figuring out what we wanted the public image of the company to be.
         </p>
         <p>
@@ -39,7 +39,7 @@ export default ({ data }) => (
           stuck with.
         </p>
         <p>
-          We summarised that into five adjective that everybody agreed
+          We summarised that into five adjectives that everybody agreed
           represented what we strive for as a company:
           <ul>
             <li>Human</li>
@@ -48,6 +48,41 @@ export default ({ data }) => (
             <li>Friendly</li>
             <li>Experienced</li>
           </ul>
+        </p>
+        <p>
+          I used those as guiding principles for setting the right tone in the
+          copy and for the aesthetics, a balance between not too corporate but
+          still clean and professional. At least that's what I hope we achieved.
+        </p>
+      </SectionCopy>
+      <SectionCopy title="The Great Gatsby">
+        <p>
+          This was my first time building a site in{' '}
+          <a href="https://www.gatsbyjs.org/" title="Gatsby.js website">
+            Gatsby
+          </a>{' '}
+          and I have to say it was pretty awesome. I'm already used to creating
+          components in React (because that's what we use for the Watching That
+          web application) but this was my first time getting into GraphQL,
+          which can be used to loop through markdown files.
+        </p>
+        <p>
+          It really makes it easy to build blazingly fast websites, our{' '}
+          <a
+            href="https://developers.google.com/web/tools/lighthouse/"
+            title="Google Lighthouse website"
+          >
+            lighthouse score
+          </a>{' '}
+          for performance is 99 and that's really without trying very hard
+          because Gatsby kind of does that for you 'out of the box'.
+        </p>
+        <p>
+          Take a look at the{' '}
+          <a href="https://www.watchingthat.com/" title="Watching That website">
+            live website
+          </a>
+          .
         </p>
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageWT)}>

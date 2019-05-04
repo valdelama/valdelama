@@ -25,8 +25,8 @@ export default ({ data }) => (
           video media, I am responsible for finding ways for our customers to
           navigate and interpret large sets of complex data so that they can
           optimize their video advertising technology stack. The role combines
-          data exploration, UX design, data visualisation design, marketing
-          design, and front-end development (using React).
+          product strategy, data exploration, UX design, data visualisation
+          design, marketing design, and UI development (using React).
         </p>
       </BodyCopy>
       <SectionCopy title="Video Intelligence Dashboard">
