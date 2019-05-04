@@ -8,6 +8,13 @@
     right: -($gridSpacing);
   }
 
+  @include media('<desktop') {
+    margin: {
+      left: -($gridSpacing);
+      right: 0;
+    }
+  }
+
   @include media($gridIsStacked) {
     flex-direction: column;
     margin: {

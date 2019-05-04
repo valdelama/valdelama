@@ -10,8 +10,13 @@ $_timing: 0.4s;
   transition: all $_timing ease;
   transition-property: color, box-shadow;
 
+  @include media('>phablet', $gridIsStacked) {
+    flex-direction: row;
+  }
+
   @include media($gridIsStacked) {
     margin-bottom: rem(60px);
+    align-items: center;
   }
 
   &:hover {
@@ -33,6 +38,10 @@ $_timing: 0.4s;
 
     .wegowise {
       background-color: #f5f9ff;
+
+      .image {
+        transform: scale(1.36);
+      }
     }
   }
 }
@@ -40,6 +49,15 @@ $_timing: 0.4s;
 .copy {
   padding: $lineHeight;
   font-family: $fontSansSerif;
+
+  @include media('>phablet', $gridIsStacked) {
+    flex-basis: 260px;
+    max-width: 45%;
+  }
+
+  @include media('<phablet') {
+    text-align: center;
+  }
 }
 
 .company {
@@ -66,6 +84,7 @@ $_timing: 0.4s;
   align-items: center;
   justify-content: center;
   transition: background-color $_timing ease;
+  overflow: hidden;
 
   @include media('<desktop') {
     height: 280px;
@@ -73,6 +92,11 @@ $_timing: 0.4s;
 
   @include media($gridIsStacked) {
     height: 200px;
+    flex: 1;
+  }
+
+  @include media('<phablet') {
+    width: 100%;
   }
 
   .image {
@@ -84,6 +108,12 @@ $_timing: 0.4s;
       width: 65%;
       top: 20px;
       position: relative;
+
+      @include media($gridIsStacked) {
+        height: 80%;
+        width: auto;
+        top: 0;
+      }
     }
   }
 
@@ -93,8 +123,8 @@ $_timing: 0.4s;
     overflow: hidden;
 
     .image {
-      width: 130%;
-      position: absolute;
+      width: 100%;
+      transform: scale(1.3);
     }
   }
 }
