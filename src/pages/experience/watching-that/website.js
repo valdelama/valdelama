@@ -35,11 +35,11 @@ export default ({ data }) => (
         </p>
         <p>
           I encouraged the meeting attendees to throw out some phrases that they
-          thought describes us well and also labels that we don't want to be
+          thought describe us well and also the labels that we don't want to be
           stuck with.
         </p>
         <p>
-          We summarised that into five adjectives that everybody agreed
+          We summarised the results as five adjectives that everybody agreed
           represented what we strive for as a company:
           <ul>
             <li>Human</li>
@@ -50,9 +50,10 @@ export default ({ data }) => (
           </ul>
         </p>
         <p>
-          I used those as guiding principles for setting the right tone in the
-          copy and for the aesthetics, a balance between not too corporate but
-          still clean and professional. At least that's what I hope we achieved.
+          I used those as guiding principles to set the right tone for both the
+          copy and the aesthetics to achieve a blend of a clean and professional
+          feel without being overly corporate. At least that's what I hope we
+          achieved.
         </p>
       </SectionCopy>
       <SectionCopy title="The Great Gatsby">

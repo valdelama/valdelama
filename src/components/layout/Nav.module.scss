@@ -6,6 +6,11 @@
   width: 100%;
   max-width: $contentWidth;
   margin: 0 auto;
+
+  @include media('<phablet') {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .link {
@@ -16,7 +21,9 @@
   color: $textColor;
 
   ~ .link {
-    margin-left: rem(50px);
+    @include media('>=phablet') {
+      margin-left: rem(50px);
+    }
   }
 }
 

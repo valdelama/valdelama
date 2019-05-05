@@ -30,7 +30,8 @@ export default ({ data }) => (
         <p>
           It was an interesting project to work on as we were pioneering a new
           product in a young, high-growth financial sector. I learned a lot from
-          collaborating some of the largest financial institutions in the US.
+          collaborating with some of the largest financial institutions in the
+          US.
         </p>
       </BodyCopy>
 

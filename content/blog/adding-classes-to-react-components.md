@@ -16,7 +16,7 @@ export default () => (
 )
 ```
 
-Resultant HTML will look something like this depending on how you set things up with webpack:
+The resultant HTML will look something like this depending on how you set things up with webpack:
 
 ```javascript
 <div class="Panel_panel">…</div>

@@ -7,11 +7,11 @@ Typography has an incredible impact on the effectiveness of your designs, some s
 
 ## Font choice
 
-The right choice of font undoubtably depends on your content and your audience, even the much hated comic sans might be a good choice for your website if the service offered is clowns for childrens birthday parties. If however the service being offered is a mortgage brokerage then you might not inspire the desired level of confidence.
+The right choice of font undoubtably depends on your content and your audience, even the much hated _Comic Sans_ might be a good choice for your website if the service offered is clowns for childrens birthday parties. If however the service being offered is a mortgage brokerage then you might not inspire the desired level of confidence.
 
 ### Brand identity
 
-Before being able to choose the right font for your website it's vital to have a clear idea of how you want your brand to be viewed by your target audience. The kind of image that the brand should portray is fundamental to font choice. Do you want to generate trust first and foremost? Trust amongst academics or trust among investors? Do you want to appear playful or serious? Traditional or cutting-edge? If you don't have the answers to these questions yet choosing the right font is going to be a shot in the dark.
+Before being able to choose the right font for your website it's vital to have a clear idea of how you want your brand to be viewed by your target audience. The kind of image that the brand should portray is fundamental to font choice. Do you want to generate trust first and foremost? Trust amongst academics or trust among investors? Do you want to appear playful or serious? Traditional or cutting-edge? Until you have the answers to these questions choosing the right font will be a shot in the dark.
 
 Here are some adjectives that you might use to describe some of the main typefaces, this should help orient your first decision: what typeface to use for your primary font.
 

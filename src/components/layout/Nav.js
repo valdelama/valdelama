@@ -20,6 +20,13 @@ export default () => (
       >
         Writing
       </Link>
+      <Link
+        to="/contact/"
+        className={styles.link}
+        activeClassName={styles.active}
+      >
+        Contact
+      </Link>
     </div>
   </Container>
 )

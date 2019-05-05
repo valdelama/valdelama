@@ -3,10 +3,10 @@ title: An outline of my product design process
 category: Product Design
 date: '2019-04-13'
 ---
-This is guide to the process that I like to follow when designing new products or non-trivial features. Whether you need to follow _all_ the steps or not will depend on the specific context. The opportunity assessment part is more formal and better suited to new products for example whereas the rest is pretty much equally applicable to features for existing products and new products.
+This is a guide to the process that I like to follow when designing new products or non-trivial features. Whether you need to follow _all_ the steps or not will depend on the specific context. The opportunity assessment part is more formal and better suited to new products, whereas the rest is generally equally applicable to features as well as new products.
 
 ## Opportunity assessment
-This part is basically lifted straight out of the brilliant book [INSPIRED: How to Create Tech Products Customers Love](https://svpg.com/inspired-how-to-create-products-customers-love/) by Marty Cagan, I think it's a must-read for product designers and managers alike.
+Most of this part is lifted straight out of the brilliant book [INSPIRED: How to Create Tech Products Customers Love](https://svpg.com/inspired-how-to-create-products-customers-love/) by Marty Cagan, I think it's a must-read for both product designers and product managers.
 1. Exactly what problem will this solve? (value proposition)
 2. For whom do we solve that problem? (target market)
 3. How big is the opportunity? (market size)
@@ -28,7 +28,7 @@ These are not questions that a product designer should feel compelled to answer 
 
 ## Prototype
 
-The end goal of this stage should be to create high-fidelity interactive prototypes that can be tested by users. A good prototype is equivalent to “measure twice, cut once” as it greatly decreases the likelihood of having to do costly post-deployment redesigns.
+The end goal of this stage is to create high-fidelity interactive prototypes that can be tested by users. A good prototype is equivalent to “measure twice, cut once” as it greatly decreases the likelihood of having to do costly post-deployment redesigns.
 
 Your prototype should serve as:
 - A resource for user testing to validate the product idea
@@ -44,7 +44,7 @@ How you arrive at the high-fidelity prototype is largely down to designer prefer
 
 **User Validation**
 
-Ideally you want real users to test the prototype who are as close to your target market profile as possible and you want to be able to see them interacting with what you've designed, whether via screenshare or by sitting next to them. I find that an initial round of 3 -5 users is sufficient to pick up on any glaring issues, if there are some real blockers that those testers all pick up on then you want to try and resolve those before doing anymore tests which is why I'm hesitant to schedule a large group of testers initially.
+Ideally you want real users to test the prototype who are as close to your target market profile as possible and you want to be able to see them interacting with what you've designed, whether via screenshare or by sitting next to them. I find that an initial round of 3 -5 users is sufficient to identify any glaring issues. If there are some real blockers that those testers all pick up on then you want to try and resolve those before doing anymore tests, which is why I'm hesitant to schedule a large group of testers initially.
 
 
 **Engineer validation**
