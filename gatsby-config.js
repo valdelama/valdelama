@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Valdelama`,
     author: `Dan Winer`,
-    description: `A product design handbook`,
-    siteUrl: `valdelama.com/`,
+    description: `A product designers portfolio`,
+    siteUrl: `valdelama.com`,
   },
   plugins: [
     'gatsby-plugin-root-import',
@@ -64,17 +64,10 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        trackingId: 'UA-38252479-1',
       },
     },
     `gatsby-plugin-offline`,
