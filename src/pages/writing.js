@@ -16,7 +16,10 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Container>
-          <SEO title="All posts" />
+          <SEO
+            title="Design journal"
+            metaDescription="Notes and essays on product design, React, illustration, typography and user experience"
+          />
           <BodyCopy>
             <Title
               title="A design journal"

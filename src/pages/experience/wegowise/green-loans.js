@@ -16,6 +16,10 @@ import glStyles from './GreenLoans.module.scss'
 export default ({ data }) => (
   <Layout>
     <Container>
+      <SEO
+        title="WegoWise"
+        metaDescription="A web application that would enable financial institutions to assess the eligibility of real estate properties for green loans."
+      />
       <BodyCopy>
         <Title
           title="WegoWise"

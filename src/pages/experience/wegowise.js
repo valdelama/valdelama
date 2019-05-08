@@ -15,6 +15,10 @@ import styles from './Experience.module.scss'
 export default ({ data }) => (
   <Layout>
     <Container>
+      <SEO
+        title="WegoWise"
+        metaDescription="My experience as Head of Design for WegoWise, the largest database of multifamily utilty data in the US"
+      />
       <BodyCopy>
         <Title
           title="WegoWise"

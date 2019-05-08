@@ -15,6 +15,10 @@ import styles from './Experience.module.scss'
 export default ({ data }) => (
   <Layout>
     <Container>
+      <SEO
+        title="Watching That"
+        metaDescription="My experience as Head of Design at Watching That, a data analytics platform for video media."
+      />
       <BodyCopy>
         <Title
           title="Watching That"

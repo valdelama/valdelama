@@ -19,6 +19,10 @@ class Home extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Container>
+          <SEO
+            title="Home"
+            metaDescription="The online home of Dan Winer, a multi-disciplinary product designer."
+          />
           <BodyCopy>
             <div className={styles.indexContent}>
               <span className={styles.intro}>hi! I'm</span>

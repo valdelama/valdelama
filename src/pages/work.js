@@ -15,6 +15,10 @@ import styles from './Work.module.scss'
 export default () => (
   <Layout>
     <Container>
+      <SEO
+        title="Work"
+        metaDescription="Check out what I've been working on for the last few years"
+      />
       <BodyCopy>
         <Title
           title="Work"

@@ -11,6 +11,7 @@ export default () => (
   <Layout>
     <Container>
       <BodyCopy>
+        <SEO title="Contact" metaDescription="Get in touch with Dan Winer" />
         <Title title="Contact" subheader="Get in touch" />
         <p>
           Feel free to leave me a message using the form below or connect on{' '}
