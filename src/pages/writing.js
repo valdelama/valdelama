@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import ScrollAnimation from 'react-animate-on-scroll'
 import Layout from '../components/Layout'
 import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
@@ -28,21 +29,23 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               return (
                 <div styleName="post" key={node.fields.slug}>
-                  <span className={styles.category}>
-                    {node.frontmatter.category}
-                  </span>
-                  <Link to={node.fields.slug}>
-                    <h3 styleName="title">{node.frontmatter.title}</h3>
-                  </Link>
+                  <ScrollAnimation animateIn="fadeIn" animateOnce>
+                    <span className={styles.category}>
+                      {node.frontmatter.category}
+                    </span>
+                    <Link to={node.fields.slug}>
+                      <h3 styleName="title">{node.frontmatter.title}</h3>
+                    </Link>
 
-                  {/*<small styleName="date">{node.frontmatter.date}</small>*/}
-                  <div
-                    className={styles.excerpt}
-                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                  />
-                  <Link className={styles.readMore} to={node.fields.slug}>
-                    Read more
-                  </Link>
+                    {/*<small styleName="date">{node.frontmatter.date}</small>*/}
+                    <div
+                      className={styles.excerpt}
+                      dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                    />
+                    <Link className={styles.readMore} to={node.fields.slug}>
+                      Read more
+                    </Link>
+                  </ScrollAnimation>
                 </div>
               )
             })}

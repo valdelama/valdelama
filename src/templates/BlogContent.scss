@@ -29,13 +29,13 @@
   }
 
   h2 {
-    margin-top: $lineHeight * 3;
+    margin-top: $lineHeight * 2.5;
     margin-bottom: $lineHeight;
   }
 
   h3 {
-    margin-top: $lineHeight * 2;
-    margin-bottom: $lineHeight;
+    margin-top: $lineHeight * 1.5;
+    margin-bottom: $lineHeight / 2;
   }
 
   p,
@@ -49,7 +49,7 @@
 
   ul,
   ol {
-    padding-left: $lineHeight * 2.5;
+    padding-left: $lineHeight * 1.5;
   }
 
   h2.subheader {
