@@ -1,9 +1,9 @@
 ---
-title: Considerate and effective design leadership
+title: Creating an environment where design thrives
 category: Product Design
 date: '2019-04-12'
 ---
-These are some of the principles that I try to utilise to help product designers produce their best work and enjoy themselves whilst doing so. This is based on my experience managing design in both a startup and an agency environment.
+These are some of the principles that I think foster a healthy environment where design can be both efficient and enjoyable. This is based on my experience as a product designer collaborating across departments, as someone leading small teams and as someone who has had the good fortune to report to some great managers. 
 
 ## Let them solve problems
 Most designers enjoy coming up with the solution, not just designing it. That means getting them involved early on by telling them…
