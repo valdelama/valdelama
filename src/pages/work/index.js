@@ -5,9 +5,10 @@ import Layout from 'src/components/Layout'
 import { GridRow, GridCell } from 'src/components/layout/grid/index'
 import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
-import PortfolioItem from '../components/index/PortfolioItem'
-import WtImg from '../pages/index/watchingthat.svg'
-import WegoImg from '../pages/index/wegowise.svg'
+import PortfolioItem from 'src/components/index/PortfolioItem'
+import WtImg from 'src/pages/index/watchingthat.svg'
+import WegoImg from 'src/pages/index/wegowise.svg'
+import CV from './dan-winer-resume.pdf'
 import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
 import styles from './Work.module.scss'
@@ -22,13 +23,18 @@ export default () => (
       <BodyCopy>
         <Title
           title="Work"
-          subheader="I've been doing this for over 12 years"
+          subheader="Design, development and leadership experience"
         />
         <p>
           I've worked as a freelancer designing and building websites for small
           businesses, as a consultant for large companies, as an operations
           manager and as a developer. For the last 6+ years I've been leading
-          the design effort for data analytics platforms.
+          the design effort for data analytics platforms. For a complete
+          timeline please take a look at{' '}
+          <a href={CV} title="PDF version of my CV">
+            my cv
+          </a>
+          .
         </p>
       </BodyCopy>
       <div className={styles.companies}>
