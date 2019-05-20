@@ -33,18 +33,18 @@ export default ({ data }) => (
       </BodyCopy>
       <SectionCopy title="Setting the right tone">
         <p>
-          Once there was a solid content map in place, outlining the different
-          pages and sections we would need, the first thing I worked on was
-          figuring out what we wanted the public image of the company to be.
+          Once there was a comprehensive content map in place, outlining the
+          different pages and sections we would need, the first thing I worked
+          on was assessing what we wanted the public image of the company to be.
         </p>
         <p>
-          I encouraged the meeting attendees to throw out some phrases that they
-          thought describe us well and also the labels that we don't want to be
-          stuck with.
+          I held a meeting where attendees were encouraged to come up with
+          phrases that they thought describe the company well or describe its
+          aspirations.
         </p>
         <p>
           We summarised the results as five adjectives that everybody agreed
-          represented what we strive for as a company:
+          represented what we strive for:
           <ul>
             <li>Human</li>
             <li>Expert</li>
@@ -55,21 +55,22 @@ export default ({ data }) => (
         </p>
         <p>
           I used those as guiding principles to set the right tone for both the
-          copy and the aesthetics to achieve a blend of a clean and professional
-          feel without being overly corporate. At least that's what I hope we
-          achieved.
+          copy and the aesthetics. I think the result is clean, professional and
+          friendly whilst avoiding an overly corporate image. At least that's
+          what I hope we achieved.
         </p>
       </SectionCopy>
       <SectionCopy title="The Great Gatsby">
         <p>
-          This was my first time building a site in{' '}
+          This was my first time using the{' '}
           <a href="https://www.gatsbyjs.org/" title="Gatsby.js website">
             Gatsby
           </a>{' '}
-          and I have to say it was pretty awesome. I'm already used to creating
-          components in React (because that's what we use for the Watching That
-          web application) but this was my first time getting into GraphQL,
-          which can be used to loop through markdown files.
+          framework and I have to say it was quite amazing. I'm already used to
+          creating components in React (because that's what we use for the
+          Watching That web application) but this was my first time getting into
+          GraphQL—which in this context is being used to loop through markdown
+          files.
         </p>
         <p>
           It really makes it easy to build blazingly fast websites, our{' '}
@@ -80,7 +81,15 @@ export default ({ data }) => (
             lighthouse score
           </a>{' '}
           for performance is 99 and that's really without trying very hard
-          because Gatsby kind of does that for you 'out of the box'.
+          because Gatsby and its plugins pretty much provide that for you 'out
+          of the box'.
+        </p>
+        <p>
+          Continuous integration, hosting and CMS functionality are all done via{' '}
+          <a href="https://www.netlify.com/" title="Netlify">
+            Netlify
+          </a>
+          .
         </p>
         <p>
           Take a look at the{' '}
@@ -91,10 +100,12 @@ export default ({ data }) => (
         </p>
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageWT)}>
-        <Img
-          fluid={data.website.childImageSharp.fluid}
-          className={styles.shadow}
-        />
+        <a href="https://www.watchingthat.com/" title="Watching That website">
+          <Img
+            fluid={data.website.childImageSharp.fluid}
+            className={styles.shadow}
+          />
+        </a>
       </div>
     </Container>
     <WWLink />

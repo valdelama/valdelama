@@ -17,7 +17,23 @@ class Layout extends React.Component {
         <Nav />
         <div className={styles.siteContent}>
           {header}
-          <PageTransition transitionTime={500}>{children}</PageTransition>
+          <PageTransition
+            defaultStyle={{
+              transitionProperty: 'transform, opacity',
+              transitionDuration: '0.5s',
+              transitionTimingFunction: 'ease-in-out',
+              transform: 'translateY(2px)',
+              opacity: 0,
+            }}
+            transitionStyles={{
+              entering: { transform: 'translateY(0)', opacity: 1 },
+              entered: { transform: 'translateY(0)', opacity: 1 },
+              exiting: { transform: 'translateY(-2px)', opacity: 0 },
+            }}
+            transitionTime={500}
+          >
+            {children}
+          </PageTransition>
         </div>
         <Footer />
       </>

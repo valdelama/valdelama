@@ -68,7 +68,9 @@ export default ({ data }) => (
         </Link>
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageLinkAbove)}>
-        <Img fluid={data.nav.childImageSharp.fluid} />
+        <Link to="experience/wegowise/information-architecture">
+          <Img fluid={data.nav.childImageSharp.fluid} />
+        </Link>
       </div>
       <ScrollAnimation animateIn="fadeIn">
         <SectionCopy title="Helping Financial Institutions Go Green">
@@ -80,10 +82,12 @@ export default ({ data }) => (
           <Link to="experience/wegowise/green-loans">Read more →</Link>
         </SectionCopy>
         <div className={cn(styles.expImage, styles.expImageLinkAbove)}>
-          <Img
-            fluid={data.greenLoans.childImageSharp.fluid}
-            className={styles.shadow}
-          />
+          <Link to="experience/wegowise/green-loans">
+            <Img
+              fluid={data.greenLoans.childImageSharp.fluid}
+              className={styles.shadow}
+            />
+          </Link>
         </div>
       </ScrollAnimation>
     </Container>

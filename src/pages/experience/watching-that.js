@@ -109,10 +109,12 @@ export default ({ data }) => (
           <Link to="experience/watching-that/website">Read more →</Link>
         </SectionCopy>
         <div className={cn(styles.expImage, styles.expImageWT)}>
-          <Img
-            fluid={data.website.childImageSharp.fluid}
-            className={styles.shadow}
-          />
+          <Link to="experience/watching-that/website">
+            <Img
+              fluid={data.website.childImageSharp.fluid}
+              className={styles.shadow}
+            />
+          </Link>
         </div>
       </ScrollAnimation>
     </Container>

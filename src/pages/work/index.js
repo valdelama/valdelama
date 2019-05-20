@@ -52,13 +52,15 @@ export default () => (
             </ScrollAnimation>
           </GridCell>
           <GridCell>
-            <PortfolioItem
-              image={WegoImg}
-              imgClass="wegowise"
-              url="/experience/wegowise"
-              company="WegoWise"
-              description="The leading analytics platform in the US for utility data."
-            />
+            <ScrollAnimation animateIn="fadeIn">
+              <PortfolioItem
+                image={WegoImg}
+                imgClass="wegowise"
+                url="/experience/wegowise"
+                company="WegoWise"
+                description="The leading analytics platform in the US for utility data."
+              />
+            </ScrollAnimation>
           </GridCell>
         </GridRow>
       </div>

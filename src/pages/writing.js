@@ -29,7 +29,11 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               return (
                 <div styleName="post" key={node.fields.slug}>
-                  <ScrollAnimation animateIn="fadeIn" animateOnce>
+                  <ScrollAnimation
+                    animateIn="fadeIn"
+                    duration="0.5"
+                    animateOnce
+                  >
                     <span className={styles.category}>
                       {node.frontmatter.category}
                     </span>
