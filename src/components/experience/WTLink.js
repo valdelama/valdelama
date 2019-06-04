@@ -19,27 +19,29 @@ export default () => (
         <span className={styles.intro}>
           Read more about my time at WegoWise
         </span>
-        <Link
-          to="/experience/wegowise"
-          className={styles.crossLink}
-          activeClassName={styles.active}
-        >
-          WegoWise overview
-        </Link>
-        <Link
-          to="/experience/wegowise/information-architecture"
-          className={styles.crossLink}
-          activeClassName={styles.active}
-        >
-          Solving an Information Architecture Puzzle
-        </Link>
-        <Link
-          to="/experience/wegowise/green-loans"
-          className={styles.crossLink}
-          activeClassName={styles.active}
-        >
-          Helping Financial Institutions Go Green
-        </Link>
+        <div className={styles.contextualLinks}>
+          <Link
+            to="/experience/wegowise"
+            className={styles.crossLink}
+            activeClassName={styles.active}
+          >
+            WegoWise overview
+          </Link>
+          <Link
+            to="/experience/wegowise/information-architecture"
+            className={styles.crossLink}
+            activeClassName={styles.active}
+          >
+            Solving an Information Architecture Puzzle
+          </Link>
+          <Link
+            to="/experience/wegowise/green-loans"
+            className={styles.crossLink}
+            activeClassName={styles.active}
+          >
+            Helping Financial Institutions Go Green
+          </Link>
+        </div>
       </div>
     </GridCell>
   </GridRow>

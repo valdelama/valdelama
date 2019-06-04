@@ -39,13 +39,20 @@ export default ({ data }) => (
           personalisation, would become invaluable to users from across all
           roles in the organisation.
         </p>
-        <p>
-          Feedback has been very positive with customers relying on it daily for
-          a top-level view of the metrics they care about it.
-        </p>
+        <Link
+          to="experience/watching-that/dashboard"
+          title="Dashboard design for Watching That"
+        >
+          Read more →
+        </Link>
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageWT)}>
-        <Img fluid={data.widgets.childImageSharp.fluid} />
+        <Link
+          to="experience/watching-that/dashboard"
+          title="Dashboard design for Watching That"
+        >
+          <Img fluid={data.widgets.childImageSharp.fluid} />
+        </Link>
       </div>
       <ScrollAnimation animateIn="fadeIn">
         <SectionCopy title="Content Performance">
@@ -57,6 +64,7 @@ export default ({ data }) => (
             exposure it deserves—pinpointing where to direct promotional
             efforts.
           </p>
+          <em>Case study coming soon.</em>
         </SectionCopy>
 
         <div className={cn(styles.expImage, styles.expImageWT)}>
@@ -72,6 +80,7 @@ export default ({ data }) => (
             The most advanced interface available for understanding and
             resolving video advertising errors.
           </p>
+          <em>Case study coming soon.</em>
         </SectionCopy>
 
         <div className={cn(styles.expImage, styles.expImageWT)}>
@@ -88,6 +97,7 @@ export default ({ data }) => (
             channels (social media networks and domains) to compare and
             aggregate performance data.
           </p>
+          <em>Case study coming soon.</em>
         </SectionCopy>
         <div
           className={cn(
