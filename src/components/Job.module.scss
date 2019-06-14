@@ -1,0 +1,47 @@
+@import 'src/styles/util/index.scss';
+
+.wrapper {
+  margin-top: $lineHeight * 2;
+}
+
+.content {
+  position: relative;
+  line-height: rem(25px);
+}
+
+.meta {
+  font-family: $fontSansSerif;
+  min-width: rem(200px);
+  font-size: rem(16px);
+
+  @include media('>desktop') {
+    position: absolute;
+    right: 100%;
+  }
+
+  @include media('<=desktop') {
+    margin-bottom: $lineHeight / 2;
+  }
+}
+
+.role {
+  @include media('>desktop') {
+    display: block;
+  }
+}
+
+.dates {
+  @include media('<=desktop') {
+    &:before {
+      content: '|';
+      margin: 0 rem(5px);
+    }
+  }
+}
+
+.company {
+  // color: $accentTextColor;
+  font-weight: bold;
+  margin-bottom: $lineHeight / 2;
+  font-size: rem(20px);
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
@@ -8,7 +9,6 @@ import BodyCopy from 'src/components/BodyCopy'
 import PortfolioItem from 'src/components/index/PortfolioItem'
 import WtImg from 'src/pages/index/watchingthat.svg'
 import WegoImg from 'src/pages/index/wegowise.svg'
-import CV from './dan-winer-resume.pdf'
 import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
 import styles from './Work.module.scss'
@@ -31,10 +31,7 @@ export default () => (
           manager and as a developer. For the last 6+ years I've been leading
           the design effort for data analytics platforms. For a complete
           timeline please take a look at{' '}
-          <a href={CV} title="PDF version of my CV">
-            my cv
-          </a>
-          .
+          <Link to="/work/resume">my résumé</Link>.
         </p>
       </BodyCopy>
       <div className={styles.companies}>
