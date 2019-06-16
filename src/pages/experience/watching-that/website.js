@@ -45,14 +45,14 @@ export default ({ data }) => (
         <p>
           We summarised the results as five adjectives that everybody agreed
           represented what we strive for:
-          <ul>
-            <li>Human</li>
-            <li>Expert</li>
-            <li>Approachable</li>
-            <li>Friendly</li>
-            <li>Experienced</li>
-          </ul>
         </p>
+        <ul>
+          <li>Human</li>
+          <li>Expert</li>
+          <li>Approachable</li>
+          <li>Friendly</li>
+          <li>Experienced</li>
+        </ul>
         <p>
           I used those as guiding principles to set the right tone for both the
           copy and the aesthetics. I think the result is clean, professional and

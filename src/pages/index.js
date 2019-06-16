@@ -49,15 +49,13 @@ class Home extends React.Component {
           </BodyCopy>
           <GridRow>
             <GridCell>
-              <ScrollAnimation animateIn="fadeIn">
-                <PortfolioItem
-                  image={WtImg}
-                  imgClass="watchingthat"
-                  url="/experience/watching-that/"
-                  company="Watching That"
-                  description="Helping to create the future of video revenue analytics."
-                />
-              </ScrollAnimation>
+              <PortfolioItem
+                image={WtImg}
+                imgClass="watchingthat"
+                url="/experience/watching-that/"
+                company="Watching That"
+                description="Helping to create the future of video revenue analytics."
+              />
             </GridCell>
             <GridCell>
               <PortfolioItem

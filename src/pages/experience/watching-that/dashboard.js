@@ -65,8 +65,7 @@ export default ({ data }) => (
         <p>
           The information was useful but the approach had some serious flaws:
           our data is so multi-dimensional and the interest of the different
-          personas so varied that this was never going to satisfy everyone. Not
-          even for MVP.
+          personas so varied that this was never going to satisfy everyone.
         </p>
       </SectionCopy>
       <div className={cn(styles.expImage, styles.expImageNoBg)}>

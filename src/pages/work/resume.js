@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
 import Container from 'src/components/layout/Container'
@@ -20,17 +21,27 @@ export default () => (
         </a>
       </BodyCopy>
       <Job company="Watching That" dates="2018 - Present" role="Lead Designer">
-        A video intelligence platform handling millions of streaming data points
-        per day that I’ve helped design from the ground up. The role includes
-        research, product design, data visualisation design, establishing a
-        scalable design system and UI development.
+        <p>
+          A video intelligence platform handling millions of streaming data
+          points per day that I’ve helped design from the ground up. The role
+          includes research, product design, data visualisation design,
+          establishing a scalable design system and UI development.
+        </p>
+        <Link
+          to="experience/watching-that"
+          title="Read about my time at Watching That"
+        >
+          Read more →
+        </Link>
       </Job>
 
       <Job company="WegoWise" dates="2013 - 2018" role="Lead Designer">
-        The largest database of multifamily utility data in the US. I was
-        responsible for product and marketing design and for the hiring and
-        managing of designers. Instrumental in various aspects of an evolving
-        design process:
+        <p>
+          The largest database of multifamily utility data in the US. I was
+          responsible for product and marketing design and for the hiring and
+          managing of designers. Instrumental in various aspects of an evolving
+          design process:
+        </p>
         <ul>
           <li>
             Collaborated with business development to explore early-stage
@@ -45,6 +56,10 @@ export default () => (
             developing front-end components.
           </li>
         </ul>
+
+        <Link to="experience/wegowise" title="Read about my time at WegoWise">
+          Read more →
+        </Link>
       </Job>
       <Job company="Create Today" dates="2009 - 2013" role="Operations Manager">
         A web to print startup and artist community (now offline). Lead a
