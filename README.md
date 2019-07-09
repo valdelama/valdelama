@@ -1,3 +1,3 @@
 # Valdelama
 
-Use `yarn` not `npm`
+My personal website, built using Gatsby
