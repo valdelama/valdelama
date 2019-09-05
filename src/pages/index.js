@@ -28,22 +28,16 @@ class Home extends React.Component {
               <span className={styles.intro}>hi! I'm</span>
               <div className={styles.name}>Dan</div>
               <span className={styles.about}>
-                a multi-disciplinary design lead{' '}
+                a multi-disciplinary product designer{' '}
               </span>
               <p>
-                I design and build digital products and lead small teams. I’m
-                particularly interested in data visualisation and scalable
-                design systems.
-              </p>
-              <p>
-                I enjoy connecting with my target audience to make sure that I
-                understand their needs and keep them at the forefront of my
-                decision-making process.
-              </p>
-              <p>
-                I believe that good design has the potential to transform
-                businesses and I help ensure that the right processes and assets
-                are in place to harness that potential.
+                Check out what I'm working on currently for the video analytics
+                platform{' '}
+                <Link to="/experience/watching-that/">Watching That</Link> and
+                previously as the lead designer at{' '}
+                <Link to="/experience/wegowise">WegoWise</Link>. I love getting
+                involved in all aspects of the design cycle and I’m particularly
+                interested in data visualisation and scalable design systems.
               </p>
             </div>
           </BodyCopy>
