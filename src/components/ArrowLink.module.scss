@@ -1,0 +1,40 @@
+@import 'src/styles/util/index.scss';
+
+.arrowLink {
+  $timing: 0.2s;
+  font-weight: bold;
+  font-size: $fontSize - 4;
+  text-transform: uppercase;
+  position: relative;
+  transition: transform $timing ease-in;
+
+  &:before,
+  &:after {
+    position: absolute;
+    transition: transform $timing ease-in;
+  }
+
+  &:after {
+    content: '→';
+    transform: translateX(4px);
+  }
+
+  &:hover:after {
+    transform: translateX(6px);
+  }
+}
+
+.back {
+  &:after {
+    display: none;
+  }
+
+  &:before {
+    content: '←';
+    transform: translateX(-18px);
+  }
+
+  &:hover:before {
+    transform: translateX(-20px);
+  }
+}

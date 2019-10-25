@@ -1,16 +1,21 @@
+@import './_functions.scss';
+
 // TYPOGRAPHY
 //----------------------
 $fontSerif: 'Libre Baskerville', serif;
 $fontSansSerif: 'Libre Franklin', sans-serif;
 $fontSize: 18px;
-$lineHeight: 1.4rem;
+$lineHeight: rem(27px);
 $textColor: #4d4236;
 $accentTextColor: #cc873d;
-$linkColor: #175ce6;
+$linkColor: #4095ed;
+$introColor: #f5faff;
+$headerColor: #5d80a3;
+$headerColorDark: #5d6c7a;
 
 // LAYOUT
 //----------------------
-$containerWidth: 1200px;
+$containerWidth: 1060px;
 $contentWidth: 620px;
 $spacingUnit: 1rem;
 $hSpacingUnit: $spacingUnit;
@@ -19,6 +24,7 @@ $documentPadding: $spacingUnit * 2;
 $totalDocPadding: $documentPadding * 2;
 $gridSpacing: $spacingUnit * 2;
 $gridColumns: 12;
+$expSectionSpacing: rem(100px);
 
 //-- MQ dimensions
 $phoneSmall: 320px;

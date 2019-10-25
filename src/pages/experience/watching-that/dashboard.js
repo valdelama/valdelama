@@ -3,29 +3,32 @@ import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
-import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
+import Intro from 'src/components/layout/Intro'
+import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
-import WWLink from 'src/components/experience/WWLink'
+
 import Img from 'gatsby-image'
 import DashInteraction from './dashboard-interaction.gif'
 import styles from '../Experience.module.scss'
 
 export default ({ data }) => (
   <Layout>
-    <Container>
-      <SEO
+    <SEO
+      title="Watching That"
+      metaDescription="Creating a card-based, customisable dashboard"
+    />
+    <Intro noBanner>
+      <Title
         title="Watching That"
-        metaDescription="Creating a card-based, customisable dashboard"
+        subheader="Creating a card-based, customisable dashboard"
+        backLink="/experience/watching-that"
       />
-      <BodyCopy>
-        <Title
-          title="Watching That"
-          subheader="Creating a card-based, customisable dashboard"
-          backLink="/experience/watching-that"
-        />
+    </Intro>
+    <Content noBanner>
+      <SectionCopy>
         <p>
           The goal was to build a flexible dashboard that, through
           personalisation, would become invaluable to users from across all
@@ -35,8 +38,7 @@ export default ({ data }) => (
           Feedback has been very positive with customers relying on it daily for
           a top-level view of the metrics they care about it.
         </p>
-      </BodyCopy>
-      <SectionCopy title="The personas">
+        <h3>The personas</h3>
         <p>
           We have four well defined personas that we worked towards on the first
           release of our customisable dashboard:
@@ -47,13 +49,12 @@ export default ({ data }) => (
           <li>Product manager</li>
           <li>Ad operations</li>
         </ul>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageNoBg)}>
         <Img
           fluid={data.personas.childImageSharp.fluid}
           className={styles.shadow}
         />
-      </div>
+      </SectionCopy>
+
       <SectionCopy title="Early design explorations">
         <p>
           To begin with I tried to focus the information around a handful of our
@@ -67,10 +68,9 @@ export default ({ data }) => (
           our data is so multi-dimensional and the interest of the different
           personas so varied that this was never going to satisfy everyone.
         </p>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageNoBg)}>
         <Img fluid={data.dashv1.childImageSharp.fluid} />
-      </div>
+      </SectionCopy>
+
       <SectionCopy title="A card-based approach">
         <p>
           Based on early impressions and feedback we realised we needed a system
@@ -78,10 +78,8 @@ export default ({ data }) => (
           on their dashboards. A customisable, card-based approach made the most
           sense for our next design exploration.
         </p>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageNoBg)}>
         <Img fluid={data.dashv2.childImageSharp.fluid} />
-      </div>
+      </SectionCopy>
       <SectionCopy title="Keep it simple">
         <p>
           We were getting closer but the cards were too complicated and started
@@ -95,10 +93,8 @@ export default ({ data }) => (
           analyse a specific dimension, eg. <em>mobile performance</em>, across
           multiple metrics in one go.
         </p>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageNoBg)}>
         <img src={DashInteraction} />
-      </div>
+      </SectionCopy>
       <SectionCopy title="Current status">
         <p>
           This is going to be a long, ongoing project but the first full version
@@ -112,15 +108,14 @@ export default ({ data }) => (
           replace multiple tools that were being used previously and is proving
           accesible to various persona types.
         </p>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageWT)}>
         <Img
           fluid={data.dashv3.childImageSharp.fluid}
           className={styles.shadow}
         />
-      </div>
-    </Container>
-    <WWLink />
+      </SectionCopy>
+
+      
+    </Content>
   </Layout>
 )
 

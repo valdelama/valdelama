@@ -1,0 +1,36 @@
+@import 'src/styles/util/index.scss';
+
+.role {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $expSectionSpacing;
+
+  @include media('<tablet') {
+    flex-direction: column;
+  }
+}
+
+.copy {
+  max-width: 620px;
+
+  @include media('<tablet') {
+    margin-bottom: 2rem;
+  }
+}
+
+.sidebar {
+  max-width: 300px;
+}
+
+.sidebarItem {
+  & ~ & {
+    margin-top: 1rem;
+  }
+}
+
+.sidebarItemTitle {
+  font-size: $fontSize - 2;
+  line-height: $lineHeight;
+  color: $headerColorDark;
+  font-weight: bold;
+}

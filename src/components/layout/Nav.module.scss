@@ -1,15 +1,21 @@
 @import 'src/styles/util/index.scss';
 
-.nav {
-  padding-top: 20px;
-  display: block;
-  width: 100%;
-  max-width: $contentWidth;
-  margin: 0 auto;
+.logo {
+  width: 35px;
+}
 
+.header {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
   @include media('<phablet') {
     display: flex;
-    justify-content: space-between;
+    flex: 1;
+    justify-content: space-around;
   }
 }
 
@@ -19,14 +25,32 @@
   font-family: $fontSansSerif;
   text-decoration: none;
   color: $textColor;
+  position: relative;
 
   ~ .link {
     @include media('>=phablet') {
       margin-left: rem(50px);
     }
   }
+
+  &:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 70%;
+    background: #5d80a3;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+    bottom: -10px;
+  }
 }
 
 .active {
-  opacity: 0.8;
+  color: #5d80a3;
+
+  &:after {
+    opacity: 1;
+  }
 }

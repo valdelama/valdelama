@@ -4,7 +4,10 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import Layout from '../components/Layout'
 import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
+import Intro from 'src/components/layout/Intro'
+import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
+import ArrowLink from 'src/components/ArrowLink'
 import SEO from '../components/seo'
 import styles from './Writing.module.scss'
 
@@ -16,16 +19,18 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <Container>
-          <SEO
-            title="Design journal"
-            metaDescription="Notes and essays on product design, React, illustration, typography and user experience"
+        <SEO
+          title="Design journal"
+          metaDescription="Notes and essays on product design, React, illustration, typography and user experience"
+        />
+        <Intro noBanner>
+          <Title
+            title="A design journal"
+            subheader="Notes and essays on product design"
           />
+        </Intro>
+        <Content noBanner>
           <BodyCopy>
-            <Title
-              title="A design journal"
-              subheader="Notes and essays on product design"
-            />
             {posts.map(({ node }) => {
               return (
                 <div styleName="post" key={node.fields.slug}>
@@ -46,15 +51,12 @@ class BlogIndex extends React.Component {
                       className={styles.excerpt}
                       dangerouslySetInnerHTML={{ __html: node.excerpt }}
                     />
-                    <Link className={styles.readMore} to={node.fields.slug}>
-                      Read more
-                    </Link>
                   </ScrollAnimation>
                 </div>
               )
             })}
           </BodyCopy>
-        </Container>
+        </Content>
       </Layout>
     )
   }

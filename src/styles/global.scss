@@ -5,7 +5,7 @@ html {
   padding: 0;
   margin: 0;
   font-size: $fontSize;
-  line-height: 1.4;
+  line-height: $lineHeight;
   box-sizing: border-box;
 
   @include media($gridIsStacked) {
@@ -20,23 +20,14 @@ html {
 }
 
 body {
-  background-image: linear-gradient(
-    6deg,
-    #ffffff 20%,
-    rgba(250, 236, 222, 0.4) 100%
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 1100px;
-  font-family: $fontSerif;
+  font-family: $fontSansSerif;
   color: $textColor;
 }
 
 p {
-  font-family: $fontSerif;
-  line-height: 1.6;
   margin: {
     top: 0;
-    bottom: $lineHeight;
+    bottom: 1rem;
   }
 
   &:last-child {
@@ -58,6 +49,14 @@ li {
   margin-bottom: $lineHeight / 2;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: $headerColorDark;
+  line-height: 1.5;
+}
+
 h2 {
   margin-top: $lineHeight * 2.5;
   margin-bottom: $lineHeight;
@@ -73,7 +72,7 @@ ul,
 ol {
   margin: {
     top: 0;
-    bottom: $lineHeight;
+    bottom: 1rem;
   }
 }
 

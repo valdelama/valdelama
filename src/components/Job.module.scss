@@ -1,20 +1,27 @@
 @import 'src/styles/util/index.scss';
 
+$_metaWidth: rem(200px);
+
 .wrapper {
   margin-top: $lineHeight * 3;
+  @include media('>desktop') {
+    padding-left: $_metaWidth;
+  }
 }
 
 .content {
   position: relative;
   line-height: rem(25px);
+  max-width: $contentWidth;
 }
 
 .meta {
   font-family: $fontSansSerif;
-  min-width: rem(200px);
   font-size: rem(16px);
+  color: $headerColorDark;
 
   @include media('>desktop') {
+    width: $_metaWidth;
     position: absolute;
     right: 100%;
   }
@@ -40,7 +47,7 @@
 }
 
 .company {
-  // color: $accentTextColor;
+  color: $headerColorDark;
   font-weight: bold;
   margin-bottom: $lineHeight / 2;
   font-size: rem(20px);

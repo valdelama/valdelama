@@ -4,7 +4,7 @@ import styles from './SectionCopy.module.scss'
 
 export default ({ title, children }) => (
   <div className={styles.sectionCopy}>
-    <SectionTitle title={title} />
+    {title && <SectionTitle title={title} />}
     {children}
   </div>
 )

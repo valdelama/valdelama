@@ -3,29 +3,31 @@ import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
-import Container from 'src/components/layout/Container'
-import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
+import Intro from 'src/components/layout/Intro'
+import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
-import WTLink from 'src/components/experience/WTLink'
+
 import Img from 'gatsby-image'
 import styles from '../Experience.module.scss'
 import glStyles from './GreenLoans.module.scss'
 
 export default ({ data }) => (
   <Layout>
-    <Container>
-      <SEO
+    <SEO
+      title="WegoWise"
+      metaDescription="A web application that would enable financial institutions to assess the eligibility of real estate properties for green loans."
+    />
+    <Intro noBanner>
+      <Title
         title="WegoWise"
-        metaDescription="A web application that would enable financial institutions to assess the eligibility of real estate properties for green loans."
+        subheader="Helping Financial Institutions Go Green"
+        backLink="/experience/wegowise"
       />
-      <BodyCopy>
-        <Title
-          title="WegoWise"
-          subheader="Helping Financial Institutions Go Green"
-          backLink="/experience/wegowise"
-        />
+    </Intro>
+    <Content noBanner>
+      <SectionCopy>
         <p>
           I led the design and front-end development of a web application that
           would enable financial institutions to assess the eligibility of real
@@ -37,42 +39,36 @@ export default ({ data }) => (
           collaborating with some of the largest financial institutions in the
           US.
         </p>
-      </BodyCopy>
 
-      <SectionCopy title="Green loan eligibility assessment tool">
+        <h3>Green loan eligibility assessment tool</h3>
         <p>
           The web app allows users to assess the potential eligibility of their
           properties for green loans and adjust various parameters to see how
           that would affect the likelihood of obtaining the loan.
         </p>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageNoBg)}>
+
         <Img
           fluid={data.glea.childImageSharp.fluid}
           className={styles.shadow}
         />
-      </div>
-
+      </SectionCopy>
       <SectionCopy title="Marketing design">
         <p>
           In addition to the product design I also helped produce the assets for
           a marketing campaign.
         </p>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageWW)}>
+
         <Img
           fluid={data.marketingScreen.childImageSharp.fluid}
           className={styles.shadow}
         />
-      </div>
-      <div className={cn(styles.expImage, styles.expImageNoBg)}>
+
         <Img
           fluid={data.flyer2.childImageSharp.fluid}
           className={styles.shadow}
         />
-      </div>
-    </Container>
-    <WTLink />
+      </SectionCopy>
+    </Content>
   </Layout>
 )
 

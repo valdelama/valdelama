@@ -2,10 +2,6 @@
 
 @mixin contain($width) {
   max-width: $width;
-  margin: {
-    left: auto;
-    right: auto;
-  }
 }
 
 .blog-post {

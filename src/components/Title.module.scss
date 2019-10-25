@@ -1,55 +1,14 @@
 @import 'src/styles/util/index.scss';
 
-.wrapper {
-  margin: $titleSpacing 0 $lineHeight * 2;
-}
-
-.title {
-  margin: 0;
-  font-size: rem(72px);
-  font-family: $fontSansSerif;
-
-  @include media($gridIsStacked) {
-    font-size: rem(52px);
-    line-height: 1.2;
-  }
-}
-
 .titleBackLink {
-  $timing: 0.2s;
-  font-family: $fontSansSerif;
-  font-size: 1rem;
-  position: relative;
-  transition: transform $timing ease-in;
-
-  &:before {
-    content: '←';
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    transform: translateX(-16px);
-    transition: all $timing ease-in;
-    transition-property: transform, opacity;
-  }
-
-  &:hover:before {
-    opacity: 1;
-    transform: translateX(-20px);
-  }
-
-  &:after {
-    content: '/';
+  @include media('<desktop') {
+    margin-left: 15px;
   }
 }
 
 .subheader {
-  font-style: italic;
-  font-size: rem(26px);
-  font-weight: normal;
-  color: $accentTextColor;
-  margin: 0;
-}
-
-.subheaderBackLink {
   font-size: rem(36px);
+  font-weight: bold;
+  color: $headerColorDark;
+  margin: 0;
 }

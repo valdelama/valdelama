@@ -1,0 +1,22 @@
+@import 'src/styles/util/index.scss';
+
+.wrapper {
+  background: #f5f7fc;
+  margin-bottom: $expSectionSpacing;
+}
+
+.copy {
+  padding: 2.5rem;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.description {
+  margin-bottom: 0.5rem;
+}
+
+.wtWebsite .gatsby-image-wrapper {
+  max-width: 900px;
+}

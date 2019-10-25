@@ -3,168 +3,133 @@ import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
-import Container from 'src/components/layout/Container'
-import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
+import Intro from 'src/components/layout/Intro'
+import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
-import SectionCopy from 'src/components/experience/SectionCopy'
-import WWLink from 'src/components/experience/WWLink'
+import Role from 'src/components/experience/Role'
+import CaseStudyLink from 'src/components/experience/CaseStudyLink'
+import ImageCaption from 'src/components/experience/ImageCaption'
+
 import Img from 'gatsby-image'
 import styles from './Experience.module.scss'
 
 export default ({ data }) => (
   <Layout>
-    <Container>
-      <SEO
+    <SEO
+      title="Watching That"
+      metaDescription="My experience as Head of Design at Watching That, a data analytics platform for video media."
+    />
+    <Intro>
+      <Title
         title="Watching That"
-        metaDescription="My experience as Head of Design at Watching That, a data analytics platform for video media."
+        subheader="Designing the Future of Video Analytics"
       />
-      <BodyCopy>
-        <Title
-          title="Watching That"
-          subheader="Designing the Future of Video Analytics"
-        />
+    </Intro>
+
+    <Content>
+      <Img
+        fluid={data.intro.childImageSharp.fluid}
+        className={styles.introImage}
+      />
+      <Role
+        role="Lead Product Designer"
+        responsibilities="Product design, product planning, UI development"
+        date="April 2018 - Present"
+      >
         <p>
-          As head of design at Watching That, a data analytics platform for
-          video media, I am responsible for finding ways for our customers to
-          navigate and interpret large sets of complex data so that they can
-          optimize their video advertising technology stack. The role combines
-          product strategy, data exploration, UX design, data visualisation
-          design, marketing design, and UI development (using React).
+          Watching that is a video intelligence platform that helps content
+          creators and publishers optimise their video advertising revenue.
         </p>
-      </BodyCopy>
-      <SectionCopy title="Video Intelligence Dashboard">
         <p>
-          The goal was to build a flexible dashboard that, through
-          personalisation, would become invaluable to users from across all
-          roles in the organisation.
+          My role as the lead product designer in a small startiup is very
+          varied and ranges from product strategy to wireframing and all the way
+          through to UI development in React.
         </p>
-        <Link
-          to="experience/watching-that/dashboard"
-          title="Dashboard design for Watching That"
-        >
-          Read more →
-        </Link>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageWT)}>
-        <Link
-          to="experience/watching-that/dashboard"
-          title="Dashboard design for Watching That"
+        <p>
+          The platform provides insight into quite complex, real-time data
+          streams and relies heavily on data visualisation and data analytics
+          tools.
+        </p>
+      </Role>
+      <ScrollAnimation animateIn="fadeIn">
+        <CaseStudyLink
+          title="Video Intelligence Dashboard"
+          description="A customisable dashboard that caters to users from across all roles in the organisation."
+          url="experience/watching-that/dashboard"
         >
           <Img fluid={data.widgets.childImageSharp.fluid} />
-        </Link>
-      </div>
-      <ScrollAnimation animateIn="fadeIn">
-        <SectionCopy title="Content Performance">
-          <p>
-            The content performance feature allows our customers to understand
-            what kind of content is engaging their users in order to try and
-            recreate that success. At the same time it enables them to spot
-            opportunities where engaging content is not receiving the sort of
-            exposure it deserves—pinpointing where to direct promotional
-            efforts.
-          </p>
-          <em>Case study coming soon.</em>
-        </SectionCopy>
+        </CaseStudyLink>
+      </ScrollAnimation>
 
-        <div className={cn(styles.expImage, styles.expImageWT)}>
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="The content performance feature allows our customers to understand what kind of content is engaging their users.">
           <Img
             fluid={data.cp.childImageSharp.fluid}
             className={styles.shadow}
           />
-        </div>
+        </ImageCaption>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn">
-        <SectionCopy title="Troubleshooting Analysis">
-          <p>
-            The most advanced interface available for understanding and
-            resolving video advertising errors.
-          </p>
-          <em>Case study coming soon.</em>
-        </SectionCopy>
 
-        <div className={cn(styles.expImage, styles.expImageWT)}>
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="The error analysis feature gives users powerful tools to increase their revenue by helping them understand and resolve video advertising errors.">
           <Img
             fluid={data.errors.childImageSharp.fluid}
             className={styles.shadow}
           />
-        </div>
+        </ImageCaption>
       </ScrollAnimation>
+
       <ScrollAnimation animateIn="fadeIn">
-        <SectionCopy title="Channel insights">
-          <p>
-            A feature that allows users to track campaigns across various
-            channels (social media networks and domains) to compare and
-            aggregate performance data.
-          </p>
-          <em>Case study coming soon.</em>
-        </SectionCopy>
-        <div
-          className={cn(
-            styles.expImage,
-            styles.expImageWT,
-            styles.expImageBottom
-          )}
+        <CaseStudyLink
+          title="A new website"
+          description="I lead the content creation, design and development of Watching That's new website."
+          url="experience/watching-that/website"
         >
-          <Img fluid={data.channels.childImageSharp.fluid} />
-        </div>
+          <Img
+            fluid={data.website.childImageSharp.fluid}
+            className={styles.paddedCaseStudyImg}
+          />
+        </CaseStudyLink>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn">
-        <SectionCopy title="A new website">
-          <p>
-            I do marketing design as well! I lead the content creation, design
-            and development of Watching That's new website. It was really
-            satisfying taking this project from start to finish.
-          </p>
-          <Link to="experience/watching-that/website">Read more →</Link>
-        </SectionCopy>
-        <div className={cn(styles.expImage, styles.expImageWT)}>
-          <Link to="experience/watching-that/website">
-            <Img
-              fluid={data.website.childImageSharp.fluid}
-              className={styles.shadow}
-            />
-          </Link>
-        </div>
-      </ScrollAnimation>
-    </Container>
-    <WWLink />
+      
+    </Content>
   </Layout>
 )
 
 export const query = graphql`
   query {
-    channels: file(relativePath: { eq: "wt/channels.png" }) {
+    intro: file(relativePath: { eq: "wt/intro.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1497) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     cp: file(relativePath: { eq: "wt/cp.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1379) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     errors: file(relativePath: { eq: "wt/errors.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     widgets: file(relativePath: { eq: "wt/widgets.png" }) {
       childImageSharp {
-        fluid(maxWidth: 2410) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     website: file(relativePath: { eq: "wt/website1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
+        fluid(maxWidth: 900) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -1,0 +1,11 @@
+@import 'src/styles/util/index.scss';
+
+.content {
+  margin-top: -130px;
+  background: #fff;
+
+  &.noBanner {
+    margin-top: 0;
+    padding-top: $expSectionSpacing / 2;
+  }
+}

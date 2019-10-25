@@ -5,10 +5,12 @@ import Layout from '../components/Layout'
 import { GridRow, GridCell } from 'src/components/layout/grid/index'
 import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
-import Title from 'src/components/Title'
+import Intro from 'src/components/layout/Intro'
+import Content from 'src/components/layout/Content'
 import PortfolioItem from '../components/index/PortfolioItem'
 import WtImg from '../pages/index/watchingthat.svg'
 import WegoImg from '../pages/index/wegowise.svg'
+import BFGImg from '../pages/index/bfg.svg'
 import SEO from '../components/seo'
 import styles from './index/index.module.scss'
 
@@ -18,50 +20,45 @@ class Home extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <Container>
-          <SEO
-            title="Home"
-            metaDescription="The online home of Dan Winer, a multi-disciplinary product designer."
+        <SEO
+          title="Home"
+          metaDescription="The online home of Dan Winer, a multi-disciplinary product designer."
+        />
+        <Intro>
+          <span className={styles.salutation}>Hi, I'm Dan</span>
+          <p>
+            A designer that likes to write code,
+            <br />
+            check out some of my recent projects
+          </p>
+        </Intro>
+
+        <Content>
+          <PortfolioItem
+            image={WtImg}
+            kind="watchingthat"
+            url="/experience/watching-that/"
+            company="Watching That"
+            lead="Designing the future of video revenue analytics"
+            description="I help people navigate and interpret large sets of complex data so that they can optimize their video advertising technology stack."
           />
-          <BodyCopy>
-            <div className={styles.indexContent}>
-              <span className={styles.intro}>hi! I'm</span>
-              <div className={styles.name}>Dan</div>
-              <span className={styles.about}>
-                a multi-disciplinary product designer{' '}
-              </span>
-              <p>
-                Check out what I'm working on currently for the video analytics
-                platform{' '}
-                <Link to="/experience/watching-that/">Watching That</Link> and
-                previously as the lead designer at{' '}
-                <Link to="/experience/wegowise">WegoWise</Link>. I love getting
-                involved in all aspects of the design cycle and I’m particularly
-                interested in data visualisation and scalable design systems.
-              </p>
-            </div>
-          </BodyCopy>
-          <GridRow>
-            <GridCell>
-              <PortfolioItem
-                image={WtImg}
-                imgClass="watchingthat"
-                url="/experience/watching-that/"
-                company="Watching That"
-                description="Helping to create the future of video revenue analytics."
-              />
-            </GridCell>
-            <GridCell>
-              <PortfolioItem
-                image={WegoImg}
-                imgClass="wegowise"
-                url="/experience/wegowise"
-                company="WegoWise"
-                description="The leading analytics platform in the US for utility data."
-              />
-            </GridCell>
-          </GridRow>
-        </Container>
+          <PortfolioItem
+            image={WegoImg}
+            kind="wegowise"
+            url="/experience/wegowise"
+            company="WegoWise"
+            lead="Enabling people to make smarter decisions about how they invest in buildings"
+            description="For five years I was responsible for product and marketing design at WegoWise, the largest database of multifamily utilty data in the US."
+          />
+          <PortfolioItem
+            image={BFGImg}
+            kind="bfg"
+            url="/experience/bfg"
+            company="Brightfield Group"
+            lead="Predictive consumer and marketing intellgence for the CBD and cannabis industry"
+            description="As a data visualisation design consultant at Brightfield Group I am helping them achieve a more professional and coherent design language across their suite of reports and data portals."
+          />
+        </Content>
       </Layout>
     )
   }

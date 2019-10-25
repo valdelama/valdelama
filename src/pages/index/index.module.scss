@@ -8,24 +8,10 @@
   }
 }
 
-.intro {
-  color: #4d4236;
-  font-family: $fontSerif;
-}
-
-.name {
-  color: #4d4236;
-  font-family: $fontSansSerif;
+.salutation {
   font-weight: bold;
-  font-size: rem(72px);
-  margin: -14px 0 -12px -4px;
-}
-
-.about {
-  font-style: italic;
-  font-size: rem(26px);
-  font-weight: normal;
-  color: $accentTextColor;
+  font-size: rem(46px);
+  color: #5d6c7a;
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }

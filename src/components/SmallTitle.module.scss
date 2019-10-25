@@ -1,0 +1,8 @@
+@import 'src/styles/util/index.scss';
+
+.smallTitle {
+  text-transform: uppercase;
+  font-size: $fontSize - 2;
+  color: $headerColor;
+  font-weight: bold;
+}

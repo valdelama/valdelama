@@ -6,24 +6,39 @@ import Layout from 'src/components/Layout'
 import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
+import Intro from 'src/components/layout/Intro'
+import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
+import Role from 'src/components/experience/Role'
+import CaseStudyLink from 'src/components/experience/CaseStudyLink'
+import ImageCaption from 'src/components/experience/ImageCaption'
 import SectionCopy from 'src/components/experience/SectionCopy'
-import WTLink from 'src/components/experience/WTLink'
+
 import Img from 'gatsby-image'
 import styles from './Experience.module.scss'
 
 export default ({ data }) => (
   <Layout>
-    <Container>
-      <SEO
+    <SEO
+      title="WegoWise"
+      metaDescription="My experience as Head of Design for WegoWise, the largest database of multifamily utilty data in the US"
+    />
+    <Intro>
+      <Title
         title="WegoWise"
-        metaDescription="My experience as Head of Design for WegoWise, the largest database of multifamily utilty data in the US"
+        subheader="Enabling people to make smarter decisions about how they invest in buildings"
       />
-      <BodyCopy>
-        <Title
-          title="WegoWise"
-          subheader="Enabling people to make smarter decisions about how they build and invest in buildings"
-        />
+    </Intro>
+    <Content>
+      <Img
+        fluid={data.intro.childImageSharp.fluid}
+        className={styles.introImage}
+      />
+      <Role
+        role="Lead Designer"
+        responsibilities="Product design, product planning, UI development, marketing design, illustration"
+        date="June 2013 - April 2018"
+      >
         <p>
           For five years I was responsible for product and marketing design at
           WegoWise, the largest database of multifamily utilty data in the US.
@@ -31,96 +46,102 @@ export default ({ data }) => (
           culture that emphasised validating early-stage designs through user
           testing.
         </p>
-      </BodyCopy>
-      <ScrollAnimation animateIn="fadeIn">
-        <SectionCopy title="A Dashboard to Optimize Utility Consumption">
-          <p>
-            The challenge was to design a dashboard that would be the initial
-            screen that all WegoWise users would see after logging in.
-          </p>
-          <p>
-            We needed to create something that would be useful to all customer
-            types, that is configurable, and that is able to clearly display a
-            high density of information. The information on display had to be
-            both high-level summary data and also detailed data, specific to
-            individual properties.
-          </p>
-        </SectionCopy>
-        <div
-          className={cn(
-            styles.expImage,
-            styles.expImageWW,
-            styles.expImageBottom
-          )}
-        >
-          <Img fluid={data.dash.childImageSharp.fluid} />
-        </div>
-      </ScrollAnimation>
-      <SectionCopy title="Solving an Information Architecture Puzzle">
         <p>
-          The dashboard at WegoWise had become a dumping ground for links to
-          miscellaneous pages as the site continued to grow and the result was
-          an unwieldy, long navigation menu with lots of unrelated links sitting
-          side-by-side.
+          I also created and maintained a styleguide driven development process
+          for UI components that helped speed up the time it took to deploy new
+          features whilst increasing aesthetic coherence.
         </p>
-        <Link to="experience/wegowise/information-architecture">
-          Read more →
-        </Link>
-      </SectionCopy>
-      <div className={cn(styles.expImage, styles.expImageLinkAbove)}>
-        <Link to="experience/wegowise/information-architecture">
-          <Img fluid={data.nav.childImageSharp.fluid} />
-        </Link>
-      </div>
+      </Role>
+
       <ScrollAnimation animateIn="fadeIn">
-        <SectionCopy title="Helping Financial Institutions Go Green">
-          <p>
-            I led the design and front-end development of a web application that
-            would enable financial institutions to assess the eligibility of
-            real estate properties for green loans.
-          </p>
-          <Link to="experience/wegowise/green-loans">Read more →</Link>
-        </SectionCopy>
-        <div className={cn(styles.expImage, styles.expImageLinkAbove)}>
-          <Link to="experience/wegowise/green-loans">
-            <Img
-              fluid={data.greenLoans.childImageSharp.fluid}
-              className={styles.shadow}
-            />
-          </Link>
-        </div>
+        <CaseStudyLink
+          title="Helping Financial Institutions Go Green"
+          description="I led the design and front-end development of a web application that would enable financial institutions to assess the eligibility of real estate properties for green loans."
+          url="experience/wegowise/green-loans"
+        >
+          <Img
+            fluid={data.glea.childImageSharp.fluid}
+            className={styles.paddedCaseStudyImg}
+          />
+        </CaseStudyLink>
       </ScrollAnimation>
-    </Container>
-    <WTLink />
+
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="Tool for benchmarking against similar buildings">
+          <Img fluid={data.buildingSummary.childImageSharp.fluid} />
+        </ImageCaption>
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="Illustrations for WegoWise product launches">
+          <div className={styles.wegoIllustrations}>
+            <Img fixed={data.wegopower.childImageSharp.fixed} />
+            <Img fixed={data.windows.childImageSharp.fixed} />
+            <Img fixed={data.wegohome.childImageSharp.fixed} />
+          </div>
+        </ImageCaption>
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <CaseStudyLink
+          title="Solving an Information Architecture Puzzle"
+          description="The dashboard at WegoWise had become a dumping ground for miscellaneous links, I used card sorting to determine new navigation patterns."
+          url="experience/wegowise/information-architecture"
+        >
+          <Img fluid={data.cardSort.childImageSharp.fluid} />
+        </CaseStudyLink>
+      </ScrollAnimation>
+    </Content>
   </Layout>
 )
 
 export const query = graphql`
   query {
-    dash: file(relativePath: { eq: "ww/dash.png" }) {
+    intro: file(relativePath: { eq: "ww/intro.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1497) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    greenLoans: file(relativePath: { eq: "ww/green-loans.png" }) {
+    glea: file(relativePath: { eq: "ww/glea.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    greenLoans2: file(relativePath: { eq: "ww/green-loans2.png" }) {
+    buildingSummary: file(relativePath: { eq: "ww/building-summary.png" }) {
       childImageSharp {
-        fluid(maxWidth: 3042) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    nav: file(relativePath: { eq: "ww/nav.png" }) {
+    wegohome: file(relativePath: { eq: "ww/wegohome.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1520) {
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    windows: file(relativePath: { eq: "ww/windows.png" }) {
+      childImageSharp {
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    wegopower: file(relativePath: { eq: "ww/wegopower.png" }) {
+      childImageSharp {
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    cardSort: file(relativePath: { eq: "ww/card-sort.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -3,28 +3,30 @@ import { Link, graphql } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
-import Container from 'src/components/layout/Container'
-import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
+import Intro from 'src/components/layout/Intro'
+import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
-import WTLink from 'src/components/experience/WTLink'
+
 import Img from 'gatsby-image'
 import styles from '../Experience.module.scss'
 
 export default ({ data }) => (
   <Layout>
-    <Container>
-      <SEO
+    <SEO
+      title="WegoWise"
+      metaDescription="How I improved the information architecture at WegoWise."
+    />
+    <Intro noBanner>
+      <Title
         title="WegoWise"
-        metaDescription="How I improved the information architecture at WegoWise."
+        subheader="Solving an Information Architecture Puzzle"
+        backLink="/experience/wegowise"
       />
-      <BodyCopy>
-        <Title
-          title="WegoWise"
-          subheader="Solving an Information Architecture Puzzle"
-          backLink="/experience/wegowise"
-        />
+    </Intro>
+    <Content noBanner>
+      <SectionCopy>
         <p>
           The dashboard at WegoWise had become a dumping ground for links to
           miscellaneous pages as the site continued to grow and the result was
@@ -36,17 +38,16 @@ export default ({ data }) => (
           information architecture changes that I implemented were thoroughly
           verified via user testing at various stages.
         </p>
-      </BodyCopy>
-      <SectionCopy title="Card sorting">
+
+        <h3>Card sorting</h3>
         <p>
           The first stage was to print out every screen of the app onto a card
           and get groups of users to put them into buckets. Post-its were used
           to create the buckets and the cards were placed in lists underneath.
         </p>
-      </SectionCopy>
-      <div className={styles.expImageFluid}>
+
         <Img fluid={data.cardSorting.childImageSharp.fluid} />
-      </div>
+      </SectionCopy>
       <SectionCopy>
         <p>
           During the exercise, I conducted interviews to understand the
@@ -54,20 +55,18 @@ export default ({ data }) => (
           arrangement to be able to look through them later and check for
           overlaps.
         </p>
-      </SectionCopy>
-      <div className={styles.expImageFluid}>
+
         <Img fluid={data.cardSorting2.childImageSharp.fluid} />
-      </div>
+      </SectionCopy>
       <SectionCopy title="Exposing common patterns">
         <p>
           A few common patterns emerged, these were plotted into a tree diagram
           to make sense of the findings and some definitive category names were
           chosen.
         </p>
-      </SectionCopy>
-      <div className={styles.expImageFluid}>
         <Img fluid={data.iaMap.childImageSharp.fluid} />
-      </div>
+      </SectionCopy>
+
       <SectionCopy title="Verifying the new structure">
         <p>
           In the next stage, users were asked to move cards into the categories
@@ -75,10 +74,10 @@ export default ({ data }) => (
           Trello cards and lists and the idea was to verify that the categories
           we had defined made sense to a wider audience.
         </p>
-      </SectionCopy>
-      <div className={styles.expImageFluid}>
+
         <Img fluid={data.trello.childImageSharp.fluid} />
-      </div>
+      </SectionCopy>
+
       <SectionCopy title="Testing the interface">
         <p>
           In the final stage of testing (before starting development), users
@@ -86,12 +85,11 @@ export default ({ data }) => (
           to see if they arrived at the desired destinations in the expected
           number of clicks.
         </p>
-      </SectionCopy>
-      <div className={styles.expImageFluid}>
+
         <Img fluid={data.nav.childImageSharp.fluid} />
-      </div>
-    </Container>
-    <WTLink />
+      </SectionCopy>
+      
+    </Content>
   </Layout>
 )
 

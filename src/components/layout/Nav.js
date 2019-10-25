@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Container from 'src/components/layout/Container'
-import BodyCopy from '../BodyCopy'
+import logo from 'src/images/logo.svg'
 import styles from './Nav.module.scss'
 
 export default () => (
-  <Container>
+  <div className={styles.header}>
+    <Link to="/" title="Logo" className={styles.logo}>
+      <img src={logo} alt="Home" />
+    </Link>
     <div className={styles.nav}>
       <Link to="/" className={styles.link} activeClassName={styles.active}>
         Home
       </Link>
       <Link to="/work" className={styles.link} activeClassName={styles.active}>
-        Work
+        Resume
       </Link>
       <Link
         to="/writing/"
@@ -28,5 +31,5 @@ export default () => (
         Contact
       </Link>
     </div>
-  </Container>
+  </div>
 )

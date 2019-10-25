@@ -34,4 +34,4 @@ Probably the biggest visual impact after font choice is going to come from line 
 
 Try and keep to a rule of 50-75 characters per line.
 
-_work in progress - please check back soon_
+_work in progress_
