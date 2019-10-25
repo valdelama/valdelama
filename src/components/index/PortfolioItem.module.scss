@@ -8,6 +8,10 @@ $_timing: 0.4s;
   margin-bottom: 100px;
   padding: rem(45px);
 
+  @include media('<tablet') {
+    padding: 20px;
+  }
+
   &.wegowise {
     background: #fafffd;
     border-color: rgba(0, 230, 142, 0.05);
@@ -35,6 +39,10 @@ $_timing: 0.4s;
 .copy {
   margin-left: 2rem;
   margin-top: 1rem;
+
+  @include media('<tablet') {
+    margin-left: 0;
+  }
 }
 
 .lead {

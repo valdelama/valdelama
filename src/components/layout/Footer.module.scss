@@ -10,6 +10,10 @@ footer {
 .content {
   display: flex;
   align-content: center;
+
+  @include media('<desktop') {
+    flex-direction: column;
+  }
 }
 
 .copy {
@@ -19,10 +23,19 @@ footer {
 .links {
   display: inline-flex;
   margin-left: 10px;
+
+  @include media('<phone') {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .link {
   padding: 0 5px;
+
+  @include media('<phone') {
+    padding: 10px;
+  }
 }
 
 .active {
@@ -32,12 +45,18 @@ footer {
 
 .external {
   display: inline-flex;
+
+  @include media('<desktop') {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 }
 
 .iconLink {
   padding: 0 5px;
   opacity: 0.5;
   transition: opacity 0.3s ease-in;
+  min-width: 30px;
 
   & ~ & {
     margin-left: 5px;

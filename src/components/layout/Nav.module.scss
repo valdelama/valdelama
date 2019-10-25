@@ -50,7 +50,9 @@
 .active {
   color: #5d80a3;
 
-  &:after {
-    opacity: 1;
+  @include media('>=phablet') {
+    &:after {
+      opacity: 1;
+    }
   }
 }
