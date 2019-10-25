@@ -88,7 +88,6 @@ export default ({ data }) => (
 
         <Img fluid={data.nav.childImageSharp.fluid} />
       </SectionCopy>
-      
     </Content>
   </Layout>
 )
@@ -97,35 +96,35 @@ export const query = graphql`
   query {
     cardSorting: file(relativePath: { eq: "ww/card-sorting.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1540) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     cardSorting2: file(relativePath: { eq: "ww/card-sorting2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1540) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     iaMap: file(relativePath: { eq: "ww/ia-map.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1540) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     trello: file(relativePath: { eq: "ww/trello.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1129) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     nav: file(relativePath: { eq: "ww/nav.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1520) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }

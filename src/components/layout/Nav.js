@@ -17,14 +17,15 @@ export default () => (
         Resume
       </Link>
       <Link
-        to="/writing/"
+        to="/writing"
         className={styles.link}
         activeClassName={styles.active}
+        partiallyActive={true}
       >
         Writing
       </Link>
       <Link
-        to="/contact/"
+        to="/contact"
         className={styles.link}
         activeClassName={styles.active}
       >

@@ -37,7 +37,7 @@ class Home extends React.Component {
           <PortfolioItem
             image={WtImg}
             kind="watchingthat"
-            url="/experience/watching-that/"
+            url="/experience/watching-that"
             company="Watching That"
             lead="Designing the future of video revenue analytics"
             description="I help people navigate and interpret large sets of complex data so that they can optimize their video advertising technology stack."

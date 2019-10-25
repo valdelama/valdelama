@@ -9,7 +9,6 @@ import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
-
 import Img from 'gatsby-image'
 import DashInteraction from './dashboard-interaction.gif'
 import styles from '../Experience.module.scss'
@@ -113,8 +112,6 @@ export default ({ data }) => (
           className={styles.shadow}
         />
       </SectionCopy>
-
-      
     </Content>
   </Layout>
 )
@@ -123,28 +120,28 @@ export const query = graphql`
   query {
     personas: file(relativePath: { eq: "wt/dashboard/personas.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1140) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     dashv1: file(relativePath: { eq: "wt/dashboard/dashv1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1140) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     dashv2: file(relativePath: { eq: "wt/dashboard/dashv2.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1140) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     dashv3: file(relativePath: { eq: "wt/dashboard/dashv3.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1140) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -24,7 +24,7 @@ export default () => (
           There's nothing more to see here, have a look at these projects:
           <div className={styles.links}>
             <Link
-              to="/experience/watching-that/"
+              to="/experience/watching-that"
               className={styles.link}
               activeClassName={styles.active}
               partiallyActive={true}
@@ -32,7 +32,7 @@ export default () => (
               Watching That
             </Link>
             <Link
-              to="/experience/wegowise/"
+              to="/experience/wegowise"
               className={styles.link}
               activeClassName={styles.active}
               partiallyActive={true}
@@ -40,7 +40,7 @@ export default () => (
               WegoWise
             </Link>
             <Link
-              to="/experience/bfg/"
+              to="/experience/bfg"
               className={styles.link}
               activeClassName={styles.active}
               partiallyActive={true}

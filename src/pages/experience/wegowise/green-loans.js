@@ -76,7 +76,7 @@ export const query = graphql`
   query {
     glea: file(relativePath: { eq: "ww/glea/glea.png" }) {
       childImageSharp {
-        fluid(maxWidth: 2880) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -85,14 +85,14 @@ export const query = graphql`
       relativePath: { eq: "ww/glea/marketing-screen.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1301) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     flyer2: file(relativePath: { eq: "ww/glea/flyer2.png" }) {
       childImageSharp {
-        fluid(maxWidth: 2544) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }

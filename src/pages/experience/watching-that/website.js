@@ -113,7 +113,7 @@ export const query = graphql`
   query {
     website: file(relativePath: { eq: "wt/website1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
