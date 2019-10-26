@@ -4,7 +4,6 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
 import Container from 'src/components/layout/Container'
-import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
 import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
@@ -29,7 +28,7 @@ export default ({ data }) => (
     </Intro>
     <Content noBanner>
       <p>
-        I do marketing design as well! I lead the content creation, design and
+        I do marketing design as well! I led the content creation, design and
         development of Watching That's new website. It was really satisfying
         taking this project from start to finish.
       </p>

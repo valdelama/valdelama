@@ -38,12 +38,12 @@ export default ({ data }) => (
         date="August 2019 - Present"
       >
         <p>
-          At Brightfield group I’m helping the company create a professional and
+          At Brightfield Group I’m helping the company create a professional and
           coherent design language across a wide range of reports and data
-          portals. I’m also helping to implement the most efficient and user
-          friendly data visusalisations and also getting involved with with
-          implementation in Power BI. Unfortunately most of the work can’t be
-          shown due to confidentiality reasons.
+          portals. I’m also helping them improve the accessibility and
+          efficiency of their products by choosing the right visualisations.
+          Unfortunately most of the work can’t be shown due to confidentiality
+          reasons.
         </p>
       </Role>
 

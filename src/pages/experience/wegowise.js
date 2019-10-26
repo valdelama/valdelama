@@ -67,13 +67,13 @@ export default ({ data }) => (
       </ScrollAnimation>
 
       <ScrollAnimation animateIn="fadeIn">
-        <ImageCaption text="Tool for benchmarking against similar buildings">
+        <ImageCaption text="Tool for benchmarking against similar buildings.">
           <Img fluid={data.buildingSummary.childImageSharp.fluid} />
         </ImageCaption>
       </ScrollAnimation>
 
       <ScrollAnimation animateIn="fadeIn">
-        <ImageCaption text="Illustrations for WegoWise product launches">
+        <ImageCaption text="Illustrations for WegoWise product launches.">
           <div className={styles.wegoIllustrations}>
             <Img fixed={data.wegopower.childImageSharp.fixed} />
             <Img fixed={data.windows.childImageSharp.fixed} />

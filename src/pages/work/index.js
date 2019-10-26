@@ -24,11 +24,11 @@ export default () => (
     </Intro>
     <Content noBanner>
       <p>
-        I've worked as a freelancer designing and building websites for small
-        businesses, as a consultant for large companies, as an operations
-        manager and as a developer. For the last 6+ years I've been leading the
-        design effort for data analytics platforms. My resume is available below
-        or as a{' '}
+        I got started in 2007 as a freelancer designing and building websites
+        for small businesses. I went on to work as a consultant for a large
+        company, as an operations manager and as a developer. For the last 6+
+        years I've been leading the design effort for data analytics platforms.
+        My resume is available below or as a{' '}
         <a href={CV} title="PDF version of my CV">
           PDF
         </a>

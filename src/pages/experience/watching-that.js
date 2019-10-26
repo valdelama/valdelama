@@ -36,12 +36,12 @@ export default ({ data }) => (
         date="April 2018 - Present"
       >
         <p>
-          Watching that is a video intelligence platform that helps content
+          Watching That is a video intelligence platform that helps content
           creators and publishers optimise their video advertising revenue.
         </p>
         <p>
-          My role as the lead product designer in a small startiup is very
-          varied and ranges from product strategy to wireframing and all the way
+          My role as the lead product designer in a small startup is very varied
+          and ranges from product strategy to wireframing and all the way
           through to UI development in React.
         </p>
         <p>
@@ -81,7 +81,7 @@ export default ({ data }) => (
       <ScrollAnimation animateIn="fadeIn">
         <CaseStudyLink
           title="A new website"
-          description="I lead the content creation, design and development of Watching That's new website."
+          description="I led the content creation, design and development of Watching That's new website."
           url="experience/watching-that/website"
         >
           <Img

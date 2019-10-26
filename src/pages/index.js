@@ -27,9 +27,9 @@ class Home extends React.Component {
         <Intro>
           <span className={styles.salutation}>Hi, I'm Dan</span>
           <p>
-            A designer that likes to write code,
+            A product designer that likes to code,
             <br />
-            check out some of my recent projects
+            check out some of my work below.
           </p>
         </Intro>
 
