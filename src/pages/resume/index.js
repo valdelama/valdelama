@@ -10,8 +10,8 @@ import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
 import Job from 'src/components/Job'
 import ArrowLink from 'src/components/ArrowLink'
-import CV from './dan-winer-resume.pdf'
-import styles from './Work.module.scss'
+import CV from './resume-dan-winer.pdf'
+import styles from './Resume.module.scss'
 
 export default () => (
   <Layout>
@@ -42,7 +42,7 @@ export default () => (
           includes research, product design, data visualisation design,
           establishing a scalable design system and UI development.
         </p>
-        <ArrowLink url="experience/watching-that" text="Read more" />
+        <ArrowLink url="/watching-that" text="Read more" />
       </Job>
       <Job company="WegoWise" dates="2013 - 2018" role="Lead Designer">
         <p>
@@ -65,7 +65,7 @@ export default () => (
             developing front-end components.
           </li>
         </ul>
-        <ArrowLink url="experience/wegowise" text="Read more" />
+        <ArrowLink url="/wegowise" text="Read more" />
       </Job>
       <Job company="Create Today" dates="2009 - 2013" role="Operations Manager">
         A web to print startup and artist community (now offline). Lead a

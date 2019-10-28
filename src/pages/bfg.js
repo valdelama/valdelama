@@ -10,9 +10,8 @@ import Title from 'src/components/Title'
 import Role from 'src/components/experience/Role'
 import CaseStudyLink from 'src/components/experience/CaseStudyLink'
 import ImageCaption from 'src/components/experience/ImageCaption'
-
 import Img from 'gatsby-image'
-import styles from './Experience.module.scss'
+import styles from './Projects.module.scss'
 
 export default ({ data }) => (
   <Layout>

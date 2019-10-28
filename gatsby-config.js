@@ -3,7 +3,7 @@ module.exports = {
     title: `Valdelama`,
     author: `Dan Winer`,
     description: `A product designers portfolio`,
-    siteUrl: `valdelama.com`,
+    siteUrl: `https://valdelama.com`,
   },
   plugins: [
     'gatsby-plugin-root-import',
@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/src/pages`,
+        name: `writing`,
       },
     },
     {

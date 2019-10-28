@@ -5,6 +5,17 @@ import dribbble from 'src/images/dribbble.svg'
 import linkedin from 'src/images/linkedin.svg'
 import styles from './Footer.module.scss'
 
+const FooterLink = props => (
+  <Link
+    className={styles.link}
+    to={props.to}
+    activeClassName={styles.active}
+    partiallyActive={true}
+  >
+    {props.children}
+  </Link>
+)
+
 export default () => (
   <footer>
     <Container>
@@ -23,30 +34,9 @@ export default () => (
         <div className={styles.copy}>
           There's nothing more to see here, have a look at these projects:
           <div className={styles.links}>
-            <Link
-              to="/experience/watching-that"
-              className={styles.link}
-              activeClassName={styles.active}
-              partiallyActive={true}
-            >
-              Watching That
-            </Link>
-            <Link
-              to="/experience/wegowise"
-              className={styles.link}
-              activeClassName={styles.active}
-              partiallyActive={true}
-            >
-              WegoWise
-            </Link>
-            <Link
-              to="/experience/bfg"
-              className={styles.link}
-              activeClassName={styles.active}
-              partiallyActive={true}
-            >
-              Brightfield Group
-            </Link>
+            <FooterLink to="/watching-that">Watching That</FooterLink>
+            <FooterLink to="/wegowise">WegoWise</FooterLink>
+            <FooterLink to="/bfg">Brightfield Group</FooterLink>
           </div>
         </div>
       </div>

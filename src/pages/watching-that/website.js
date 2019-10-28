@@ -9,9 +9,8 @@ import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
-
 import Img from 'gatsby-image'
-import styles from '../Experience.module.scss'
+import styles from '../Projects.module.scss'
 
 export default ({ data }) => (
   <Layout>
@@ -23,7 +22,7 @@ export default ({ data }) => (
       <Title
         title="Watching That"
         subheader="Creating a new marketing site, from concept to production"
-        backLink="/experience/watching-that"
+        backLink="/watching-that"
       />
     </Intro>
     <Content noBanner>

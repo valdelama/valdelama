@@ -11,7 +11,8 @@ import Role from 'src/components/experience/Role'
 import CaseStudyLink from 'src/components/experience/CaseStudyLink'
 import ImageCaption from 'src/components/experience/ImageCaption'
 import Img from 'gatsby-image'
-import styles from './Experience.module.scss'
+import styles from '../Projects.module.scss'
+
 export default ({ data }) => (
   <Layout>
     <SEO
@@ -54,7 +55,7 @@ export default ({ data }) => (
         <CaseStudyLink
           title="Video Intelligence Dashboard"
           description="A customisable dashboard that caters to users from across all roles in the organisation."
-          url="experience/watching-that/dashboard"
+          url="/watching-that/dashboard"
         >
           <Img fluid={data.widgets.childImageSharp.fluid} />
         </CaseStudyLink>
@@ -82,7 +83,7 @@ export default ({ data }) => (
         <CaseStudyLink
           title="A new website"
           description="I led the content creation, design and development of Watching That's new website."
-          url="experience/watching-that/website"
+          url="/watching-that/website"
         >
           <Img
             fluid={data.website.childImageSharp.fluid}

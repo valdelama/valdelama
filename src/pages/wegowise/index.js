@@ -13,9 +13,8 @@ import Role from 'src/components/experience/Role'
 import CaseStudyLink from 'src/components/experience/CaseStudyLink'
 import ImageCaption from 'src/components/experience/ImageCaption'
 import SectionCopy from 'src/components/experience/SectionCopy'
-
 import Img from 'gatsby-image'
-import styles from './Experience.module.scss'
+import styles from '../Projects.module.scss'
 
 export default ({ data }) => (
   <Layout>
@@ -57,7 +56,7 @@ export default ({ data }) => (
         <CaseStudyLink
           title="Helping Financial Institutions Go Green"
           description="I led the design and front-end development of a web application that would enable financial institutions to assess the eligibility of real estate properties for green loans."
-          url="experience/wegowise/green-loans"
+          url="/wegowise/green-loans"
         >
           <Img
             fluid={data.glea.childImageSharp.fluid}
@@ -86,7 +85,7 @@ export default ({ data }) => (
         <CaseStudyLink
           title="Solving an Information Architecture Puzzle"
           description="The dashboard at WegoWise had become a dumping ground for miscellaneous links, I used card sorting to determine new navigation patterns."
-          url="experience/wegowise/information-architecture"
+          url="/wegowise/information-architecture"
         >
           <Img fluid={data.cardSort.childImageSharp.fluid} />
         </CaseStudyLink>

@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
                 <div styleName="post" key={node.fields.slug}>
                   <ScrollAnimation
                     animateIn="fadeIn"
-                    duration="0.5"
+                    duration={0.5}
                     animateOnce
                   >
                     <span className={styles.category}>

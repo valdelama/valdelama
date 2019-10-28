@@ -8,10 +8,8 @@ import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
-
 import Img from 'gatsby-image'
-import styles from '../Experience.module.scss'
-import glStyles from './GreenLoans.module.scss'
+import styles from '../Projects.module.scss'
 
 export default ({ data }) => (
   <Layout>
@@ -23,7 +21,7 @@ export default ({ data }) => (
       <Title
         title="WegoWise"
         subheader="Helping Financial Institutions Go Green"
-        backLink="/experience/wegowise"
+        backLink="/wegowise"
       />
     </Intro>
     <Content noBanner>
@@ -47,10 +45,7 @@ export default ({ data }) => (
           that would affect the likelihood of obtaining the loan.
         </p>
 
-        <Img
-          fluid={data.glea.childImageSharp.fluid}
-          className={styles.shadow}
-        />
+        <Img fluid={data.glea.childImageSharp.fluid} />
       </SectionCopy>
       <SectionCopy title="Marketing design">
         <p>
@@ -58,15 +53,9 @@ export default ({ data }) => (
           a marketing campaign.
         </p>
 
-        <Img
-          fluid={data.marketingScreen.childImageSharp.fluid}
-          className={styles.shadow}
-        />
+        <Img fluid={data.marketingScreen.childImageSharp.fluid} />
 
-        <Img
-          fluid={data.flyer2.childImageSharp.fluid}
-          className={styles.shadow}
-        />
+        <Img fluid={data.flyer2.childImageSharp.fluid} />
       </SectionCopy>
     </Content>
   </Layout>

@@ -13,7 +13,11 @@ export default () => (
       <Link to="/" className={styles.link} activeClassName={styles.active}>
         Home
       </Link>
-      <Link to="/work" className={styles.link} activeClassName={styles.active}>
+      <Link
+        to="/resume"
+        className={styles.link}
+        activeClassName={styles.active}
+      >
         Resume
       </Link>
       <Link

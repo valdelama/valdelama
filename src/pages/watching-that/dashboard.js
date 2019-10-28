@@ -11,7 +11,7 @@ import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
 import Img from 'gatsby-image'
 import DashInteraction from './dashboard-interaction.gif'
-import styles from '../Experience.module.scss'
+import styles from '../Projects.module.scss'
 
 export default ({ data }) => (
   <Layout>
@@ -23,7 +23,7 @@ export default ({ data }) => (
       <Title
         title="Watching That"
         subheader="Creating a card-based, customisable dashboard"
-        backLink="/experience/watching-that"
+        backLink="/watching-that"
       />
     </Intro>
     <Content noBanner>
