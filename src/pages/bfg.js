@@ -51,6 +51,11 @@ export default ({ data }) => (
           <Img fluid={data.vis.childImageSharp.fluid} />
         </ImageCaption>
       </ScrollAnimation>
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="Detailed styleguides to help scale a coherent visual language across the products">
+          <Img fluid={data.styleguide.childImageSharp.fluid} />
+        </ImageCaption>
+      </ScrollAnimation>
     </Content>
   </Layout>
 )
@@ -65,6 +70,13 @@ export const query = graphql`
       }
     }
     vis: file(relativePath: { eq: "bfg/bfg-vis.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    styleguide: file(relativePath: { eq: "bfg/styleguide.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
