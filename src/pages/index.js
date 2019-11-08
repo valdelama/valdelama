@@ -24,6 +24,7 @@ class Home extends React.Component {
           title="Home"
           metaDescription="The online home of Dan Winer, a multi-disciplinary product designer."
         />
+
         <Intro>
           <span className={styles.salutation}>Hi, I'm Dan</span>
           <p>

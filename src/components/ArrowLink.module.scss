@@ -6,7 +6,6 @@
   font-size: $fontSize - 4;
   text-transform: uppercase;
   position: relative;
-  transition: transform $timing ease-in;
 
   &:before,
   &:after {

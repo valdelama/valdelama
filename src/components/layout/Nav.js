@@ -11,7 +11,7 @@ export default () => (
     </Link>
     <div className={styles.nav}>
       <Link to="/" className={styles.link} activeClassName={styles.active}>
-        Home
+        Work
       </Link>
       <Link
         to="/resume"

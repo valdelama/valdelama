@@ -44,6 +44,20 @@ export default () => (
         </p>
         <ArrowLink url="/watching-that" text="Read more" />
       </Job>
+      <Job
+        company="Brightfield Group"
+        dates="2019 - Present"
+        role="Design Consultant"
+      >
+        <p>
+          Predictive consumer and market intelligence for the CBD and Cannabis
+          industry. I’m helping the company create a professional, coherent
+          design language across a wide range of reports and data portals. I’m
+          also providing them with data visualisation expertise to help them
+          improve the accessibility and efficiency of their products.
+        </p>
+        <ArrowLink url="/bfg" text="Read more" />
+      </Job>
       <Job company="WegoWise" dates="2013 - 2018" role="Lead Designer">
         <p>
           The largest database of multifamily utility data in the US. I was

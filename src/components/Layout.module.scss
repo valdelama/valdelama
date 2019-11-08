@@ -1,5 +1,9 @@
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .siteContent {
-  // max-width: 1540px;
-  // margin: 0 auto;
-  // flex: 1;
+  flex: 1;
 }

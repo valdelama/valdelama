@@ -34,24 +34,18 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               return (
                 <div styleName="post" key={node.fields.slug}>
-                  <ScrollAnimation
-                    animateIn="fadeIn"
-                    duration={0.5}
-                    animateOnce
-                  >
-                    <span className={styles.category}>
-                      {node.frontmatter.category}
-                    </span>
-                    <Link to={node.fields.slug}>
-                      <h3 styleName="title">{node.frontmatter.title}</h3>
-                    </Link>
+                  <span className={styles.category}>
+                    {node.frontmatter.category}
+                  </span>
+                  <Link to={node.fields.slug}>
+                    <h3 styleName="title">{node.frontmatter.title}</h3>
+                  </Link>
 
-                    {/*<small styleName="date">{node.frontmatter.date}</small>*/}
-                    <div
-                      className={styles.excerpt}
-                      dangerouslySetInnerHTML={{ __html: node.excerpt }}
-                    />
-                  </ScrollAnimation>
+                  {/*<small styleName="date">{node.frontmatter.date}</small>*/}
+                  <div
+                    className={styles.excerpt}
+                    dangerouslySetInnerHTML={{ __html: node.excerpt }}
+                  />
                 </div>
               )
             })}
@@ -74,7 +68,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 350)
           fields {
             slug
           }

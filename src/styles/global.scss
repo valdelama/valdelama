@@ -43,6 +43,11 @@ img {
 a {
   color: $linkColor;
   text-decoration: none;
+  transition: color 0.2s ease-in;
+
+  &:hover {
+    color: #2c84de;
+  }
 }
 
 li {
@@ -92,8 +97,22 @@ ol {
     transform: translateY(0);
   }
 }
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 .fadeIn {
   animation-name: fadeIn;
   animation-timing-function: ease-in-out;
+}
+
+.fade {
+  animation-name: fade;
+  animation-timing-function: ease-in;
 }

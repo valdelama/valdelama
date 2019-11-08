@@ -9,9 +9,9 @@ export default ({ kind, image, company, lead, url, description }) => (
   <div className={cn(styles.wrapper, styles[kind])}>
     <SmallTitle className={styles.title} content={company} />
     <div className={styles.content}>
-      <Link to={url}>
+      <Link to={url} className={styles.imageLink}>
         <div className={styles.imageWrapper}>
-          <img src={image} alt={company} className={styles.image} />
+          <img src={image} alt={company} />
         </div>
       </Link>
 
