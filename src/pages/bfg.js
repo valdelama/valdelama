@@ -16,13 +16,13 @@ import styles from './Projects.module.scss'
 export default ({ data }) => (
   <Layout>
     <SEO
-      title="Watching That"
+      title="Brightfield Group"
       metaDescription="My experience as a data visualisation consultant"
     />
     <Intro>
       <Title
         title="Brightfield Group"
-        subheader="Predictive consumer and marketing intellgence for the CBD and cannabis industry"
+        subheader="Predictive consumer and marketing intelligence for the CBD and cannabis industry"
       />
     </Intro>
 
