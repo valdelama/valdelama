@@ -10,8 +10,9 @@ export default ({ className, children, noBanner }) => (
     defaultStyle={{
       transitionProperty: 'transform, opacity',
       transitionDuration: '0.3s',
+      transitionDelay: '0.45s',
       transitionTimingFunction: 'ease-in-out',
-      transform: 'translateY(1px)',
+      transform: 'translateY(5px)',
       opacity: 0,
     }}
     transitionStyles={{

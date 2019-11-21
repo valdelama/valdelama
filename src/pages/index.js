@@ -26,12 +26,26 @@ class Home extends React.Component {
         />
 
         <Intro>
-          <span className={styles.salutation}>Hi, I'm Dan</span>
-          <p>
-            A product designer that likes to code,
-            <br />
-            check out some of my work below.
-          </p>
+          <ScrollAnimation
+            animateIn="fadeIn"
+            duration={0.3}
+            delay={150}
+            animateOnce
+          >
+            <span className={styles.salutation}>Hi, I'm Dan</span>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateIn="fadeIn"
+            duration={0.3}
+            delay={350}
+            animateOnce
+          >
+            <p>
+              A product designer that likes to code,
+              <br />
+              check out some of my work below.
+            </p>
+          </ScrollAnimation>
         </Intro>
 
         <Content>

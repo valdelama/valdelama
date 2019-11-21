@@ -10,9 +10,7 @@ export default ({ className, children, noBanner }) => (
   <div className={cn(styles.intro, className, noBanner && styles.noBanner)}>
     <Container>
       <Nav />
-      <ScrollAnimation animateIn="fade" duration={0.3} animateOnce>
-        <div className={styles.content}>{children}</div>
-      </ScrollAnimation>
+      <div className={styles.content}>{children}</div>
     </Container>
   </div>
 )
