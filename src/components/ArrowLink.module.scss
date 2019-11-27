@@ -1,16 +1,23 @@
 @import 'src/styles/util/index.scss';
 
+$_arrowWidth: 24px;
+$_arrowPadding: 4px;
+$_timing: 0.3s;
 .arrowLink {
-  $timing: 0.2s;
   font-weight: bold;
   font-size: $fontSize - 4;
   text-transform: uppercase;
   position: relative;
+  overflow: hidden;
+  padding: $_arrowPadding;
+  padding-right: $_arrowWidth;
+  transition: color 0.3s ease-in;
+  display: inline-block;
 
   &:before,
   &:after {
     position: absolute;
-    transition: transform $timing ease-in;
+    transition: transform $_timing ease-in;
   }
 
   &:after {
@@ -18,12 +25,41 @@
     transform: translateX(4px);
   }
 
-  &:hover:after {
-    transform: translateX(6px);
+  &:hover {
+    color: #0079f5;
+
+    &:after {
+      transform: translateX(6px);
+    }
+
+    .bg {
+      transform: translateX(0);
+    }
   }
 }
 
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.bg {
+  width: 100%;
+  transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: block;
+  background: rgba(#2c84de, 0.07);
+  z-index: 0;
+  transition: transform $_timing ease-in;
+}
+
 .back {
+  padding-right: $_arrowPadding;
+  padding-left: $_arrowWidth;
+
   &:after {
     display: none;
   }
@@ -35,5 +71,9 @@
 
   &:hover:before {
     transform: translateX(-20px);
+  }
+
+  .bg {
+    transform: translateX(100%);
   }
 }

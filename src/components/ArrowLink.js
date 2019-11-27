@@ -8,6 +8,7 @@ export default ({ back, className, text, url }) => (
     to={url}
     className={cn(styles.arrowLink, className, back && styles.back)}
   >
-    {text}
+    <span className={styles.content}>{text}</span>
+    <span className={styles.bg}></span>
   </Link>
 )

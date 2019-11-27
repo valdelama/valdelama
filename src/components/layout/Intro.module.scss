@@ -2,7 +2,12 @@
 
 .intro {
   padding-top: 10px;
-  background-color: $introColor;
+  background-image: linear-gradient(
+    178deg,
+    #f7fbff 0%,
+    #f5faff 54%,
+    #f2f6ff 100%
+  );
 }
 
 .content {

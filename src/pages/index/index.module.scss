@@ -1,17 +1,43 @@
 @import 'src/styles/util/index.scss';
 
-.indexContent {
-  margin: rem(90px) 0;
+.indexIntro {
+  margin: rem(60px) 0;
 
   @include media($gridIsStacked) {
-    margin: rem(60px) 0;
+    margin: 0;
   }
 }
 
 .salutation {
   font-weight: bold;
   font-size: rem(53px);
-  color: #416180;
+  color: $headerColorDark;
   display: block;
   margin-bottom: 1rem;
+}
+
+.portfolioWrapper {
+  position: relative;
+}
+
+.wwDeco,
+.wwDisc,
+.wtDeco {
+  position: absolute;
+}
+
+.wwDeco {
+  right: -50px;
+  bottom: 80px;
+  z-index: 3;
+}
+
+.wwDisc {
+  right: -65px;
+  bottom: 30px;
+}
+
+.wtDeco {
+  top: 30px;
+  left: -50px;
 }
