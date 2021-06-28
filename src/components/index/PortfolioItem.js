@@ -17,7 +17,7 @@ export default ({ kind, image, company, lead, url, description }) => (
 
       <div className={styles.copy}>
         <span className={styles.description}>{description}</span>
-        <ArrowLink url={url} text="Explore" className={styles.explore} />
+        {url && <ArrowLink url={url} text="Explore" className={styles.explore} /> }
       </div>
     </div>
   </div>

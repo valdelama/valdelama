@@ -26,73 +26,55 @@ export default () => (
       <p>
         I got started in 2007 as a freelancer designing and building websites
         for small businesses. I went on to work as a consultant for a large
-        company, as an operations manager and as a developer. For the last 6+
-        years I've been leading the design effort for data analytics platforms.
-        My resume is available below or as a{' '}
+        company, as an operations manager and as a developer. For the last few
+        years I've been leading small design teams and helping other designers 
+        do their best work. My resume is available below or as a{' '}
         <a href={CV} title="PDF version of my CV">
           PDF
         </a>
         .
       </p>
-
-      <Job company="Watching That" dates="2018 - Present" role="Lead Designer">
+      <Job
+        company="Smile.io"
+        dates="2019 - Present"
+        role="Head of Design"
+      >
         <p>
-          A video intelligence platform handling millions of streaming data
-          points per day that I’ve helped design from the ground up. The role
-          includes research, product design, data visualisation design,
-          establishing a scalable design system and UI development.
+        I lead a small design team building the ecommerce loyalty infrastructure of the internet. Our work reaches over 60k brands and millions of shoppers. 
         </p>
-        <ArrowLink url="/watching-that" text="Read more" />
+        <ArrowLink url="/smile" text="Read more" />
+        
       </Job>
+
       <Job
         company="Brightfield Group"
         dates="2019 - Present"
         role="Design Consultant"
       >
         <p>
-          Predictive consumer and market intelligence for the CBD and Cannabis
-          industry. I’m helping the company create a professional, coherent
-          design language across a wide range of reports and data portals. I’m
-          also providing them with data visualisation expertise to help them
-          improve the accessibility and efficiency of their products.
+        Brightfield is an industry leader in predictive consumer and market intelligence for the CBD and Cannabis industry. I provide them data visualisation expertise.
         </p>
         <ArrowLink url="/bfg" text="Read more" />
       </Job>
+
+      <Job company="Watching That" dates="2018 - Present" role="Lead Designer">
+        <p>
+          A video intelligence platform handling millions of streaming data points per day that I helped design from the ground up. The role included research, product design, data visualisation design, establishing a design system and React UI development.
+        </p>
+        <ArrowLink url="/watching-that" text="Read more" />
+      </Job>
+    
       <Job company="WegoWise" dates="2013 - 2018" role="Lead Designer">
         <p>
-          The largest database of multifamily utility data in the US. I was
-          responsible for product and marketing design and for the hiring and
-          managing of designers. Instrumental in various aspects of an evolving
-          design process:
+        The largest database of multifamily utility data in the US. I was responsible for product and marketing design, managing the design team and implementing a ‘design first’ culture. Created and oversaw a scalable approach to developing front-end components.
         </p>
-        <ul>
-          <li>
-            Collaborated with business development to explore early-stage
-            product concepts.
-          </li>
-          <li>
-            Established and promoted a 'design first' company culture with an
-            emphasis on validating ideas via interviews and testing.
-          </li>
-          <li>
-            Implemented and oversaw a scalable, documented approach to
-            developing front-end components.
-          </li>
-        </ul>
         <ArrowLink url="/wegowise" text="Read more" />
       </Job>
       <Job company="Create Today" dates="2009 - 2013" role="Operations Manager">
-        A web to print startup and artist community (now offline). Lead a
-        diverse, distributed team building complex software to tight deadlines.
-        I gained a wealth of experience in various aspects of agile development
-        and project management. Helped take the business from concept through to
-        successful acquisition.
+      A web to print startup and artist community (now offline). Led a diverse, distributed team building complex software to tight deadlines. Helped take the business from concept through to successful acquisition. 
       </Job>
       <Job company="IGT" dates="2009 - 2012" role="Design Consultant">
-        Designed and coded the player portal area of various state lottery
-        sites, developed a reusable front-end framework in HTML, CSS and
-        Javascript. The work also included some ios design and usability/
-        accessibility analysis.
+      Designed and coded the player portal area of various state lottery sites, developed a reusable front-end framework in HTML, CSS and Javascript. The work also included usability, accessibility and inclusion analysis and iOS design.
       </Job>
     </Content>
   </Layout>

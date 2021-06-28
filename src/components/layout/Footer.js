@@ -34,6 +34,7 @@ export default () => (
         <div className={styles.copy}>
           There's nothing more to see here, have a look at these projects:
           <div className={styles.links}>
+          <FooterLink to="/smile">Smile</FooterLink>
             <FooterLink to="/watching-that">Watching That</FooterLink>
             <FooterLink to="/wegowise">WegoWise</FooterLink>
             <FooterLink to="/bfg">Brightfield Group</FooterLink>

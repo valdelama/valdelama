@@ -34,15 +34,15 @@ export default ({ data }) => (
       <Role
         role="Lead Product Designer"
         responsibilities="Product design, product planning, UI development"
-        date="April 2018 - Present"
+        date="April 2018 - November 2019"
       >
         <p>
           Watching That is a video intelligence platform that helps content
           creators and publishers optimise their video advertising revenue.
         </p>
         <p>
-          My role as the lead product designer in a small startup is very varied
-          and ranges from product strategy to wireframing and all the way
+          My role as the lead product designer in a small startup was very varied
+          and ranged from product strategy to wireframing and all the way
           through to UI development in React.
         </p>
         <p>

@@ -2,7 +2,7 @@
 
 $_arrowWidth: 24px;
 $_arrowPadding: 4px;
-$_timing: 0.3s;
+$_timing: 0.15s;
 .arrowLink {
   font-weight: bold;
   font-size: $fontSize - 4;
@@ -11,7 +11,7 @@ $_timing: 0.3s;
   overflow: hidden;
   padding: $_arrowPadding;
   padding-right: $_arrowWidth;
-  transition: color 0.3s ease-in;
+  transition: color $_timing ease-in;
   display: inline-block;
 
   &:before,
