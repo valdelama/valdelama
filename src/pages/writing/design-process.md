@@ -3,10 +3,10 @@ title: An outline of my product design process
 category: Product Design
 date: '2019-04-13'
 ---
-This is a guide to the process that I like to follow when designing new products or non-trivial features. Whether you need to follow _all_ the steps or not will depend on the specific context. The opportunity assessment part is more formal and better suited to new products, whereas the rest is generally equally applicable to features as well as new products.
+This is a guide to the process that I like to follow when designing new products or non-trivial features. Whether it's best to follow _all_ the steps or not will depend on the specific context. The opportunity assessment part is more formal and better suited to new products, whereas the rest is generally equally applicable to features as well as new products.
 
 ## Opportunity assessment
-Most of this part is lifted straight out of the brilliant book [INSPIRED: How to Create Tech Products Customers Love](https://svpg.com/inspired-how-to-create-products-customers-love/) by Marty Cagan, I think it's a must-read for both product designers and product managers.
+I got a lot of value out of the book [INSPIRED: How to Create Tech Products Customers Love](https://svpg.com/inspired-how-to-create-products-customers-love/) by Marty Cagan, He provides a great framework for how to frame opportunities:
 1. Exactly what problem will this solve? (value proposition)
 2. For whom do we solve that problem? (target market)
 3. How big is the opportunity? (market size)
@@ -17,7 +17,15 @@ Most of this part is lifted straight out of the brilliant book [INSPIRED: How to
 8. How will we measure success? (metrics/revenue strategy)
 9. What factors are critical to success? (solution requirements)
 
-These are not questions that a product designer should feel compelled to answer but this is the sort of information that you want to have at your disposal so that you can make more relevant and informed design decisions.
+These are not questions that a product designer should have to answer by themselves, but being equipped with this sort of information can really help you make more relevant and informed design decisions.
+
+Often times however a framework like the one above can be overkill, especially for a small feature or an existing product. There are a few simple questions that I always like to try and answer before starting design work: 
+
+- What is the problem to the user?
+- Who is the user that is affected? (persona)
+- How do we know it's a real problem?
+- What is the risk to the business if we don't solve it?
+
 ## Propose a solution
 
 **Create a simple product specification, a simple product spec. is more likely to be read and maintained.** I break this document down into three categories:
@@ -49,7 +57,7 @@ Ideally you want real users to test the prototype who are as close to your targe
 
 **Engineer validation**
 
-There's no point designing a fantastic solution if you just don't have the technical capacity to implement it so somebody on your engineering team needs to answer the question: do we have the capability and resources to build it?
+There's no point designing a fantastic solution if you just don't have the technical capacity to implement it so somebody on your engineering team needs to answer the question: do we have the capability to build it?
 
 ## Conclusion
 

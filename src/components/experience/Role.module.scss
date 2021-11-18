@@ -31,6 +31,5 @@
 .sidebarItemTitle {
   font-size: $fontSize - 2;
   line-height: $lineHeight;
-  color: $headerColorDark;
-  font-weight: bold;
+  font-weight: $fontWeightBold;
 }

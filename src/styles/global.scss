@@ -7,6 +7,7 @@ html {
   font-size: $fontSize;
   line-height: $lineHeight;
   box-sizing: border-box;
+  font-weight: $fontWeightDefault;
 
   @include media($gridIsStacked) {
     font-size: $fontSize - 2px;
@@ -35,6 +36,10 @@ p {
   }
 }
 
+strong {
+  font-weight: $fontWeightBold;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -58,13 +63,14 @@ h1,
 h2,
 h3,
 h4 {
-  color: $headerColorDark;
+  color: $headerColor;
   line-height: 1.5;
 }
 
 h2 {
   margin-top: $lineHeight * 2.5;
   margin-bottom: $lineHeight;
+  line-height: 1.2;
 }
 
 h3 {

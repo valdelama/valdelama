@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
 import Layout from '../components/Layout'
-import Container from 'src/components/layout/Container'
 import BodyCopy from 'src/components/BodyCopy'
 import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
-import ArrowLink from 'src/components/ArrowLink'
 import SEO from '../components/seo'
 import styles from './Writing.module.scss'
 
@@ -34,14 +31,10 @@ class BlogIndex extends React.Component {
             {posts.map(({ node }) => {
               return (
                 <div styleName="post" key={node.fields.slug}>
-                  <span className={styles.category}>
-                    {node.frontmatter.category}
-                  </span>
                   <Link to={node.fields.slug}>
                     <h3 styleName="title">{node.frontmatter.title}</h3>
                   </Link>
 
-                  {/*<small styleName="date">{node.frontmatter.date}</small>*/}
                   <div
                     className={styles.excerpt}
                     dangerouslySetInnerHTML={{ __html: node.excerpt }}

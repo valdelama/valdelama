@@ -2,16 +2,11 @@
 
 .intro {
   padding-top: 10px;
-  background-image: linear-gradient(
-    178deg,
-    #f7fbff 0%,
-    #f5faff 54%,
-    #f2f6ff 100%
-  );
+  background: $shadedAreaBg;
 }
 
 .content {
-  padding: rem(100px) 0 rem(230px);
+  padding: rem(100px) 0 rem(200px);
 
   .noBanner & {
     padding-bottom: $expSectionSpacing / 2;

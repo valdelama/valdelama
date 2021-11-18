@@ -9,9 +9,9 @@
 }
 
 .salutation {
-  font-weight: bold;
+  font-weight: $fontWeightBold;
   font-size: rem(53px);
-  color: $headerColorDark;
+  color: $headerColor;
   display: block;
   margin-bottom: 1rem;
 }

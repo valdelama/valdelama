@@ -9,7 +9,7 @@ $_metaWidth: rem(200px);
   }
 }
 
-.content {
+.content {  
   position: relative;
   line-height: rem(25px);
   max-width: $contentWidth;
@@ -18,7 +18,9 @@ $_metaWidth: rem(200px);
 .meta {
   font-family: $fontSansSerif;
   font-size: rem(16px);
-  color: $headerColorDark;
+  text-align: right;
+  padding-right: 2rem;
+  font-style: italic;
 
   @include media('>desktop') {
     width: $_metaWidth;
@@ -47,8 +49,12 @@ $_metaWidth: rem(200px);
 }
 
 .company {
-  color: $headerColorDark;
-  font-weight: bold;
+  color: $headerColor;
+  font-weight: $fontWeightBold;
   margin-bottom: $lineHeight / 2;
   font-size: rem(20px);
+}
+
+.link {
+  margin-top: $lineHeight / 3;
 }

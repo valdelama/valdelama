@@ -23,15 +23,21 @@ $_timing: 0.4s;
     background: #fefcff;
     border-color: rgba(#c973f4, 0.06);
   }
+
+  &.smile {
+    background: #fff;
+  }  
 }
 
 .title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   display: block;
+  color: $headerColor;
 }
 
 .content {
   display: flex;
+  align-items: center;
 
   @include media('<tablet') {
     flex-direction: column;
@@ -40,7 +46,6 @@ $_timing: 0.4s;
 
 .copy {
   margin-left: 2rem;
-  margin-top: 1rem;
 
   @include media('<tablet') {
     margin-left: 0;
@@ -53,13 +58,18 @@ $_timing: 0.4s;
 
 .lead {
   margin-bottom: 1rem;
-  font-weight: bold;
+  font-weight: $fontWeightBold;
   opacity: 0.8;
 }
 
 .imageWrapper {
+  text-align: center;
   @include media('>=tablet') {
     width: 360px;
+  }
+
+  .watchingthat & {
+    padding: 1em;
   }
 }
 

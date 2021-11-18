@@ -90,19 +90,13 @@ export default ({ data }) => (
         </a>
         .
       </p>
-      <p>
-        Take a look at the{' '}
-        <a href="https://www.watchingthat.com/" title="Watching That website">
-          live website
-        </a>
-        .
-      </p>
-      <a href="https://www.watchingthat.com/" title="Watching That website">
+
+
         <Img
           fluid={data.website.childImageSharp.fluid}
           className={styles.shadow}
         />
-      </a>
+
     </Content>
   </Layout>
 )

@@ -6,7 +6,7 @@ import styles from './Nav.module.scss'
 
 export default () => (
   <div className={styles.header}>
-    <Link to="/" title="Logo" className={styles.logo}>
+    <Link to="/" title="Logo" className={styles.logo} width="35px" height="35px">
       <img src={logo} alt="Home" />
     </Link>
     <div className={styles.nav}>
@@ -18,7 +18,7 @@ export default () => (
         className={styles.link}
         activeClassName={styles.active}
       >
-        Resume
+        About
       </Link>
       <Link
         to="/writing"

@@ -2,16 +2,17 @@
 
 $_arrowWidth: 24px;
 $_arrowPadding: 4px;
-$_timing: 0.3s;
+$_timing: 0.15s;
 .arrowLink {
-  font-weight: bold;
-  font-size: $fontSize - 4;
+  font-weight: $fontWeightBold;
+  font-size: $fontSize - 5;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
   padding: $_arrowPadding;
   padding-right: $_arrowWidth;
-  transition: color 0.3s ease-in;
+  transition: color $_timing ease-in;
   display: inline-block;
 
   &:before,
@@ -27,10 +28,6 @@ $_timing: 0.3s;
 
   &:hover {
     color: #0079f5;
-
-    &:after {
-      transform: translateX(6px);
-    }
 
     .bg {
       transform: translateX(0);
@@ -67,10 +64,6 @@ $_timing: 0.3s;
   &:before {
     content: '←';
     transform: translateX(-18px);
-  }
-
-  &:hover:before {
-    transform: translateX(-20px);
   }
 
   .bg {

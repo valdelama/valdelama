@@ -11,6 +11,7 @@ import PortfolioItem from 'src/components/index/PortfolioItem'
 import WtImg from 'src/pages/index/watchingthat.svg'
 import WegoImg from 'src/pages/index/wegowise.svg'
 import BFGImg from 'src/pages/index/bfg.svg'
+import SmileImg from 'src/pages/index/smile.svg'
 import WTDeco from 'src/pages/index/wtDeco.svg'
 import WWDeco from 'src/pages/index/wwDeco.svg'
 import WWDisc from 'src/pages/index/wwDisc.svg'
@@ -45,9 +46,7 @@ class Home extends React.Component {
               animateOnce
             >
               <p>
-                A product designer that likes to code,
-                <br />
-                check out some of my work below.
+                Head of design at Smile.io
               </p>
             </ScrollAnimation>
           </div>
@@ -64,15 +63,22 @@ class Home extends React.Component {
               <img src={WTDeco} className={styles.wtDeco} />
             </ScrollAnimation>
             <PortfolioItem
+              image={SmileImg}
+              kind="smile"
+              url="/smile"
+              company="Smile.io"
+              lead=""
+              description="I lead a small design team building the ecommerce loyalty infrastructure of the internet. Our work reaches over 60,000 brands and millions of shoppers."
+            />
+            <PortfolioItem
               image={WtImg}
               kind="watchingthat"
               url="/watching-that"
               company="Watching That"
               lead="Designing the future of video revenue analytics"
-              description="I help people navigate and interpret large sets of complex data so that they can optimize their video advertising technology stack."
+              description="Helped media teams navigate and interpret large sets of complex data so that they can optimize their video advertising technology stack."
             />
-          </div>
-          <div className={styles.portfolioWrapper}>
+          
             <PortfolioItem
               image={WegoImg}
               kind="wegowise"
