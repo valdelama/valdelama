@@ -1,5 +1,4 @@
 @import 'src/styles/util/index.scss';
-$_timing: 0.4s;
 
 .wrapper {
   border: 1px solid;
@@ -64,8 +63,19 @@ $_timing: 0.4s;
 
 .imageWrapper {
   text-align: center;
+
   @include media('>=tablet') {
     width: 360px;
+  }
+
+  @include media('<tablet') {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    min-width: 250px;
+    width: auto;
+    height: auto;
   }
 
   .watchingthat & {

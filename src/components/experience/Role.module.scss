@@ -13,13 +13,20 @@
 .copy {
   max-width: 620px;
 
-  @include media('<tablet') {
-    margin-bottom: 2rem;
+  @include media('<tablet') {    
+    order: 2;
   }
 }
 
 .sidebar {
-  max-width: 300px;
+
+  @include media('>=tablet') {
+      max-width: 300px;
+  }
+
+  @include media('<tablet') {
+    margin-bottom: 2rem;
+  }
 }
 
 .sidebarItem {

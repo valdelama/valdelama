@@ -13,8 +13,6 @@ import WegoImg from 'src/pages/index/wegowise.svg'
 import BFGImg from 'src/pages/index/bfg.svg'
 import SmileImg from 'src/pages/index/smile.svg'
 import WTDeco from 'src/pages/index/wtDeco.svg'
-import WWDeco from 'src/pages/index/wwDeco.svg'
-import WWDisc from 'src/pages/index/wwDisc.svg'
 import SEO from 'src/components/seo'
 import styles from './index/index.module.scss'
 
@@ -68,7 +66,7 @@ class Home extends React.Component {
               url="/smile"
               company="Smile.io"
               lead=""
-              description="I lead a small design team building the ecommerce loyalty infrastructure of the internet. Our work reaches over 60,000 brands and millions of shoppers."
+              description="I lead a small design team building the ecommerce loyalty infrastructure of the internet. Our work reaches over 60k brands and millions of shoppers."
             />
             <PortfolioItem
               image={WtImg}

@@ -2,6 +2,7 @@
 
 .logo {
   width: 35px;
+  margin-right: 1rem;;
 }
 
 .header {
@@ -19,13 +20,14 @@
   }
 }
 
-.link {
+$_link: darken($linkColor, 5%);
+$_active: mix(black, $_link, 40%);
+.link {  
   box-shadow: none;
-  font-weight: 300;
   font-family: $fontSansSerif;
-  text-decoration: none;
-  color: $textColor;
+  text-decoration: none;  
   position: relative;
+  color: darken($linkColor, 5%);
 
   ~ .link {
     @include media('>=phablet') {
@@ -37,8 +39,8 @@
     content: '';
     display: block;
     height: 3px;
-    width: 70%;
-    background: #5d80a3;
+    width: 80%;
+    background: rgba($_link, 0.6);
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
@@ -47,8 +49,8 @@
   }
 }
 
-.active {
-  color: #5d80a3;
+.active, .active:hover {
+  color: $_link;
 
   @include media('>=phablet') {
     &:after {

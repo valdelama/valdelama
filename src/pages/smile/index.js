@@ -52,6 +52,43 @@ export default ({ data }) => (
 
         <p>I manage a small team so I also have time to be hands-on and help design new features. </p>
       </Role>
+      <ScrollAnimation animateIn="fadeIn">
+        <CaseStudyLink
+          title="Optimising merchant onboarding"
+          description="An updated onboarding experience that made it easier for merchants to choose optimal settings for their rewards program, and better understand the impact to their business."
+          url="/smile/onboarding"
+          className="smileOnboarding"
+        >
+          <Img fluid={data.onboarding.childImageSharp.fluid} />
+        </CaseStudyLink>
+      </ScrollAnimation>
+
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="Updated integration page for Smile merchants.">
+          <Img
+            fluid={data.integrations.childImageSharp.fluid}
+            className={styles.shadow}
+          />
+        </ImageCaption>
+      </ScrollAnimation>
+      
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="Promotional material for the Wix marketplace.">
+          <Img
+            fluid={data.wixPromo.childImageSharp.fluid}
+            className={styles.shadow}
+          />
+        </ImageCaption>
+      </ScrollAnimation>
+      
+      <ScrollAnimation animateIn="fadeIn">
+        <ImageCaption text="Concept design for our shopper-facing loyalty program.">
+          <Img
+            fluid={data.smileUI.childImageSharp.fluid}
+            className={styles.shadow}
+          />
+        </ImageCaption>
+      </ScrollAnimation>
 
     </Content>
   </Layout>
@@ -60,6 +97,34 @@ export default ({ data }) => (
 export const query = graphql`
   query {
     intro: file(relativePath: { eq: "smile/smile-intro.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    onboarding: file(relativePath: { eq: "smile/onboarding.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    integrations: file(relativePath: { eq: "smile/integrations.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    wixPromo: file(relativePath: { eq: "smile/wix-promo.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    smileUI: file(relativePath: { eq: "smile/smile-ui-concept.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
