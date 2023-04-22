@@ -1,18 +1,18 @@
 @import 'src/styles/util/index.scss';
 
 .logo {
-  width: 35px;
+  width: 45px;
   margin-right: 1rem;;
 }
 
 .header {
-  padding-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: $lineHeight/2 0 $lineHeight;
 }
 
-.nav {
+.nav {  
   @include media('<phablet') {
     display: flex;
     flex: 1;
@@ -27,34 +27,21 @@ $_active: mix(black, $_link, 40%);
   font-family: $fontSansSerif;
   text-decoration: none;  
   position: relative;
-  color: darken($linkColor, 5%);
+  padding: 12px 16px;
+  border-radius: 8px;
+    
+
+  &:hover {
+    color: $textColor;
+  }
 
   ~ .link {
     @include media('>=phablet') {
-      margin-left: rem(50px);
+      margin-left: rem(36px);
     }
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 80%;
-    background: rgba($_link, 0.6);
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    opacity: 0;
-    bottom: -10px;
   }
 }
 
 .active, .active:hover {
-  color: $_link;
-
-  @include media('>=phablet') {
-    &:after {
-      opacity: 1;
-    }
-  }
+  background-color: rgba(#000, 0.02);
 }

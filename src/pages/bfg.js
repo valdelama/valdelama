@@ -1,41 +1,34 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
-import cn from 'classnames'
 import Layout from 'src/components/Layout'
 import SEO from 'src/components/seo'
-import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
-import Title from 'src/components/Title'
+import Breadcrumbs from 'src/components/Breadcrumbs'
 import Role from 'src/components/experience/Role'
-import CaseStudyLink from 'src/components/experience/CaseStudyLink'
 import ImageCaption from 'src/components/experience/ImageCaption'
 import Img from 'gatsby-image'
-import styles from './Projects.module.scss'
+import * as styles from './Projects.module.scss'
 
-export default ({ data }) => (
+export default function Component ({ data }) {
+  return (
   <Layout>
     <SEO
       title="Brightfield Group"
       metaDescription="My experience as a data visualisation consultant"
     />
-    <Intro>
-      <Title
-        title="Brightfield Group"
-        subheader="Predictive consumer and marketing intelligence for the CBD and cannabis industry"
-      />
-    </Intro>
 
     <Content>
       <Img
         fluid={data.intro.childImageSharp.fluid}
         className={styles.introImage}
       />
+      <Breadcrumbs backLink="/#work" backTitle="Work" title="Brightfield Group" />      
       <Role
-        role="Data Visualisation Design Consultant"
-        responsibilities="Data visualisation design, Style guide, Power BI development"
-        date="August 2019 - Present"
+        role="Data visualisation designer"
+        responsibilities="Data visualisation design, Style guides, Power BI development"
+        date="August 2019 - May 2022"
       >
+      <h2>Predictive consumer and marketing intelligence for the CBD and cannabis industry</h2>
         <p>
           At Brightfield Group I’m helping the company create a professional and
           coherent design language across a wide range of reports and data
@@ -46,19 +39,17 @@ export default ({ data }) => (
         </p>
       </Role>
 
-      <ScrollAnimation animateIn="fadeIn">
         <ImageCaption text="Exploring ways to visualise consumer behaviour and habits">
           <Img fluid={data.vis.childImageSharp.fluid} />
         </ImageCaption>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn="fadeIn">
+      
         <ImageCaption text="Detailed styleguides to help scale a coherent visual language across the products">
           <Img fluid={data.styleguide.childImageSharp.fluid} />
         </ImageCaption>
-      </ScrollAnimation>
+      
     </Content>
   </Layout>
-)
+)}
 
 export const query = graphql`
   query {

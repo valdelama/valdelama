@@ -6,7 +6,8 @@ import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
 import Title from 'src/components/Title'
 
-export default () => (
+export default function Component () {
+  return (
   <Layout>
     <Container>
       <BodyCopy>
@@ -17,4 +18,4 @@ export default () => (
       </BodyCopy>
     </Container>
   </Layout>
-)
+)}

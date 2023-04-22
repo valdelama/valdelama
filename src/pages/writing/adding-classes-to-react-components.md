@@ -9,7 +9,7 @@ _This is specific to React and CSS Modules and not relevant if you are using CSS
 Lets say we have a 'panel' component that we want to create:
 
 ```javascript
-import styles from './Panel.module.css'
+import * as styles from './Panel.module.css'
 
 export default () => (
   <div classname={styles.panel}>…</div>
@@ -28,7 +28,7 @@ Lets say we want to add another class to our `Panel`, this is what it would look
 
 ```javascript
 import cn from 'classnames'
-import styles from './Panel.module.css'
+import * as styles from './Panel.module.css'
 
 export default () => (
   <div classname={cn(styles.panel, styles.primary)}>…</div>
@@ -52,7 +52,7 @@ First we want to tell our panel component to expect the `theme` prop and that it
 
 ```javascript
 import cn from 'classnames'
-import styles from './Panel.module.css'
+import * as styles from './Panel.module.css'
 
 export default (theme) => (
   <div classname={cn(styles.panel, styles[theme])}>…</div>
@@ -81,7 +81,7 @@ In our panel component:
 
 ```javascript
 import cn from 'classnames'
-import styles from './Panel.module.css'
+import * as styles from './Panel.module.css'
 
 export default (className) => (
   <div classname={cn(styles.panel, className)}>…</div>
@@ -92,7 +92,7 @@ Special instance of a panel on the homepage:
 
 ```javascript
 import Panel from '../Panel'
-import styles from './Home.module.css'
+import * as styles from './Home.module.css'
 
 export default () => (
   <Panel className={styles.homePanel} />
@@ -113,7 +113,7 @@ In our panel component:
 
 ```javascript
 import cn from 'classnames'
-import styles from './Panel.module.css'
+import * as styles from './Panel.module.css'
 
 export default (className, theme) => (
   <div classname={cn(styles.panel, styles[theme], className)}>…</div>
@@ -124,7 +124,7 @@ Instance of the panel on the homepage with both a context specific class and a t
 
 ```javascript
 import Panel from '../Panel'
-import styles from './Home.module.css'
+import * as styles from './Home.module.css'
 
 export default () => (
   <Panel className={styles.homePanel} theme="primary" />

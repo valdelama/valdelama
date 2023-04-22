@@ -1,6 +1,8 @@
+@use "sass:math";
+
 @import 'src/styles/util/index.scss';
 
-$_metaWidth: rem(200px);
+$_metaWidth: rem(220px);
 
 .wrapper {
   margin-top: $lineHeight * 3;
@@ -17,8 +19,7 @@ $_metaWidth: rem(200px);
 
 .meta {
   font-family: $fontSansSerif;
-  font-size: rem(16px);
-  text-align: right;
+  font-size: rem(16px);  
   padding-right: 2rem;
   font-style: italic;
 
@@ -26,10 +27,11 @@ $_metaWidth: rem(200px);
     width: $_metaWidth;
     position: absolute;
     right: 100%;
+    text-align: right;
   }
 
   @include media('<=desktop') {
-    margin-bottom: $lineHeight / 2;
+    margin-bottom: $lineHeight * 0.5;
   }
 }
 
@@ -49,12 +51,11 @@ $_metaWidth: rem(200px);
 }
 
 .company {
-  color: $headerColor;
+  font-size: rem($h3Size);
   font-weight: $fontWeightBold;
-  margin-bottom: $lineHeight / 2;
-  font-size: rem(20px);
+  margin-bottom: $lineHeight * 0.5;
 }
 
 .link {
-  margin-top: $lineHeight / 3;
+  margin-top: math.div($lineHeight, 3);
 }

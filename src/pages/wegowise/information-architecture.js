@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
 import SEO from 'src/components/seo'
@@ -9,9 +8,10 @@ import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
 import Img from 'gatsby-image'
-import styles from '../Projects.module.scss'
+import * as styles from '../Projects.module.scss'
 
-export default ({ data }) => (
+export default function Component ({ data }) {
+  return (
   <Layout>
     <SEO
       title="WegoWise"
@@ -89,7 +89,7 @@ export default ({ data }) => (
       </SectionCopy>
     </Content>
   </Layout>
-)
+)}
 
 export const query = graphql`
   query {

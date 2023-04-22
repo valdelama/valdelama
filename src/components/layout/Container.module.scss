@@ -13,8 +13,8 @@
 
   @include media($gridIsStacked) {
     padding: {
-      left: $padding / 2;
-      right: $padding / 2;
+      left: $padding * 0.5;
+      right: $padding * 0.5;
     }
   }
 }

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import cn from 'classnames'
-import styles from './GridCell.module.scss'
+import * as styles from './GridCell.module.scss'
 
 export default ({ className, kind, span, ...otherProps }) => (
   <div

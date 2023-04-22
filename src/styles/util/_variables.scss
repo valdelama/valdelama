@@ -1,18 +1,30 @@
 @import './_functions.scss';
 
+
+$grey100: #F3F4F6;
+$grey400: #9CA3AF;
+$grey500: #6B7280;
+$grey600: #4B5563;
+$grey900: #111827;
+
 // TYPOGRAPHY
 //----------------------
-$fontSansSerif: 'Libre Franklin', sans-serif;
+$fontSansSerif: 'Inter', sans-serif;
 $fontSize: 18px;
 $lineHeight: rem(27px);
-$textColor: #3D4A57;
+$h1Size: 48px;
+$h2Size: 36px;
+$h3Size: 22px;
+$textColor: $grey900;
+$textColorLight: $grey500;
 $accentTextColor: #5d80a3;
-$linkColor: #3878B7;
+$linkColor: $textColor;
 $introColor: #f5faff;
 $headerColor: #546678;
-$fontWeightBold: 600;
+$fontWeightBold: 700;
 $fontWeightDefault: 400;
-$shadedAreaBg: #F7FAFD;
+$shadedAreaBg: linear-gradient(164.48deg, #FFFAFF 7.82%, #FFFAFF 11.82%, #FFFAFF 15.53%, #FFFAFF 18.98%, #FEFAFF 22.23%, #FEFAFF 25.32%, #FEFAFF 28.29%, #FDFAFF 31.19%, #FDFAFF 34.07%, #FDFAFF 36.98%, #FDFAFF 39.95%, #FCFAFE 43.03%, #FCFBFE 46.28%, #FCFBFE 49.74%, #FCFBFE 53.44%, #FFFFFF 57.42%);
+$calloutBox: #FBFCFD;
 
 // LAYOUT
 //----------------------

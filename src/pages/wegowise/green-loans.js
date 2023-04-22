@@ -1,31 +1,31 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
-import cn from 'classnames'
 import Layout from 'src/components/Layout'
 import SEO from 'src/components/seo'
-import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
-import Title from 'src/components/Title'
+import Role from 'src/components/experience/Role'
+import Breadcrumbs from 'src/components/Breadcrumbs'
 import SectionCopy from 'src/components/experience/SectionCopy'
+import ImageCaption from 'src/components/experience/ImageCaption'
 import Img from 'gatsby-image'
-import styles from '../Projects.module.scss'
+import * as styles from '../Projects.module.scss'
 
-export default ({ data }) => (
+export default function Component ({ data }) {
+  return (
   <Layout>
     <SEO
       title="WegoWise"
       metaDescription="A web application that would enable financial institutions to assess the eligibility of real estate properties for green loans."
     />
-    <Intro noBanner>
-      <Title
-        title="WegoWise"
-        subheader="Helping Financial Institutions Go Green"
-        backLink="/wegowise"
-      />
-    </Intro>
-    <Content noBanner>
-      <SectionCopy>
+    
+    <Content>    
+    <Img fixed={data.block.childImageSharp.fixed} />
+    <Role
+        role="Lead Designer"
+        responsibilities="Product design, Front-end development, Marketing design, Illustration"
+      >
+      <Breadcrumbs backLink="/wegowise" backTitle="WegoWise" title="Green loans" />
+      <h2>Helping financial institutions go green</h2>
         <p>
           I led the design and front-end development of a web application that
           would enable financial institutions to assess the eligibility of real
@@ -44,10 +44,14 @@ export default ({ data }) => (
           properties for green loans and adjust various parameters to see how
           that would affect the likelihood of obtaining the loan.
         </p>
-
-        <Img fluid={data.glea.childImageSharp.fluid} />
-      </SectionCopy>
+        
+      </Role>
+      <ImageCaption text="I designed and coded the front-end of a web app to allow property managers to assess the eligibility of their buildings for a green loan.">
+          <Img fluid={data.glea.childImageSharp.fluid} />
+        </ImageCaption>      
+      
       <SectionCopy title="Marketing design">
+      
         <p>
           In addition to the product design I also helped produce the assets for
           a marketing campaign.
@@ -59,10 +63,17 @@ export default ({ data }) => (
       </SectionCopy>
     </Content>
   </Layout>
-)
+)}
 
 export const query = graphql`
   query {
+    block: file(relativePath: { eq: "ww/city-block.png" }) {
+      childImageSharp {
+        fixed(width: 454) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     glea: file(relativePath: { eq: "ww/glea/glea.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {

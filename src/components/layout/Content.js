@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import cn from 'classnames'
-import PageTransition from 'gatsby-v2-plugin-page-transitions'
 import Container from 'src/components/layout/Container'
-import styles from './Content.module.scss'
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
+import * as styles from './Content.module.scss'
 
 export default ({ className, children, noBanner }) => (
   <PageTransition

@@ -1,43 +1,34 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
-import cn from 'classnames'
 import Layout from 'src/components/Layout'
-import Container from 'src/components/layout/Container'
-import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
-import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
-import Title from 'src/components/Title'
+import Breadcrumbs from 'src/components/Breadcrumbs'
 import Role from 'src/components/experience/Role'
 import CaseStudyLink from 'src/components/experience/CaseStudyLink'
 import ImageCaption from 'src/components/experience/ImageCaption'
-import SectionCopy from 'src/components/experience/SectionCopy'
 import Img from 'gatsby-image'
-import styles from '../Projects.module.scss'
+import * as styles from '../Projects.module.scss'
 
-export default ({ data }) => (
+export default function Component ({ data }) {
+  return (
   <Layout>
     <SEO
       title="WegoWise"
       metaDescription="My experience as Head of Design for WegoWise, the largest database of multifamily utilty data in the US"
     />
-    <Intro>
-      <Title
-        title="WegoWise"
-        subheader="Enabling people to make smarter decisions about how they invest in buildings"
-      />
-    </Intro>
     <Content>
       <Img
-        fluid={data.intro.childImageSharp.fluid}
+        fluid={data.banner.childImageSharp.fluid}
         className={styles.introImage}
       />
+      <Breadcrumbs backLink="/#work" backTitle="Work" title="WegoWise" />
       <Role
         role="Lead Designer"
         responsibilities="Product design, product planning, UI development, marketing design, illustration"
         date="June 2013 - April 2018"
       >
+        <h2>Enabling smarter investments in the built environment to reduce CO2</h2>
         <p>
           For five years I was responsible for product and marketing design at
           WegoWise, the largest database of multifamily utilty data in the US.
@@ -52,7 +43,7 @@ export default ({ data }) => (
         </p>
       </Role>
 
-      <ScrollAnimation animateIn="fadeIn">
+      
         <CaseStudyLink
           title="Helping Financial Institutions Go Green"
           description="I led the design and front-end development of a web application that would enable financial institutions to assess the eligibility of real estate properties for green loans."
@@ -63,15 +54,15 @@ export default ({ data }) => (
             className={styles.paddedCaseStudyImg}
           />
         </CaseStudyLink>
-      </ScrollAnimation>
+      
 
-      <ScrollAnimation animateIn="fadeIn">
+      
         <ImageCaption text="Tool for benchmarking against similar buildings.">
           <Img fluid={data.buildingSummary.childImageSharp.fluid} />
         </ImageCaption>
-      </ScrollAnimation>
+      
 
-      <ScrollAnimation animateIn="fadeIn">
+      
         <ImageCaption text="Illustrations for WegoWise product launches.">
           <div className={styles.wegoIllustrations}>
             <Img fixed={data.wegopower.childImageSharp.fixed} />
@@ -79,9 +70,9 @@ export default ({ data }) => (
             <Img fixed={data.wegohome.childImageSharp.fixed} />
           </div>
         </ImageCaption>
-      </ScrollAnimation>
+      
 
-      <ScrollAnimation animateIn="fadeIn">
+      
         <CaseStudyLink
           title="Solving an Information Architecture Puzzle"
           description="The dashboard at WegoWise had become a dumping ground for miscellaneous links, I used card sorting to determine new navigation patterns."
@@ -89,14 +80,20 @@ export default ({ data }) => (
         >
           <Img fluid={data.cardSort.childImageSharp.fluid} />
         </CaseStudyLink>
-      </ScrollAnimation>
+      
     </Content>
   </Layout>
-)
-
+)}
 export const query = graphql`
   query {
     intro: file(relativePath: { eq: "ww/intro.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    banner: file(relativePath: { eq: "ww/banner.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

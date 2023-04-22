@@ -1,7 +1,7 @@
 @import 'src/styles/util/index.scss';
 
 $_inputHeight: $lineHeight * 2;
-$_formAccent: $accentTextColor;
+$_formAccent: $textColor;
 
 .form {
   max-width: 380px;
@@ -19,9 +19,9 @@ label {
   height: $_inputHeight;
   position: absolute;
   z-index: 1;
-  top: $_inputHeight / 4;
+  top: $_inputHeight * 0.25;
   left: rem(8px);
-  color: rgba(0, 0, 0, 0.3);
+  color: $textColorLight;
   transform-origin: left;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -35,7 +35,7 @@ label {
 .input:valid {
   ~ label {
     $scale: 0.8;
-    top: -($_inputHeight / 2);
+    top: -($_inputHeight * 0.5);
     transform: scale($scale, $scale);
     left: 0;
   }
@@ -88,6 +88,7 @@ button {
   background-size: 200% 100%;
   background-position: 100% 0;
   transition: all 0.6s ease;
+  border-radius: 3px;
 }
 
 button:before {

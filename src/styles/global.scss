@@ -12,6 +12,11 @@ html {
   @include media($gridIsStacked) {
     font-size: $fontSize - 2px;
   }
+
+  &.gradient {
+    background: $shadedAreaBg no-repeat top;
+    background-size: 100% 40%;
+  }
 }
 
 *,
@@ -47,7 +52,6 @@ img {
 
 a {
   color: $linkColor;
-  text-decoration: none;
   transition: color 0.2s ease-in;
 
   &:hover {
@@ -56,26 +60,24 @@ a {
 }
 
 li {
-  margin-bottom: $lineHeight / 2;
+  margin-bottom: $lineHeight * 0.5;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: $headerColor;
   line-height: 1.5;
 }
 
 h2 {
-  margin-top: $lineHeight * 2.5;
   margin-bottom: $lineHeight;
   line-height: 1.2;
 }
 
 h3 {
   margin-top: $lineHeight * 1.5;
-  margin-bottom: $lineHeight / 2;
+  margin-bottom: $lineHeight * 0.5;
 }
 
 p,

@@ -1,58 +1,52 @@
 @import 'src/styles/util/index.scss';
 
 .wrapper {
-  border: 1px solid;
-  background: #fcfdff;
-  border: 1px solid rgba(115, 179, 244, 0.09);
-  margin-bottom: 120px;
-  padding: rem(65px);
-  position: relative;
-  z-index: 2;
-
-  @include media('<tablet') {
-    padding: 20px;
-  }
-
-  &.wegowise {
-    background: #fafffd;
-    border-color: rgba(0, 230, 142, 0.05);
-  }
-
-  &.bfg {
-    background: #fefcff;
-    border-color: rgba(#c973f4, 0.06);
-  }
-
-  &.smile {
-    background: #fff;
-  }  
-}
-
-.title {
-  margin-bottom: 2rem;
-  display: block;
-  color: $headerColor;
-}
-
-.content {
   display: flex;
   align-items: center;
+  // background: #fff;
+  // border: 1px solid hsl(300 10% 43% / 9%);
+  background-color: rgba($color: #fff, $alpha: 0.85);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 150px;
+  padding: rem(72px);
+  position: relative;
+  z-index: 2; 
+  transition: all 0.3s ease-in;
+  text-decoration: none;
 
   @include media('<tablet') {
     flex-direction: column;
+     padding: 20px;
+  }
+
+  &:hover {
+    background: #fff;
+    border: 1px solid hsl(300 10% 43% / 18%);
+    box-shadow: 0px 25px 28px -13px rgba(0, 0, 0, 0.04);
+    color: $textColor; 
   }
 }
 
+.title {
+  color: $textColor;
+  font-size: rem($h3Size);
+  margin-bottom: 1rem;
+  display: block;
+  font-weight: $fontWeightBold;
+}
+
 .copy {
-  margin-left: 2rem;
+  margin-right: 4rem;
 
   @include media('<tablet') {
-    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 .description {
   display: block;
+  
 }
 
 .lead {

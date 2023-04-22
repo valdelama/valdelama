@@ -14,7 +14,9 @@ $_spacing: 1rem;
 }
 
 .title {
-  margin: $_spacing / 4 0 $_spacing / 2;
+  margin: calc($_spacing / 4) 0 calc($_spacing / 2);
+  color: $textColor;
+  text-decoration: none;
 
   &:hover {
     color: $linkColor;
@@ -27,5 +29,5 @@ $_spacing: 1rem;
 }
 
 .excerpt {
-  margin-bottom: $lineHeight / 2;
+  margin-bottom: calc($lineHeight * 0.5);
 }

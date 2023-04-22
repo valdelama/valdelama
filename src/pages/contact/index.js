@@ -7,15 +7,14 @@ import SEO from 'src/components/seo'
 import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
-import styles from './Contact.module.scss'
+import * as styles from './Contact.module.scss'
 
-export default () => (
+export default function Component () {
+  return (
   <Layout>
     <SEO title="Contact" metaDescription="Get in touch with Dan Winer" />
-    <Intro noBanner>
-      <Title title="Contact" subheader="Get in touch" />
-    </Intro>
-    <Content noBanner>
+    <Content>
+    <h2>Get in touch</h2>
       <p>
         Feel free to leave me a message below or connect on{' '}
         <a href="https://www.linkedin.com/in/danwiner/">LinkedIn</a>.
@@ -68,4 +67,4 @@ export default () => (
       </form>
     </Content>
   </Layout>
-)
+)}

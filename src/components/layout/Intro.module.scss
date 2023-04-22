@@ -2,13 +2,18 @@
 
 .intro {
   padding-top: 10px;
-  background: $shadedAreaBg;
+
+
+  &.noBanner {
+   background: none;
+  }  
+  
 }
 
 .content {
-  padding: rem(100px) 0 rem(200px);
+  padding: $lineHeight 0;
 
   .noBanner & {
-    padding-bottom: $expSectionSpacing / 2;
+    padding: $lineHeight*3 0;        
   }
 }

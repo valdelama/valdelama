@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
         `
           {
             allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
+              sort: {frontmatter: {date: DESC}}
               limit: 1000
               filter: { fileAbsolutePath: { regex: "/pages/writing/" } }
             ) {
@@ -70,3 +70,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+
+const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new FilterWarningsPlugin({
+        exclude:
+          /mini-css-extract-plugin[^]*Conflicting order. Following module has been added:/,
+      }),
+    ],
+  });
+};

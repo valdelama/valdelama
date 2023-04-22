@@ -1,33 +1,34 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
 import cn from 'classnames'
 import Layout from 'src/components/Layout'
 import BodyCopy from 'src/components/BodyCopy'
 import SEO from 'src/components/seo'
+import Breadcrumbs from 'src/components/Breadcrumbs'
+import Role from 'src/components/experience/Role'
 import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SectionCopy from 'src/components/experience/SectionCopy'
 import Img from 'gatsby-image'
 import DashInteraction from './dashboard-interaction.gif'
-import styles from '../Projects.module.scss'
+import * as styles from '../Projects.module.scss'
 
-export default ({ data }) => (
+export default function Component ({ data }) {
+  return (
   <Layout>
     <SEO
       title="Watching That"
       metaDescription="Creating a card-based, customisable dashboard"
     />
-    <Intro noBanner>
-      <Title
-        title="Watching That"
-        subheader="Creating a card-based, customisable dashboard"
-        backLink="/watching-that"
-      />
-    </Intro>
-    <Content noBanner>
-      <SectionCopy>
+
+    <Content>
+    <Breadcrumbs backLink="/watching-that" backTitle="Watching That" title="Dashboard" />
+    <Role
+        role="Product design and development"
+        responsibilities="Research, Visual design, Prototyping, React development"
+      >
+      <h2>Creating a card-based, customisable dashboard</h2>
         <p>
           The goal was to build a flexible dashboard that, through
           personalisation, would become invaluable to users from across all
@@ -50,9 +51,8 @@ export default ({ data }) => (
         </ul>
         <Img
           fluid={data.personas.childImageSharp.fluid}
-          className={styles.shadow}
         />
-      </SectionCopy>
+      </Role>
 
       <SectionCopy title="Early design explorations">
         <p>
@@ -109,15 +109,21 @@ export default ({ data }) => (
         </p>
         <Img
           fluid={data.dashv3.childImageSharp.fluid}
-          className={styles.shadow}
         />
       </SectionCopy>
     </Content>
   </Layout>
-)
+)}
 
 export const query = graphql`
   query {
+    banner: file(relativePath: { eq: "wt/dashboard/banner.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     personas: file(relativePath: { eq: "wt/dashboard/personas.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {

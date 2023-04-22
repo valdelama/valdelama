@@ -1,7 +1,8 @@
 @import 'src/styles/util/index.scss';
 
 .indexIntro {
-  margin: rem(60px) 0;
+  margin: rem(180px) 0 rem(180px);
+  
 
   @include media($gridIsStacked) {
     margin: 0;
@@ -9,15 +10,22 @@
 }
 
 .salutation {
+  
+}
+.aboutMe {
+  color: $textColor;
   font-weight: $fontWeightBold;
-  font-size: rem(53px);
-  color: $headerColor;
+  font-size: rem($h1Size);
+  line-height: rem(58px);
   display: block;
-  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  max-width: rem(820px);
 }
 
 .portfolioWrapper {
   position: relative;
+  padding-top: rem(40px);
+  background: transparent;
 }
 
 .wwDeco,

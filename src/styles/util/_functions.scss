@@ -1,11 +1,13 @@
 // px to rem
 //-----------
+@use "sass:math";
+
 @function rem($px-values) {
   // Convert the baseline into rems
-  $baseline-rem: $fontSize / 1rem * 1;
+  $baseline-rem: calc($fontSize / 1rem) * 1;
   // If there is only one (numeric) value, return it
   @if type-of($px-values) == 'number' {
-    @return $px-values / $baseline-rem;
+    @return calc($px-values / $baseline-rem);
   } @else {
     // Create an empty list that we can dump values into
     $rem-values: ();
@@ -14,7 +16,7 @@
       @if $value == 0 or type-of($value) != 'number' {
         $rem-values: append($rem-values, $value);
       } @else {
-        $rem-values: append($rem-values, $value / $baseline-rem);
+        $rem-values: append($rem-values, math.div($value, $baseline-rem));
       }
     }
     // Return the property and its list of converted values

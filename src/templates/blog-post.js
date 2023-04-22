@@ -9,7 +9,7 @@ import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 // Template styles
-import styles from './BlogPost.scss'
+import * as styles from './BlogPost.scss'
 // General styles for article content
 import './BlogContent.scss'
 

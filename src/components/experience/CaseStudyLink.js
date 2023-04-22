@@ -1,8 +1,8 @@
-import React from 'react'
+  import React from 'react'
 import { Link } from 'gatsby'
 import cn from 'classnames'
 import ArrowLink from 'src/components/ArrowLink'
-import styles from './CaseStudyLink.module.scss'
+import * as styles from './CaseStudyLink.module.scss'
 
 export default ({ className, title, description, children, url }) => (
   <div className={cn(styles.wrapper, styles[className])}>
@@ -11,7 +11,7 @@ export default ({ className, title, description, children, url }) => (
       <p className={styles.description}>{description}</p>
       <ArrowLink url={url} text="Explore" />
     </div>
-    <Link to={url} className={styles.imageWrapper}>
+    <Link to={url}>
       {children}
     </Link>
   </div>

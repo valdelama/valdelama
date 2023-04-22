@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ImageCaption.module.scss'
+import * as styles from './ImageCaption.module.scss'
 
 export default ({ text, children }) => (
   <div className={styles.wrapper}>

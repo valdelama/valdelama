@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import cn from 'classnames'
-import styles from './ArrowLink.module.scss'
+import * as styles from './ArrowLink.module.scss'
 
 export default ({ back, className, text, url }) => (
   <Link

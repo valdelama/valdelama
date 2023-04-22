@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import './variables';
 
 @mixin upperCaseFont {
@@ -11,7 +13,7 @@
 
 // Create a grid cell with specified width, use as a modifier with the $cellClass from the gridRow() mixin
 @mixin gridcell($colspan, $columns: $gridColumns) {
-  $percent: percentage($colspan / $columns);
+  $percent: percentage(math.div($colspan, $columns));
   @include media($gridIsNotStacked) {
     flex: 0 0 $percent;
     max-width: $percent;

@@ -1,46 +1,51 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
+import Img from 'gatsby-image'
 import ImageCaption from 'src/components/experience/ImageCaption'
 import Layout from 'src/components/Layout'
 import SectionCopy from 'src/components/experience/SectionCopy'
+import Breadcrumbs from 'src/components/Breadcrumbs'
+import Role from 'src/components/experience/Role'
 import SEO from 'src/components/seo'
 import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
-import { GridRow, GridCell } from 'src/components/layout/grid/index'
-import Role from 'src/components/experience/Role'
-import Img from 'gatsby-image'
-import styles from '../Projects.module.scss'
+import * as styles from '../Projects.module.scss'
 
-export default ({ data }) => (
+export default function Component ({ data }) {
+  return (
   <Layout>
     <SEO
       title="Onboarding case study"
       metaDescription="Optimising the onboarding experience at Smile"
     />
-    <Intro noBanner>
-      <Title
-        title="Smile.io"
-        subheader="Optimising merchant onboarding"
-        backLink="/smile"
-      />
-    </Intro>
+    
 
-    <Content noBanner>
-    <SectionCopy>
-    <h3 className={styles.firstTitle}> Problem</h3>
+    <Content>
+    <Img
+        fluid={data.banner.childImageSharp.fluid}
+        className={styles.introImage}
+      />
+    
+    <Breadcrumbs backLink="/smile" backTitle="Smile.io" title="Onboarding" />
+    <Role
+        role="Product design"
+        responsibilities="Research, Usability testing, Visual design, prototyping"
+        
+      >
+      <h2>Optimising merchant onboarding</h2>
           <p>One of the problems we were seeing with our merchant onboarding is that configuring the value of the points that customers earn was challenging. Users were exposed to a complicated experience that led to an under-performing program.</p> 
           <p>The knock-on effect to the business was that users see less value in their subscription if their program is not performing well, and are more likley to churn. </p>
           <p>We also decided to try and address another problem that had come up during user testing, which is that the participants were not able to accurately explain what changes would be made to their store after launching the program, or how their customers would interact with it. </p>
         <p>The previous configuration screen tried to explain the entire customer journey whilst also allowing merchants to change their program settings. Changing the settings also meant editing both earning and rewarding actions separately, with no guidance as to what values to choose.</p>
-</SectionCopy>
+        </Role>
+
         <ImageCaption text="The previous screen for program configuration">
         <Img
             fluid={data.onboardingOld.childImageSharp.fluid}  className={styles.shadowImg}
           />  
         </ImageCaption>
-                    
+  
       
       <SectionCopy title="Solution">
       
@@ -66,10 +71,17 @@ export default ({ data }) => (
         </SectionCopy>
     </Content>
   </Layout>
-)
+)}
 
 export const query = graphql`
   query {
+    banner: file(relativePath: { eq: "smile/smile-onboarding.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     onboardingOld: file(relativePath: { eq: "smile/onboarding-old3.png" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {

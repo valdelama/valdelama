@@ -3,7 +3,8 @@
 .role {
   display: flex;
   justify-content: space-between;
-  margin-bottom: $expSectionSpacing;
+  margin-bottom: $expSectionSpacing;  
+  align-items: flex-start;
 
   @include media('<tablet') {
     flex-direction: column;
@@ -19,6 +20,11 @@
 }
 
 .sidebar {
+  background: $calloutBox;
+  border-left: 1px solid #F1F5F9;
+  padding: $lineHeight;
+  height: auto;
+  font-size: $fontSize - 2px;
 
   @include media('>=tablet') {
       max-width: 300px;

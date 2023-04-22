@@ -6,7 +6,7 @@ import Intro from 'src/components/layout/Intro'
 import Content from 'src/components/layout/Content'
 import Title from 'src/components/Title'
 import SEO from '../components/seo'
-import styles from './Writing.module.scss'
+import * as styles from './Writing.module.scss'
 
 class BlogIndex extends React.Component {
   render() {
@@ -30,9 +30,9 @@ class BlogIndex extends React.Component {
           <BodyCopy>
             {posts.map(({ node }) => {
               return (
-                <div styleName="post" key={node.fields.slug}>
-                  <Link to={node.fields.slug}>
-                    <h3 styleName="title">{node.frontmatter.title}</h3>
+                <div className={styles.post} key={node.fields.slug}>
+                  <Link className={styles.title} to={node.fields.slug}>
+                    <h3>{node.frontmatter.title}</h3>
                   </Link>
 
                   <div
@@ -58,7 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
       edges {
         node {
           excerpt(pruneLength: 350)
