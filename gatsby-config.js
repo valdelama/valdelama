@@ -58,6 +58,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    'gatsby-plugin-postcss',
     `gatsby-plugin-react-helmet`,
     'gatsby-v2-plugin-page-transitions',
     `gatsby-plugin-sass`,
