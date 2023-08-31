@@ -20,6 +20,11 @@ footer {
   }
 }
 
+svg {
+  fill: $grey400;
+}
+
+
 .copy,
 .email {
   display: inline-flex;
@@ -27,15 +32,22 @@ footer {
 }
 
 .email a {
+  color: $textColorLight;  
   text-decoration: none;
+
+  &:hover {
+    color: $textColor;
+
+    svg {
+      fill: $textColor;
+    }
+  }
 }
 
 .codeIcon,
 .emailIcon {
-  color: $grey400;
   display: inline-flex;
   width: 24px;
   margin-right: rem(8px);
-  opacity: 0.7;
 }
 

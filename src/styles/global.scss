@@ -71,7 +71,7 @@ h4 {
 }
 
 h2 {
-  margin-bottom: $lineHeight;
+  margin-bottom: calc($lineHeight/2);
   line-height: 1.2;
 }
 

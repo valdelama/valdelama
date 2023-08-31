@@ -29,12 +29,32 @@
   align-items: center;
   text-decoration: none;
   font-size: $h3Size;
-  // font-weight: bold;
   letter-spacing: 1.1px;
+  
+  @include media('<desktop') {
+    align-items: start;
+    font-size: $h3Size - 2;
+  }
+}
+
+.linkText {
+  @include media('<desktop') {
+    order: 2;
+  }
 }
 
 .icon {
-  display: inline-flex;
+  display: flex;
   width: 24px;
+  height: 24px;
+  flex-shrink: 0;
   margin-left: rem(6px);
+
+  @include media('<desktop') {
+    order: 1;
+    margin-left: 0;
+    margin-right: rem(6px);
+    width: 20px;
+    height: 20px;
+  }
 }

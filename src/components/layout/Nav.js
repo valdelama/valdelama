@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from 'src/images/logo-avatar2.png'
+import logo from 'src/images/logo-avatar4.png'
 import * as styles from './Nav.module.scss'
 
 export default () => (
@@ -9,7 +9,7 @@ export default () => (
       <img src={logo} alt="Home" />
     </Link>
     <div className={styles.nav}>
-      <Link to="/" className={styles.link} activeClassName={styles.active}>
+      <Link to="/#work" className={styles.link} activeClassName={styles.active}>
         Work
       </Link>
       <Link

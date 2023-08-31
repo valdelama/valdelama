@@ -13,17 +13,24 @@ export default function Component ({ data }) {
       title="Work"
       metaDescription="Check out what I've been working on for the last few years"
     />
-    <Content>
-    <Img
-        fluid={data.about.childImageSharp.fluid}
-      />
+    <Content>    
     
     <h2>About me</h2>
       <p>
-        I live in Spain with my family. I've been designing professionally since 2007. During that time, I worked predominantly as a product designer and UX manager, but I also ran an agency designing and building websites for small businesses, consulted for enterprise clients, worked as a data visualisation designer, as an operations manager, and as a developer. For the last few years, I've led design and research teams and helped designers do their best work. 
+        I live with my family in a small surf town on the Atlantic coast in southern Spain. I've been designing professionally since 2007, mainly as a product designer and UX manager. Before that, I ran an agency designing and building websites for small businesses, consulted for enterprise clients, worked as a data visualisation designer, a print designer, an operations manager, and a developer. 
       </p>
-    
-      
+      <p>
+        For the last few years, I've led design and research teams and helped designers do their best work.
+      </p>
+      <p>        
+        When I'm not working, I like to play with my kids on the beach, <a href="https://www.linkedin.com/in/danwiner/">post on LinkedIn</a> to help designers with their career growth, spend time on the ocean surfing and windsurfing, make tacos, work out, and read about design.
+      </p>
+      <Img fluid={data.about.childImageSharp.fluid} />
+      <Job
+      >
+        <p>A brief summary of the last 10+ years in design</p>
+      </Job>
+
       <Job
         company="Smile.io"
         dates="2019 - Present"
@@ -42,7 +49,7 @@ export default function Component ({ data }) {
         url="/bfg"
       >
         <p>
-        Brightfield is an industry leader in predictive consumer and market intelligence for the CBD and Cannabis industry. I provide them data visualisation expertise.
+        Brightfield is an industry leader in predictive consumer and market intelligence for the CBD and Cannabis industry. I provided them data visualisation expertise.
         </p>
       </Job>
 
@@ -53,7 +60,7 @@ export default function Component ({ data }) {
         url="/watching-that"
         >
         <p>
-          A video intelligence platform handling millions of streaming data points per day that I helped design from the ground up. The role included research, product design, data visualisation design, establishing a design system and React UI development.
+          A video intelligence platform handling millions of streaming data points per day that I helped design and build from the ground up. The role included research, product design, data visualisation design, establishing a design system and React development.
         </p>
       </Job>
     
@@ -65,6 +72,7 @@ export default function Component ({ data }) {
       <Job company="Create Today" dates="2009 - 2013" role="Senior product designer">
       A web to print startup and artist community (now offline). I helped take the business from concept through to successful acquisition. Wore many hats and contributed as a designer, engineer and operations manager. 
       </Job>
+
       <Job company="IGT" dates="2009 - 2012" role="Design Consultant">
       Designed and coded the player portal area of various state lottery sites, developed a reusable front-end framework in HTML, CSS and Javascript. The work also included usability, accessibility and inclusion analysis and iOS design.
       </Job>
