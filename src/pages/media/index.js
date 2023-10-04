@@ -25,15 +25,31 @@ export default function Component ({ data }) {
       />
 
       <ExternalLink 
+        url="https://www.linkedin.com/events/7113146383376781312/about/" 
+        title="Asking the right questions"
+        type="Lecture"
+        location="University of Waterloo"
+        date="Oct 2, 2023"
+      />
+
+      <ExternalLink 
+        url="https://www.looppanel.com/blog/how-to-talk-about-the-business-value-of-ux-with-dan-winer" 
+        title="Talk about the Business Value of UX"
+        type="Interview"
+        location="Looppanel"
+        date="Sep 21, 2023"
+      />
+
+      <ExternalLink 
         url="https://www.linkedin.com/feed/update/urn:li:activity:7095009958122987520/?updateEntityUrn=urn%3Ali%3Afs_updateV2%3A%28urn%3Ali%3Aactivity%3A7095009958122987520%2CFEED_DETAIL%2CEMPTY%2CDEFAULT%2Cfalse%29" 
         title="A simple system for complex problems"
         type="Post"
         location="LinkedIn"
         date="Aug 9, 2023"
       />
-
+      
       <ExternalLink 
-        url="https://www.looppanel.com/blog/dan-winer-ux-advice" 
+        url="https://www.looppanel.com/blog/ask-questions-dan-winer" 
         title="Ask the Right Questions to Advance your UX Career"
         type="Guest article"
         location="Looppanel"

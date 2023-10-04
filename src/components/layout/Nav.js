@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from 'src/images/logo-avatar4.png'
+import logo from 'src/images/favicon.png'
 import * as styles from './Nav.module.scss'
 
 export default () => (
   <div className={styles.header}>
-    <Link to="/" title="Logo" className={styles.logo} width="45px">
+    <Link to="/" title="Logo" className={styles.logo} width="60px">
       <img src={logo} alt="Home" />
     </Link>
     <div className={styles.nav}>

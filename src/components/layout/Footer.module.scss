@@ -3,9 +3,11 @@
 footer {
   margin-top: 80px;
   padding-bottom: 60px;
-  font-size: $fontSize - 2;
-  text-align: center;
-  color: $textColorLight;  
+  font-size: $fontSize - 2;  
+  color: $textColorLight;
+  @include media('>phablet') {
+    text-align: center;
+  }
 }
 
 .content {
@@ -24,11 +26,20 @@ svg {
   fill: $grey400;
 }
 
+.copy {
+  @include media('<desktop') {
+    margin-bottom: calc($lineHeight / 2);
+  }
+}
 
 .copy,
 .email {
   display: inline-flex;
   align-items: center;
+  
+  @include media('<phablet') {
+    align-items: flex-start;
+  }
 }
 
 .email a {
@@ -48,6 +59,7 @@ svg {
 .emailIcon {
   display: inline-flex;
   width: 24px;
+  flex-shrink: 0;
   margin-right: rem(8px);
 }
 
