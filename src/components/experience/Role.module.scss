@@ -8,6 +8,7 @@
 
   @include media('<tablet') {
     flex-direction: column;
+    margin-bottom: calc($expSectionSpacing/2);
   }
 }
 
@@ -32,6 +33,10 @@
 
   @include media('<tablet') {
     margin-bottom: 2rem;
+    margin: {
+      left: -($containerPaddingMobile);
+      right: -($containerPaddingMobile);
+    }
   }
 }
 

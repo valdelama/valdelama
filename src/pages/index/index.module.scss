@@ -9,9 +9,6 @@
   }
 }
 
-.salutation {
-  
-}
 .aboutMe {
   color: $textColor;
   font-weight: $fontWeightBold;
@@ -20,6 +17,12 @@
   display: block;
   letter-spacing: -1px;
   max-width: rem(820px);
+
+  @include media('<tablet') {
+    font-size: rem($h2Size);
+    line-height: 1.25;
+    margin-top: calc($lineHeight/3)
+  }
 }
 
 .portfolioWrapper {

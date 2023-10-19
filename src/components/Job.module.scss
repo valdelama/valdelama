@@ -5,7 +5,7 @@
 $_metaWidth: rem(220px);
 
 .wrapper {
-  margin-top: $lineHeight * 3;
+  margin: calc($lineHeight * 2) 0 $lineHeight;
   @include media('>desktop') {
     padding-left: $_metaWidth;
   }
@@ -43,7 +43,7 @@ $_metaWidth: rem(220px);
 
 .dates {
   @include media('<=desktop') {
-    &:before {
+    &:not(:empty):before {
       content: '|';
       margin: 0 rem(5px);
     }
@@ -57,5 +57,6 @@ $_metaWidth: rem(220px);
 }
 
 .link {
+  display: block;
   margin-top: math.div($lineHeight, 3);
 }

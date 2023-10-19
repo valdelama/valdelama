@@ -17,7 +17,10 @@
 
   @include media('<tablet') {
     flex-direction: column;
-     padding: 20px;
+    padding: 20px;
+    margin-bottom: 90px;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &:hover {
@@ -41,6 +44,7 @@
 
   @include media('<tablet') {
     margin-right: 0;
+    margin-bottom: 2rem;
   }
 }
 
@@ -56,7 +60,6 @@
 }
 
 .imageWrapper {
-  text-align: center;
 
   @include media('>=tablet') {
     width: 360px;

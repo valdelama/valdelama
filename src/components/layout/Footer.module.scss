@@ -1,12 +1,12 @@
 @import 'src/styles/util/index.scss';
 
 footer {
-  margin-top: 80px;
-  padding-bottom: 60px;
+  padding: calc($lineHeight*2) 0;
   font-size: $fontSize - 2;  
   color: $textColorLight;
   @include media('>phablet') {
     text-align: center;
+    padding: $lineHeight 0;
   }
 }
 
@@ -15,10 +15,11 @@ footer {
   align-content: center;
   justify-content: space-between;
   border-top: 1px solid $grey100;
-  padding-top: $lineHeight;
+  padding-top: calc($lineHeight*2);
 
   @include media('<desktop') {
     flex-direction: column;
+    padding-top: $lineHeight;
   }
 }
 

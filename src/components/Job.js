@@ -1,5 +1,4 @@
 import React from 'react'
-import BodyCopy from 'src/components/BodyCopy'
 import ArrowLink from 'src/components/ArrowLink'
 import * as styles from './Job.module.scss'
 
@@ -12,7 +11,9 @@ export default ({ children, company, dates, role, url }) => (
         <span className={styles.dates}>{dates}</span>
       </div>
       <div>{children}</div>
-      {url && <ArrowLink url={url} className={styles.link} text="Read more" /> }
+      {url && (
+        <a href={url} className={styles.link}>Read more</a> 
+      )}
     </div>
   </div>
 )

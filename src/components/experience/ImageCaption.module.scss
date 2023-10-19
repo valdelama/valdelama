@@ -2,6 +2,11 @@
 
 .wrapper {
   margin-bottom: $expSectionSpacing;
+
+
+  @include media('<tablet') {
+    margin-bottom: calc($expSectionSpacing/2);
+  }
 }
 
 .caption {

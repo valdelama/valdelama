@@ -30,6 +30,8 @@ $calloutBox: #FBFCFD;
 //----------------------
 $containerWidth: 1060px;
 $contentWidth: 620px;
+$containerPadding: 30px;
+$containerPaddingMobile: calc($containerPadding/2);
 $spacingUnit: 1rem;
 $hSpacingUnit: $spacingUnit;
 $vSpacingUnit: $spacingUnit;

@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: $lineHeight/2 0 $lineHeight;
+  margin: calc($lineHeight/2) 0 $lineHeight;
 }
 
 .nav {  

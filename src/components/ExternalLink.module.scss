@@ -50,6 +50,10 @@
   flex-shrink: 0;
   margin-left: rem(6px);
 
+  svg {
+    fill: none;
+  }
+
   @include media('<desktop') {
     order: 1;
     margin-left: 0;

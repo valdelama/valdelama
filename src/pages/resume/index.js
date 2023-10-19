@@ -26,8 +26,7 @@ export default function Component ({ data }) {
         When I'm not working, I like to play with my kids on the beach, <a href="https://www.linkedin.com/in/danwiner/">post on LinkedIn</a> to help designers with their career growth, spend time on the ocean surfing and windsurfing, make tacos, work out, and read about design.
       </p>
       <Img fluid={data.about.childImageSharp.fluid} />
-      <Job
-      >
+      <Job>
         <p>A brief summary of the last 10+ years in design</p>
       </Job>
 
