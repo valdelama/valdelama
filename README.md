@@ -4,7 +4,7 @@ My personal website, built using Gatsby
 
 Dev: `gatsby develop`
 
-Build: `gatsby build`
+Build: `netlify build`
 
 Manual deploy: `netlify deploy` (preview)
 
